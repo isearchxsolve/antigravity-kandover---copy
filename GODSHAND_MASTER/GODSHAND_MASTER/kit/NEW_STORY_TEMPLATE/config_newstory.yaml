@@ -1,0 +1,177 @@
+# ============================================================================
+# NEW STORY CONFIG TEMPLATE
+# 1. Copy this file:      cp NEW_STORY_TEMPLATE/config_newstory.yaml config_mystory.yaml
+# 2. Edit the <EDIT> fields below.
+# 3. Run:                 KIT_CONFIG=config_mystory.yaml bash GODSHAND_ONECLICK.sh
+# Only TWO keys bind the story: film_title + shots_file. Everything else is knobs.
+# ============================================================================
+
+film_title: MY_NEW_FILM            # <EDIT> your film's title (used in output names)
+shots_file: shots_mystory.json     # <EDIT> your shots file (defines cast + scenes)
+
+# ---- render quality (safe no-compromise defaults; usually leave as-is) ----
+render_mode: motion_stills
+fps: 24
+interpolate_fps: 16          # KEEP <=16 (WAN is 16fps; higher re-enables degrading interpolation)
+width: 1280
+height: 720
+base_model: Wan2.2-S2V
+quant: Q8
+steps: 40
+cfg: 7.0
+sampler: uni_pc
+scheduler: beta
+upscale: 2.0
+rejection_samples: 5
+codeformer_fidelity: 0.5     # tuned
+max_clip_seconds: 8
+denoise: 0.55                # tuned
+identity_retry: 4
+
+# ---- paths (the /kaggle/* ones are auto-repointed by GODSHAND_ONECLICK.sh) ----
+paths:
+  refs: refs
+  script: script/lines_mystory.csv           # <EDIT/optional> dialogue lines CSV
+  audio_bg: audio/bg_mystory                  # where generated score mp3s land
+  audio_prompts: audio/prompts_mystory.csv    # <optional>
+  work: /kaggle/working/mystory_work
+  out: output_mystory
+  models: /kaggle/working/models
+
+# ---- CHARACTERS ----
+# forge_character.py auto-generates a face/body ref set for each target from
+# shots_mystory.json -> character_design. No photos needed. Names MUST match the
+# character_design keys in the shots file AND the chars[] used by your shots.
+character_forge:
+  enabled: true
+  targets:
+  - hero          # <EDIT> your character names
+  - rival
+  workflow: charforge
+  out_root: refs
+  overwrite: false   # set true to re-forge even if refs/<name>/face already exists
+
+# ---- VOICE: a TTS voice pool + acting direction per character ----
+tts:
+  english: hexgrad/Kokoro-82M
+  backup: myshell-ai/MeloTTS-English
+  hindi: ai4bharat/indic-parler-tts
+  sample_rate: 48000
+  speak_direction: false
+  voice_cast:                    # Kokoro voice ids: am_* = male, af_* = female
+    hero:
+    - am_onyx
+    - am_adam
+    rival:
+    - af_nicole
+    - af_bella
+  performance:                   # free-text acting direction per character
+    hero: "<EDIT> e.g. warm, resolute, quietly determined, never shouting"
+    rival: "<EDIT> e.g. cold, precise, commanding, restrained menace"
+
+# ---- SCORE: map each musical movement to the shots it plays under ----
+# score_gen.py composes ONE original instrumental cue per movement.
+# NOTE: the per-movement COMPOSE PROMPT lives in src/score_gen.py (the MOOD dict),
+# keyed by movement NAME. Reuse an existing name to inherit its mood, e.g.:
+#   prelude, search, confrontation, origin, the_deepening, lullaby, the_breaking,
+#   the_crossing, machine_years, the_waking, the_reveal, the_mirror, the_verdict
+# ...or add a new entry to MOOD for a custom movement name.
+score:
+  sample_rate: 48000
+  duck_db: 18
+  crossfade_ms: 2200
+  shared_pad: true
+  movements:
+    prelude:                     # <EDIT> movement name (see note above)
+      file: prelude.mp3
+      shots:
+      - scene1                   # <EDIT> shot ids this cue plays under
+      - scene2
+    confrontation:
+      file: confrontation.mp3
+      shots:
+      - scene3
+  chorus_gain_db: -15
+
+# ---- hardware profile (kaggle_2xt4 = Kaggle's free 2x Tesla T4; default) ----
+gpu:
+  hero_shots_mode: A
+  simple_shots_mode: B
+  always_stage_split: true
+active_profile: kaggle_2xt4
+profiles:
+  lightning_l4:
+    num_gpus: 1
+    attention: fp8
+    quant: Q6
+    rejection_samples: 1
+    steps: 24
+    upscale: 1.5
+    width: 1152
+    height: 648
+    rate_per_gpu_hr: 0.48
+    comfy_flags: --fast --cache-none
+  lightning_a100_max:
+    num_gpus: 1
+    attention: sdpa
+    quant: bf16
+    rejection_samples: 3
+    steps: 50
+    upscale: 2.0
+    width: 1280
+    height: 720
+    rate_per_gpu_hr: 2.19
+    comfy_flags: --highvram --cache-none
+  kaggle_2xt4:
+    num_gpus: 2
+    attention: xformers
+    quant: Q8
+    rejection_samples: 3
+    steps: 30
+    upscale: 1.75
+    width: 1280
+    height: 720
+    rate_per_gpu_hr: 0.0
+    comfy_flags: --cache-none --disable-smart-memory
+
+# ---- misc (safe defaults) ----
+music_policy:
+  under_narration: cinematic_original_score_ducked_under_dialogue
+  swell_in_wordless_beats: true
+  wordless_beats: []
+  original_only: true
+real_characters: []
+lipsync:
+  enabled: false
+realism:
+  positive: photorealistic, shot on 35mm film, natural skin texture with visible pores, realistic subsurface scattering, cinematic lighting, shallow depth of field, subtle film grain, physically accurate motion, detailed hands, ultra detailed, high dynamic range
+  negative: cartoon, anime, cgi, 3d render, plastic skin, waxy skin, airbrushed, deformed hands, extra fingers, warped face, identity drift, flickering, oversaturated, video game, illustration, blurry, watermark, text
+sfx:
+  enabled: true
+  mode: cpu
+  gain_db: -8
+finale:
+  enabled: false
+intensity:
+  keep_glitch_threshold: 0.66
+audio_master:
+  sample_rate: 48000
+  bit_depth: 24
+  loudness_target: -14
+  loudness_range: 10
+  true_peak: -1.0
+  limiter_ceiling: -0.3
+  stereo_enhance: 0.25
+  reverb_send: -8
+  reverb_decay: 2.2
+  deesser_threshold: 0.3
+  sidechain_ratio: 12
+  sidechain_attack: 3
+  sidechain_release: 250
+grain:
+  enabled: true
+  strength: 4.5
+  size: 1.0
+  chroma: 0.6
+  halation: 0.25
+identity: {}

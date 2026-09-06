@@ -1,0 +1,655 @@
+{
+  "film": "THE MOMENT \u2014 5-min extended cut (PRIMARY)",
+  "note": "~60 chained beats (~5s each = ~5 min) covering all 7 Sanctuary-of-Silchar scenes. English 'visual' lines are the render prompts; 'vo_hi' carries your exact Hindi narration split across beats; music-only beats have vo_hi: null. Same engine/quality/voices/modesty as shots_moment.json.",
+  "inherit_globals_from": "shots_moment.json",
+  "globals": {
+    "woman_name": "Gunja",
+    "actor1_young": "Indian man, late 20s, short dark hair, light mustache and stubble, slender delicate build, intelligent vulnerable melancholic gaze; fully modestly clothed in simple formal shirt/trousers",
+    "actor2_mature": "same man at 47, white hair, soft neat white beard, gentle kind face, calm accepting eyes, quiet relief; modest simple clothing",
+    "gunja": "tall elegant charismatic Indian corporate woman, late 20s, strong expressive brows, thick wavy dark hair, warm dignified grace; ALWAYS fully modestly clothed (saree or salwar-kameez or modest formal western), invented fictional face, consistent across scenes",
+    "tone_kunal": "serious, solemn, sorrowful, reverent, silent, tense jaw, downcast or fixed gaze, NO smile",
+    "tone_gunja": "serious, warm, emotional, fearful, teary; at most a rare faint guarded almost-smile, lips barely curved, restrained",
+    "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing",
+    "style": "cinematic realism, 35mm film grain, anamorphic lens flare, mood-driven shadows, deep psychological contrast",
+    "tone_override": "NOT a happy-ending film. Serious and restrained throughout. Scene 7 peace is conveyed by a relaxed face, closed eyes and a slow exhale \u2014 quiet acceptance, NOT a broad or happy smile."
+  },
+  "scenes": [
+    {
+      "id": "S1_shadow_of_ridicule",
+      "song": "ambient_bed",
+      "era": "young",
+      "beats": [
+        {
+          "id": "s1_b01",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Cinematic low-angle, a frail thin young boy stands isolated at the edge of a crowded blurred schoolyard, shoulders hunched, looking down at his own thin hands, other children out of focus behind him, overcast desaturated grey daylight.",
+          "vo_hi": "\u092c\u091a\u092a\u0928 \u0938\u0947 \u0915\u0949\u0932\u0947\u091c \u0915\u0947 \u0917\u0932\u093f\u092f\u093e\u0930\u094b\u0902 \u0924\u0915, \u092f\u0947 \u0926\u0941\u092c\u0932\u093e \u091c\u093f\u0938\u094d\u092e \u0938\u093f\u0930\u094d\u092b \u090f\u0915 \u092e\u091c\u093c\u093e\u0915 \u0925\u093e\u0964"
+        },
+        {
+          "id": "s1_b02",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Slow push-in on the same boy's face, eyes lowered, flinching slightly as unheard taunts land; shallow focus, cold grey tone.",
+          "vo_hi": null
+        },
+        {
+          "id": "s1_b03",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "Transition dissolve: empty school corridor emptying of blurred figures, dust in a shaft of pale light, no one left.",
+          "vo_hi": null
+        },
+        {
+          "id": "s1_b04",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "A dark, empty college library; a slender young man (Actor 1) sits completely alone in deep shadow at a long table, staring down at his thin hands.",
+          "vo_hi": null
+        },
+        {
+          "id": "s1_b05",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Close on his hands turning over slowly on the table, then his downcast face half in shadow, jaw tense, no expression of hope.",
+          "vo_hi": "\u0932\u094b\u0917\u094b\u0902 \u0915\u0947 \u0924\u093e\u0928\u094b\u0902 \u0915\u094b \u0938\u091a \u092e\u093e\u0928\u0915\u0930, \u092e\u0948\u0902\u0928\u0947 \u0916\u0941\u0926 \u0915\u094b \u0915\u092e\u0924\u0930 \u0915\u0941\u092c\u0942\u0932 \u0915\u0930 \u0932\u093f\u092f\u093e \u0925\u093e\u0964"
+        },
+        {
+          "id": "s1_b06",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Wide shot: the lone figure dwarfed by tall dark bookshelves, a single window light far behind him, isolation emphasised.",
+          "vo_hi": null
+        },
+        {
+          "id": "s1_b07",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Hold on his still silhouette; slow fade toward the next chapter, grain heavy.",
+          "vo_hi": null
+        }
+      ]
+    },
+    {
+      "id": "S2_seven_months_rejection",
+      "song": "ambient_bed",
+      "era": "young",
+      "beats": [
+        {
+          "id": "s2_b01",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Atmospheric tracking shot: the slender young man walks through heavy rain on a grey street, clutching a wet folder of certificates to his chest, drenched, exhausted.",
+          "vo_hi": "\u0915\u0949\u0932\u0947\u091c \u0915\u0947 \u092c\u093e\u0926 \u0938\u093e\u0924 \u092e\u0939\u0940\u0928\u0947 \u0915\u093e \u0935\u094b \u092d\u092f\u093e\u0928\u0915 \u0938\u0902\u0918\u0930\u094d\u0937..."
+        },
+        {
+          "id": "s2_b02",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "His face in the rain, water running down, eyes tired and fixed ahead, no self-pity, only fatigue.",
+          "vo_hi": null
+        },
+        {
+          "id": "s2_b03",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "A dark cramped bedroom, he sits on the floor by a laptop, its cold light on his face, staring blankly at a screen full of interview rejection emails.",
+          "vo_hi": "\u090f\u0915 \u0915\u0947 \u092c\u093e\u0926 \u090f\u0915 \u0930\u093f\u091c\u0947\u0915\u094d\u0936\u0928, \u0928\u093e\u0915\u093e\u092e \u0907\u0902\u091f\u0930\u0935\u094d\u092f\u0942 \u0914\u0930 \u091f\u0942\u091f\u0924\u093e \u0939\u0941\u0906 \u0939\u094c\u0938\u0932\u093e\u0964"
+        },
+        {
+          "id": "s2_b04",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "Macro insert: the rejection words glowing on the laptop, reflected in his still eyes; ambient hum.",
+          "vo_hi": null
+        },
+        {
+          "id": "s2_b05",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "He lowers the laptop lid slowly; room falls dark; he sits motionless in the dark, drained.",
+          "vo_hi": "\u092e\u0948\u0902 \u092a\u0942\u0930\u0940 \u0924\u0930\u0939 \u0925\u0915 \u091a\u0941\u0915\u093e \u0925\u093e\u0964"
+        },
+        {
+          "id": "s2_b06",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Wide of the small dark room, single figure small in frame; slow fade.",
+          "vo_hi": null
+        }
+      ]
+    },
+    {
+      "id": "S3_shock_of_grace",
+      "song": "sarki_chunariya_then_aaoge_jab_tum",
+      "era": "young",
+      "beats": [
+        {
+          "id": "s3_b01",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "A bright modern Bangalore corporate interview room; the protagonist enters looking completely defeated, shoulders low, clutching his folder.",
+          "vo_hi": "\u091c\u092c \u090f\u0915 \u0926\u093f\u0928 \u0907\u0902\u091f\u0930\u0935\u094d\u092f\u0942 \u0915\u0947 \u0915\u092e\u0930\u0947 \u092e\u0947\u0902 \u0935\u094b \u092e\u0941\u091d\u0947 \u092e\u093f\u0932\u0940\u0964"
+        },
+        {
+          "id": "s3_b02",
+          "seconds": 5,
+          "engine": "phantom",
+          "characters": [
+            "kunal_young",
+            "gunja"
+          ],
+          "visual": "Reverse: across a clean desk sits Gunja \u2014 a tall, remarkably elegant, dignified Indian woman in modest formal attire, reviewing his profile; first framing of them in one shot.",
+          "vo_hi": null
+        },
+        {
+          "id": "s3_b03",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Close on Gunja's face as she reads: her eyes fill with sudden deep warmth and profound intellectual admiration \u2014 love at first sight, dignified, restrained.",
+          "vo_hi": "\u0935\u094b \u092e\u0947\u0930\u0940 \u0915\u093e\u092f\u093e \u092a\u0930 \u0928\u0939\u0940\u0902, \u092e\u0947\u0930\u0940 \u0936\u0916\u094d\u0938\u093f\u092f\u0924 \u0914\u0930 \u091c\u093c\u0939\u0928\u093f\u092f\u0924 \u092a\u0930 \u092b\u093c\u093f\u0926\u093e \u0939\u0941\u0908 \u0925\u0940\u0964"
+        },
+        {
+          "id": "s3_b04",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Close on the young man: he looks up, still guarded and solemn, not yet understanding the warmth directed at him.",
+          "vo_hi": null
+        },
+        {
+          "id": "s3_b05",
+          "seconds": 5,
+          "engine": "phantom",
+          "characters": [
+            "kunal_young",
+            "gunja"
+          ],
+          "visual": "Two-shot across the desk, a charged quiet moment of recognition between them; soft window light, SONG shift to Sarki Chunariya feeling.",
+          "vo_hi": "\u092a\u0939\u0932\u0940 \u0939\u0940 \u0928\u091c\u093c\u0930 \u092e\u0947\u0902 \u0909\u0938\u0947 \u092e\u0941\u091d\u0938\u0947 \u092c\u0947\u0907\u0902\u0924\u0939\u093e \u092e\u094b\u0939\u092c\u094d\u092c\u0924 \u0939\u094b \u0917\u0908\u0964"
+        },
+        {
+          "id": "s3_b06",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Later that day, the young man stepping out with his first offer letter in hand, expression stunned and quiet, not celebratory.",
+          "vo_hi": null
+        },
+        {
+          "id": "s3_b07",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Gunja alone at her desk afterward, a faint guarded almost-smile barely curving her lips, hopeful, restrained.",
+          "vo_hi": null
+        },
+        {
+          "id": "s3_b08",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Montage: the young man at his new office desk, working, glancing once toward where she sits, then away; SONG becomes Aaoge Jab Tum, tender.",
+          "vo_hi": "\u0935\u094b \u0907\u0924\u0928\u0940 \u0916\u0942\u092c\u0938\u0942\u0930\u0924, \u0932\u0902\u092c\u0940 \u0914\u0930 \u0917\u0930\u093f\u092e\u093e\u092e\u092f\u0940 \u0925\u0940\u0964"
+        },
+        {
+          "id": "s3_b09",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Gunja walking through the office with quiet grace, dignified and modest, others blurred; his POV, reverent.",
+          "vo_hi": null
+        },
+        {
+          "id": "s3_b10",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "His face watching from a distance, a flicker of wonder quickly hidden behind his usual solemn guard.",
+          "vo_hi": "\u0935\u0948\u0938\u0940 \u0914\u0930\u0924 \u091c\u093f\u0902\u0926\u0917\u0940 \u092e\u0947\u0902 \u092e\u0948\u0902\u0928\u0947 \u0915\u092d\u0940 \u0928\u0939\u0940\u0902 \u0926\u0947\u0916\u0940 \u0925\u0940\u0964"
+        },
+        {
+          "id": "s3_b11",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "Golden office light on empty chairs at dusk; the feeling of a beginning; slow dissolve.",
+          "vo_hi": null
+        }
+      ]
+    },
+    {
+      "id": "S4_trembling_appraisals",
+      "song": "mora_piya_mose_bolat_nahi",
+      "era": "young",
+      "beats": [
+        {
+          "id": "s4_b01",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Close-up on Gunja at a polished corporate desk during an appraisal review, her hands shaking slightly holding a pen, throat tightening.",
+          "vo_hi": "\u0926\u092b\u093c\u094d\u0924\u0930 \u0915\u0940 \u092e\u0940\u091f\u093f\u0902\u0917\u094d\u0938 \u092e\u0947\u0902 \u0909\u0938\u0915\u0940 \u0906\u0935\u093e\u091c\u093c \u0915\u093e\u0902\u092a\u0924\u0940 \u0925\u0940\u0964"
+        },
+        {
+          "id": "s4_b02",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Her eyes welling with unshed tears, a woman on the verge of an emotional outburst, holding it in with dignity.",
+          "vo_hi": "\u091c\u0948\u0938\u0947 \u0935\u094b \u0915\u093f\u0938\u0940 \u092d\u0940 \u092a\u0932 \u0930\u094b \u092a\u0921\u093c\u0947\u0917\u0940\u0964"
+        },
+        {
+          "id": "s4_b03",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "She looks across the room toward him, pleading silently; he is out of focus, unreachable.",
+          "vo_hi": "\u0935\u094b \u0905\u0902\u0926\u0930 \u0939\u0940 \u0905\u0902\u0926\u0930 \u091f\u0942\u091f \u0930\u0939\u0940 \u0925\u0940, \u092c\u093f\u0916\u0930 \u0930\u0939\u0940 \u0925\u0940\u0964"
+        },
+        {
+          "id": "s4_b04",
+          "seconds": 5,
+          "engine": "phantom",
+          "characters": [
+            "kunal_young",
+            "gunja"
+          ],
+          "visual": "Quiet office hallway: Gunja pulls the protagonist's friends aside, expression full of frantic desperate worry, asking about him; modest, restrained.",
+          "vo_hi": "\u091c\u092c \u092e\u0948\u0902\u0928\u0947 \u092c\u093e\u0924\u091a\u0940\u0924 \u092c\u093f\u0932\u094d\u0915\u0941\u0932 \u092c\u0902\u0926 \u0915\u0930 \u0926\u0940..."
+        },
+        {
+          "id": "s4_b05",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Her hand on a colleague's arm, eyes searching, whispering a question about him; worry etched on her face.",
+          "vo_hi": "\u0924\u094b \u0935\u094b \u092e\u0947\u0930\u0947 \u0926\u094b\u0938\u094d\u0924\u094b\u0902 \u0915\u0947 \u091a\u0915\u094d\u0915\u0930 \u0915\u093e\u091f\u0924\u0940, \u092e\u0947\u0930\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u092a\u0942\u091b\u0924\u0940 \u0930\u0939\u0940\u0964"
+        },
+        {
+          "id": "s4_b06",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Cut to the protagonist, face frozen like stone, staring blankly at the floor, completely unresponsive.",
+          "vo_hi": "\u092a\u0930 \u092e\u0947\u0930\u0940 \u0939\u0940\u0928\u092d\u093e\u0935\u0928\u093e \u0928\u0947 \u092e\u0947\u0930\u0947 \u092e\u0941\u0901\u0939 \u092a\u0930 \u0924\u093e\u0932\u093e \u0932\u0917\u093e \u0926\u093f\u092f\u093e \u0925\u093e\u0964"
+        },
+        {
+          "id": "s4_b07",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "His hands still on his knees, knuckles tight; he does not look up; guilt held silently.",
+          "vo_hi": null
+        },
+        {
+          "id": "s4_b08",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Gunja alone at a window at dusk, turning away to hide her tears from the office.",
+          "vo_hi": "\u092e\u0948\u0902\u0928\u0947 \u0909\u0938\u0947 \u0924\u0921\u093c\u092a\u0924\u0947 \u0926\u0947\u0916\u093e..."
+        },
+        {
+          "id": "s4_b09",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "The protagonist watching her turned back from across the room, wanting to speak, unable to; SONG Mora Piya swells softly.",
+          "vo_hi": "\u092a\u0930 \u0915\u092d\u0940 \u0938\u0949\u0930\u0940 \u0928\u0939\u0940\u0902 \u0915\u0939\u093e\u0964"
+        },
+        {
+          "id": "s4_b10",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "Empty meeting room after hours, two chairs apart, unspoken distance; slow dissolve.",
+          "vo_hi": null
+        }
+      ]
+    },
+    {
+      "id": "S5_conflict_of_reverence",
+      "song": "nindarian",
+      "era": "young",
+      "beats": [
+        {
+          "id": "s5_b01",
+          "seconds": 5,
+          "engine": "phantom",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "A dimly lit doctor's consultation room; a frustrated doctor slams a stack of perfect test reports on the desk; the protagonist sits still opposite.",
+          "vo_hi": "\u0921\u0949\u0915\u094d\u091f\u0930 \u092a\u0930\u0947\u0936\u093e\u0928 \u0925\u093e, \u091d\u0941\u0902\u091d\u0932\u093e\u092f\u093e \u0939\u0941\u0906 \u0925\u093e\u0964"
+        },
+        {
+          "id": "s5_b02",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Close on the protagonist, eyes wide with a mix of sorrow and clarity, absorbing the doctor's frustration in silence.",
+          "vo_hi": "\u0935\u094b \u092c\u094b\u0932\u093e\u2014'\u0924\u0941\u092e \u092a\u0942\u0930\u0940 \u0924\u0930\u0939 \u092b\u093f\u091f \u0939\u094b, \u092b\u093f\u0930 \u0938\u092e\u0938\u094d\u092f\u093e \u0915\u094d\u092f\u093e \u0939\u0948?'"
+        },
+        {
+          "id": "s5_b03",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "The protagonist begins to answer quietly, gaze lowered, choosing words with difficulty.",
+          "vo_hi": "\u092e\u0948\u0902\u0928\u0947 \u0915\u0939\u093e\u2014'\u092f\u0947 \u0914\u0930\u0924 \u0905\u0932\u0917 \u0939\u0948\u0964 \u092e\u0948\u0902 \u0909\u0928\u0938\u0947 \u092c\u0947\u0907\u0902\u0924\u0939\u093e \u092e\u094b\u0939\u092c\u094d\u092c\u0924 \u0915\u0930\u0924\u093e \u0939\u0942\u0901\u0964'"
+        },
+        {
+          "id": "s5_b04",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Flash cut: Gunja in a graceful, fully modest traditional Indian outfit, subtly trying to catch his gaze, eyes pleading for connection.",
+          "vo_hi": "\u0909\u0928\u0915\u0940 \u0907\u0902\u0938\u093e\u0928\u093f\u092f\u0924, \u0909\u0928\u0915\u0940 \u0905\u091a\u094d\u091b\u093e\u0908 \u0928\u0947 \u092e\u0947\u0930\u0940 \u0930\u0942\u0939 \u0915\u094b \u091b\u0942 \u0932\u093f\u092f\u093e \u0939\u0948\u0964"
+        },
+        {
+          "id": "s5_b05",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Flash cut: Gunja in dignified modest formal wear, a faint hopeful guarded look toward him across a room.",
+          "vo_hi": "\u092e\u0948\u0902 \u0909\u0928\u0915\u0940 \u0907\u092c\u093e\u0926\u0924 \u0915\u0930\u0924\u093e \u0939\u0942\u0901\u0964"
+        },
+        {
+          "id": "s5_b06",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "The protagonist firmly closes his eyes and turns his face away in absolute agony \u2014 a silent act of sacred protection, refusing to look.",
+          "vo_hi": "\u0914\u0930 \u091c\u093f\u0938\u0915\u0940 \u092e\u0948\u0902 \u092a\u0942\u091c\u093e \u0915\u0930\u0924\u093e \u0939\u0942\u0901, \u0909\u0938\u0915\u0947 \u0932\u093f\u090f \u0915\u094b\u0908 '\u0917\u0902\u0926\u093e' \u0916\u094d\u092f\u093e\u0932 \u0906 \u0939\u0940 \u0928\u0939\u0940\u0902 \u0938\u0915\u0924\u093e\u0964"
+        },
+        {
+          "id": "s5_b07",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young",
+            "gunja"
+          ],
+          "visual": "Two-shot: she stands near, hopeful; he keeps his eyes shut and face turned, protecting his reverence; strictly modest, no contact.",
+          "vo_hi": "\u091c\u092c \u0935\u094b \u092e\u0947\u0930\u0947 \u0938\u093e\u092e\u0928\u0947 \u0906\u0924\u0940 \u0925\u0940\u0902, \u092e\u0948\u0902 \u0905\u092a\u0928\u0940 \u0906\u0901\u0916\u0947\u0902 \u092c\u0902\u0926 \u0915\u0930 \u0932\u0947\u0924\u093e \u0925\u093e\u0964"
+        },
+        {
+          "id": "s5_b08",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Night: the protagonist lies awake, sleepless, staring at the ceiling, hands folded on his chest; SONG Nindarian, worshipful and aching.",
+          "vo_hi": "\u0939\u0940\u0928\u092d\u093e\u0935\u0928\u093e \u0914\u0930 \u0909\u0928\u0915\u0947 \u092a\u094d\u0930\u0924\u093f \u0905\u0938\u0940\u092e \u0906\u0926\u0930 \u0915\u0947 \u091f\u0915\u0930\u093e\u0935 \u0928\u0947 \u092e\u0941\u091d\u0947 \u0905\u092a\u093e\u0939\u093f\u091c \u092c\u0928\u093e \u0926\u093f\u092f\u093e \u0925\u093e\u0964"
+        },
+        {
+          "id": "s5_b09",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Close on his open eyes in the dark, wet at the edges, refusing to let the longing become anything less than worship.",
+          "vo_hi": "\u092e\u0948\u0902 \u0905\u092a\u0928\u0940 \u092a\u0935\u093f\u0924\u094d\u0930 \u0926\u0947\u0935\u0940 \u0915\u094b \u0905\u092a\u0928\u0940 \u0928\u091c\u0930\u094b\u0902 \u092e\u0947\u0902 \u0917\u093f\u0930\u093e \u0928\u0939\u0940\u0902 \u0938\u0915\u0924\u093e \u0925\u093e\u0964"
+        },
+        {
+          "id": "s5_b10",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "gunja"
+          ],
+          "visual": "Imagined/remembered: Gunja alone, crying quietly where no one sees, dignified even in grief.",
+          "vo_hi": "\u092e\u0941\u091d\u0947 \u0928\u0939\u0940\u0902 \u092a\u0924\u093e \u0935\u094b \u0905\u0915\u0947\u0932\u0947 \u092e\u0947\u0902 \u092e\u0947\u0930\u0940 \u0935\u091c\u0939 \u0938\u0947 \u0915\u093f\u0924\u0928\u0940 \u092c\u093e\u0930 \u0930\u094b\u0908 \u0939\u094b\u0917\u0940\u0964"
+        },
+        {
+          "id": "s5_b11",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "The protagonist sitting alone at the edge of his bed at dawn, head bowed, carrying the weight of what he could not say.",
+          "vo_hi": "\u092e\u0948\u0902\u0928\u0947 \u0909\u0938\u0947 \u092c\u0939\u0941\u0924 \u0926\u0930\u094d\u0926 \u0926\u093f\u092f\u093e\u0964"
+        },
+        {
+          "id": "s5_b12",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Close on his face, eyes closing slowly in self-reproach; SONG holds; slow fade.",
+          "vo_hi": "\u0905\u092a\u0928\u0947 \u0939\u0940 \u0921\u0930 \u0915\u0947 \u092a\u093f\u0902\u091c\u0930\u0947 \u092e\u0947\u0902 \u0915\u0948\u0926 \u0939\u094b\u0915\u0930, \u092e\u0948\u0902 \u0909\u0938\u0938\u0947 \u090f\u0915 \u092c\u093e\u0930 \u092e\u093e\u092b\u0940 \u0924\u0915 \u0928\u0939\u0940\u0902 \u092e\u093e\u0902\u0917 \u0938\u0915\u093e\u0964"
+        }
+      ]
+    },
+    {
+      "id": "S6_resignation_exit",
+      "song": "chal_chale_apne_ghar",
+      "era": "young",
+      "beats": [
+        {
+          "id": "s6_b01",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Sterile Bangalore hospital corridor with flickering cold blue fluorescent lights; the protagonist walks slowly, hollow.",
+          "vo_hi": "\u0907\u0938 \u092e\u093e\u0928\u0938\u093f\u0915 \u092c\u094b\u091d \u0938\u0947 \u0918\u092c\u0930\u093e\u0939\u091f \u0914\u0930 \u092a\u0948\u0928\u093f\u0915 \u0905\u091f\u0948\u0915\u094d\u0938 \u0915\u093e \u0905\u0902\u0924\u0939\u0940\u0928 \u091a\u0915\u094d\u0930 \u0936\u0941\u0930\u0942 \u0939\u0941\u0906\u0964"
+        },
+        {
+          "id": "s6_b02",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "Macro slow-motion: white prescription pill strips scattered on a dark wooden bedside table, cold light.",
+          "vo_hi": null
+        },
+        {
+          "id": "s6_b03",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "The protagonist sitting on the edge of a bed, breathing hard through a panic attack, hand at his chest.",
+          "vo_hi": "\u0915\u093f \u0906\u0916\u093f\u0930\u0915\u093e\u0930 \u092e\u0947\u0930\u093e \u0935\u091c\u0942\u0926 \u0922\u0939 \u0917\u092f\u093e\u0964"
+        },
+        {
+          "id": "s6_b04",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "He signs a resignation letter on a desk, hand steady with grim finality, face blank.",
+          "vo_hi": "\u0939\u093e\u0930 \u092e\u093e\u0928 \u0932\u0940 \u092e\u0948\u0902\u0928\u0947\u0964"
+        },
+        {
+          "id": "s6_b05",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "He packs a heavy suitcase in a bare room, taking one last look at the empty space.",
+          "vo_hi": "\u0907\u0938\u094d\u0924\u0940\u092b\u093e \u0926\u0947\u0915\u0930, \u0905\u092a\u0928\u093e \u0938\u092c \u0915\u0941\u091b \u0938\u092e\u0947\u091f\u0915\u0930..."
+        },
+        {
+          "id": "s6_b06",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "Wide cinematic shot of a rainy, neon-lit Bangalore railway station at dusk; a lone silhouette carrying a heavy suitcase walks toward a waiting train.",
+          "vo_hi": "\u092e\u0948\u0902 \u092c\u0947\u0902\u0917\u043b\u0941\u0930\u0941 \u0915\u094b \u0939\u092e\u0947\u0936\u093e \u0915\u0947 \u0932\u093f\u090f \u092a\u0940\u091b\u0947 \u091b\u094b\u0921\u093c \u0906\u092f\u093e\u0964"
+        },
+        {
+          "id": "s6_b07",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_young"
+          ],
+          "visual": "He boards the train; through the window his still face slides past the platform lights; SONG Chal Chale swells.",
+          "vo_hi": null
+        },
+        {
+          "id": "s6_b08",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "The train pulls away into the rainy dark, tail lights receding; the city left behind; slow fade.",
+          "vo_hi": null
+        }
+      ]
+    },
+    {
+      "id": "S7_sanctuary_of_silchar",
+      "song": "boba_tunnel",
+      "era": "mature_47",
+      "beats": [
+        {
+          "id": "s7_b01",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "Palette shifts to brilliant warm golden-hour sunlight breaking over a quiet, serene, wide-open riverbank in Silchar, Assam; still water.",
+          "vo_hi": "\u0935\u0915\u094d\u0924 \u0915\u093e \u0926\u0930\u093f\u092f\u093e \u092c\u0939\u0924\u093e \u0930\u0939\u093e\u0964"
+        },
+        {
+          "id": "s7_b02",
+          "seconds": 5,
+          "engine": "s2v",
+          "characters": [
+            "kunal_40s"
+          ],
+          "visual": "The mature 47-year-old protagonist (Actor 2) with white hair and soft white beard stands calmly by the shifting water, gentle and kind, at rest.",
+          "vo_hi": "\u0906\u091c \u0938\u0948\u0902\u0924\u093e\u0932\u0940\u0938 (47) \u0915\u0940 \u0926\u0939\u0932\u0940\u091c \u092a\u0930, \u0938\u093f\u0932\u091a\u0930 \u0915\u0940 \u0907\u0938 \u0936\u093e\u0902\u0924 \u0939\u0935\u093e \u092e\u0947\u0902..."
+        },
+        {
+          "id": "s7_b03",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_40s"
+          ],
+          "visual": "He gently closes his eyes and takes a slow, unrestricted, deep breath; his face relaxes into quiet acceptance \u2014 peace, not a broad smile.",
+          "vo_hi": "\u092e\u0948\u0902\u0928\u0947 \u0905\u092a\u0928\u0940 \u092a\u0930\u091b\u093e\u0907\u092f\u094b\u0902 \u0938\u0947 \u0926\u094b\u0938\u094d\u0924\u0940 \u0915\u0930 \u0932\u0940 \u0939\u0948\u0964"
+        },
+        {
+          "id": "s7_b04",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_40s"
+          ],
+          "visual": "Close on his calm peaceful eyes opening slowly to the golden river, soft lines of wisdom, deep internal quiet.",
+          "vo_hi": "\u0905\u092c \u0915\u094b\u0908 \u092e\u0932\u093e\u0932 \u0928\u0939\u0940\u0902..."
+        },
+        {
+          "id": "s7_b05",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [
+            "kunal_40s"
+          ],
+          "visual": "Long steady tracking shot of him by the wide golden river, small and at peace in the vast calm landscape.",
+          "vo_hi": "\u0905\u092c \u0938\u093f\u0930\u094d\u092b \u0938\u0941\u0915\u0942\u0928 \u0939\u0948\u0964"
+        },
+        {
+          "id": "s7_b06",
+          "seconds": 5,
+          "engine": "flf2v",
+          "characters": [],
+          "visual": "The river and golden light hold, then fade slowly to black; SONG Boba Tunnel acoustic guitar swells to full for black-screen credits. Closing card: \u0905\u092c \u0938\u093f\u0930\u094d\u092b \u0938\u0941\u0915\u0942\u0928 \u0939\u0948\u0964",
+          "vo_hi": null
+        }
+      ]
+    }
+  ]
+}

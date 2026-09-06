@@ -1,0 +1,770 @@
+6.6s	0	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.6s	1	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.6s	2	0.00s - to python to disable frozen modules.
+6.6s	3	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.2s	4	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.2s	5	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.2s	6	0.00s - to python to disable frozen modules.
+7.2s	7	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.2s	8	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+14.2s	9	
+14.2s	10	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+13.0s	11	[auto] HANDS-OFF render: full range, resume-on-rerun, budget=11h (no chunk knob).
+13.0s	12	[hf] loaded token from Kaggle secret 'HF_TOKEN'
+14.4s	13	[hf] login() ok; get_token sees token: True
+14.4s	14	[hf] Hugging Face authenticated for this session.
+14.4s	15	--- 1. INITIALIZING ENGINE: REAL RENDERING SHOTS 1 TO 435 ---
+14.7s	16	[setup] GODSHAND kit mounted from: /kaggle/input/datasets/kkk3213/godshand/GODSHAND_FINAL/kit
+15.8s	17	[setup] kit file structure verified OK.
+16.2s	18	[OK] STORY built from notebook block: 435 shots, 2 characters -> shots_confrontation.json
+16.2s	19	     characters: jack<-man_anchor.png, julie<-woman_anchor.png
+16.2s	20	[2min] Opening-act cut: 28 shots, ~117s (1:57).
+16.2s	21	[auto] AUTO-DERIVED from story: total=28 shots -> HANDS-OFF full-range render (resume-on-rerun, budget=11h).
+16.2s	22	[speed] rejection_samples=1 (single take/shot); active_profile=lightning_l4
+16.2s	23	[merge] PROOF MODE -> first 4 shot(s) only (the 'prelude'). Set GODSHAND_MODE=full for all 28.
+16.2s	24	$ git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git
+18.0s	25	$ pip install -q -r requirements.txt
+38.2s	26	$ git clone --depth 1 https://github.com/city96/ComfyUI-GGUF.git
+38.6s	27	$ git clone --depth 1 https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+39.0s	28	$ pip install -q gguf sentencepiece protobuf einops
+45.1s	29	[install] ComfyUI and custom nodes ready.
+111.0s	30	[model] loaded ltxv-13b-0.9.7-distilled-fp8.safetensors | 13B=True distilled=True steps=8 cfg=1.0
+136.2s	31	[download] spatial upscaler ready: RealESRGAN_x2.pth (from ai-forever/Real-ESRGAN)
+136.2s	32	[download] Assets ready. LTX-Video ckpt: ltxv-13b-0.9.7-distilled-fp8.safetensors | T5: t5xxl_fp8_e4m3fn.safetensors
+136.2s	33	
+136.2s	34	--- 4w. FETCHING WAN2.2 14B I2V (GGUF, MoE) ASSETS ---
+290.7s	35	[wan] engine READY | high=Wan2.2-I2V-A14B-HighNoise-Q4_K_M.gguf low=Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf umt5=umt5_xxl_fp8_e4m3fn_scaled.safetensors vae=wan_2.1_vae.safetensors loraH=wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors loraL=wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors steps=4 cfg=1.0
+290.7s	36	[config] takes patched: rejection_samples=2, identity_retry=0 (2 takes/shot, pick best).
+290.7s	37	[config] profile patched for VRAM safety.
+290.7s	38	
+290.7s	39	--- 5b. INGESTING CHARACTER ANCHORS FROM ATTACHED DATASET ---
+290.7s	40	[merge] AUTO-FORGE mode: skipping dataset-anchor ingest; jack/julie will be INVENTED via SDXL text-forge (set GODSHAND_FORGE=anchors to use real photos).
+291.2s	41	[OK] N-character pass: 0 extra anchored, 0 text-forged.
+291.2s	42	[client] upgraded comfy_client.py deployed.
+291.2s	43	[stitch] FFmpeg channel-layout fix applied.
+291.2s	44	[patch] wrote corrected grade_match.py (14317 bytes)
+291.2s	45	[patch] wrote corrected face_enhance.py (8562 bytes)
+291.2s	46	[patch] render_motion.py: progressive scene chunking & sharding enabled
+291.2s	47	
+291.2s	48	--- 3.5 AUDIO SETUP ---
+315.7s	49	
+315.7s	50	--- 8. STARTING TWO COMFYUI SERVERS ---
+318.7s	51	[gpu-guard] Launching 1 ComfyUI server(s): [(0, 8188)]
+318.7s	52	Waiting for ComfyUI on GPU0 / port 8188...
+348.7s	53	✓ GPU0 online (:8188)
+348.7s	54	
+348.7s	55	--- 8.5 RESOLVING LTX-VIDEO SCHEMA ---
+348.7s	56	
+348.7s	57	--- 8.5w RESOLVING WAN2.2 14B I2V SCHEMA ---
+348.7s	58	[graph] WAN2.2 14B I2V MoE wired: GGUF high(1)+low(21) | lora H=True L=True | 4 steps split@2 | cfg 1.0 | 768x512 len 41
+348.7s	59	[graph] spatial upscaler NOT wired (model/nodes missing); VideoCombine uses native VAEDecode output.
+348.7s	60	[resume] restored 0 finished clip(s) from previous sessions.
+348.7s	61	
+348.7s	62	--- 9. EXECUTING REAL GPU CHUNK: SHOTS 1 TO 4 ---
+348.7s	63	[merge] VERIFY GATE PASSED: inline WAN graph + range patch + story assets present; shots 1-4.
+348.7s	64	[merge] auto-forge: downloading SDXL base (~6.9GB, first run only)...
+372.7s	65	[merge] auto-forge: SDXL checkpoint ready -> /kaggle/working/ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors
+372.7s	66	[merge] auto-forge: charforge.json already targets sd_xl_base_1.0.safetensors
+372.7s	67	
+372.7s	68	===== preflight (free) =====
+373.2s	69	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+373.2s	70	[preflight] OK -- 28 shots, profile=kaggle_2xt4, gpu=yes, 21GB free. Safe to render.
+373.2s	71	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+373.2s	72	[preflight] OK -- 28 shots, profile=kaggle_2xt4, gpu=yes, 21GB free. Safe to render.
+373.2s	73	
+373.2s	74	===== forge character identities =====
+373.3s	75	[forge] character forge complete. Reference stills written under refs/<target>/.
+373.4s	76	[forge] character forge complete. Reference stills written under refs/<target>/.
+373.4s	77	
+373.4s	78	--- 9b. PARALLEL RENDERING ACROSS BOTH T4 GPUs ---
+388.6s	79	  [shard 0 / GPU0] running  
+403.6s	80	  [shard 0 / GPU0] running  
+418.6s	81	  [shard 0 / GPU0] running  
+433.6s	82	  [shard 0 / GPU0] running  
+448.6s	83	  [shard 0 / GPU0] running  
+463.6s	84	  [shard 0 / GPU0] running  
+478.6s	85	  [shard 0 / GPU0] running  
+493.6s	86	  [shard 0 / GPU0] running  
+508.6s	87	  [shard 0 / GPU0] running  
+523.6s	88	  [shard 0 / GPU0] running  
+538.6s	89	  [shard 0 / GPU0] running  
+553.6s	90	  [shard 0 / GPU0] running  
+568.6s	91	  [shard 0 / GPU0] running  
+583.6s	92	  [shard 0 / GPU0] running  
+598.6s	93	  [shard 0 / GPU0] running  
+613.6s	94	  [shard 0 / GPU0] running  
+628.6s	95	  [shard 0 / GPU0] running  
+643.6s	96	  [shard 0 / GPU0] running  
+658.6s	97	  [shard 0 / GPU0] running  
+673.6s	98	  [shard 0 / GPU0] running  
+688.6s	99	  [shard 0 / GPU0] running  
+703.6s	100	  [shard 0 / GPU0] running  
+718.6s	101	  [shard 0 / GPU0] running  
+733.6s	102	  [shard 0 / GPU0] running  
+748.6s	103	  [shard 0 / GPU0] running  
+763.6s	104	  [shard 0 / GPU0] running  
+778.6s	105	  [shard 0 / GPU0] running  
+793.6s	106	  [shard 0 / GPU0] running  
+808.6s	107	  [shard 0 / GPU0] running  
+823.6s	108	  [shard 0 / GPU0] running  
+838.6s	109	  [shard 0 / GPU0] running  
+853.6s	110	  [shard 0 / GPU0] running  
+868.6s	111	  [shard 0 / GPU0] running  
+883.6s	112	  [shard 0 / GPU0] running  
+898.6s	113	  [shard 0 / GPU0] running  
+913.6s	114	  [shard 0 / GPU0] running  
+928.6s	115	  [shard 0 / GPU0] running  
+943.6s	116	  [shard 0 / GPU0] running  
+958.6s	117	  [shard 0 / GPU0] running  
+973.6s	118	  [shard 0 / GPU0] running  
+988.6s	119	  [shard 0 / GPU0] running  
+1003.6s	120	  [shard 0 / GPU0] running  
+1018.6s	121	  [shard 0 / GPU0] running  
+1033.6s	122	  [shard 0 / GPU0] running  
+1048.6s	123	  [shard 0 / GPU0] running  
+1063.6s	124	  [shard 0 / GPU0] running  
+1078.6s	125	  [shard 0 / GPU0] running  
+1093.6s	126	  [shard 0 / GPU0] running  
+1108.6s	127	  [shard 0 / GPU0] running  
+1123.6s	128	  [shard 0 / GPU0] running  
+1138.6s	129	  [shard 0 / GPU0] running  
+1153.6s	130	  [shard 0 / GPU0] running  
+1168.6s	131	  [shard 0 / GPU0] running  
+1183.6s	132	  [shard 0 / GPU0] running  
+1198.6s	133	  [shard 0 / GPU0] running  
+1213.6s	134	  [shard 0 / GPU0] running  
+1228.6s	135	  [shard 0 / GPU0] running  
+1243.6s	136	  [shard 0 / GPU0] running  
+1258.6s	137	  [shard 0 / GPU0] running  
+1273.6s	138	  [shard 0 / GPU0] running  
+1288.6s	139	  [shard 0 / GPU0] running  
+1303.6s	140	  [shard 0 / GPU0] running  
+1318.6s	141	  [shard 0 / GPU0] running  
+1333.6s	142	  [shard 0 / GPU0] running  
+1348.6s	143	  [shard 0 / GPU0] running  
+1363.6s	144	  [shard 0 / GPU0] running  
+1378.6s	145	  [shard 0 / GPU0] running  
+1393.6s	146	  [shard 0 / GPU0] running  
+1408.6s	147	  [shard 0 / GPU0] running  
+1423.6s	148	  [shard 0 / GPU0] running  
+1438.6s	149	  [shard 0 / GPU0] running  
+1453.6s	150	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1468.6s	151	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1483.6s	152	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1498.6s	153	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_01/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+1513.6s	154	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_01/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+1528.6s	155	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1543.6s	156	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1558.6s	157	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1573.6s	158	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1588.6s	159	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1603.6s	160	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1618.6s	161	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1633.6s	162	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1648.6s	163	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1663.6s	164	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1678.6s	165	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1693.6s	166	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1708.6s	167	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1723.6s	168	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1738.6s	169	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1753.6s	170	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1768.6s	171	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1783.6s	172	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1798.6s	173	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1813.6s	174	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1828.6s	175	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1843.6s	176	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1858.6s	177	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1873.6s	178	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1888.6s	179	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1903.6s	180	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1918.6s	181	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1933.6s	182	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1948.6s	183	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1963.6s	184	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1978.6s	185	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+6.6s	186	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.6s	187	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.6s	188	0.00s - to python to disable frozen modules.
+6.6s	189	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.2s	190	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.2s	191	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.2s	192	0.00s - to python to disable frozen modules.
+7.2s	193	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.2s	194	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+14.2s	195	
+14.2s	196	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+13.0s	197	[auto] HANDS-OFF render: full range, resume-on-rerun, budget=11h (no chunk knob).
+13.0s	198	[hf] loaded token from Kaggle secret 'HF_TOKEN'
+14.4s	199	[hf] login() ok; get_token sees token: True
+14.4s	200	[hf] Hugging Face authenticated for this session.
+14.4s	201	--- 1. INITIALIZING ENGINE: REAL RENDERING SHOTS 1 TO 435 ---
+14.7s	202	[setup] GODSHAND kit mounted from: /kaggle/input/datasets/kkk3213/godshand/GODSHAND_FINAL/kit
+15.8s	203	[setup] kit file structure verified OK.
+16.2s	204	[OK] STORY built from notebook block: 435 shots, 2 characters -> shots_confrontation.json
+16.2s	205	     characters: jack<-man_anchor.png, julie<-woman_anchor.png
+16.2s	206	[2min] Opening-act cut: 28 shots, ~117s (1:57).
+16.2s	207	[auto] AUTO-DERIVED from story: total=28 shots -> HANDS-OFF full-range render (resume-on-rerun, budget=11h).
+16.2s	208	[speed] rejection_samples=1 (single take/shot); active_profile=lightning_l4
+16.2s	209	[merge] PROOF MODE -> first 4 shot(s) only (the 'prelude'). Set GODSHAND_MODE=full for all 28.
+16.2s	210	$ git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git
+18.0s	211	$ pip install -q -r requirements.txt
+38.2s	212	$ git clone --depth 1 https://github.com/city96/ComfyUI-GGUF.git
+38.6s	213	$ git clone --depth 1 https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+39.0s	214	$ pip install -q gguf sentencepiece protobuf einops
+45.1s	215	[install] ComfyUI and custom nodes ready.
+111.0s	216	[model] loaded ltxv-13b-0.9.7-distilled-fp8.safetensors | 13B=True distilled=True steps=8 cfg=1.0
+136.2s	217	[download] spatial upscaler ready: RealESRGAN_x2.pth (from ai-forever/Real-ESRGAN)
+136.2s	218	[download] Assets ready. LTX-Video ckpt: ltxv-13b-0.9.7-distilled-fp8.safetensors | T5: t5xxl_fp8_e4m3fn.safetensors
+136.2s	219	
+136.2s	220	--- 4w. FETCHING WAN2.2 14B I2V (GGUF, MoE) ASSETS ---
+290.7s	221	[wan] engine READY | high=Wan2.2-I2V-A14B-HighNoise-Q4_K_M.gguf low=Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf umt5=umt5_xxl_fp8_e4m3fn_scaled.safetensors vae=wan_2.1_vae.safetensors loraH=wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors loraL=wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors steps=4 cfg=1.0
+290.7s	222	[config] takes patched: rejection_samples=2, identity_retry=0 (2 takes/shot, pick best).
+290.7s	223	[config] profile patched for VRAM safety.
+290.7s	224	
+290.7s	225	--- 5b. INGESTING CHARACTER ANCHORS FROM ATTACHED DATASET ---
+290.7s	226	[merge] AUTO-FORGE mode: skipping dataset-anchor ingest; jack/julie will be INVENTED via SDXL text-forge (set GODSHAND_FORGE=anchors to use real photos).
+291.2s	227	[OK] N-character pass: 0 extra anchored, 0 text-forged.
+291.2s	228	[client] upgraded comfy_client.py deployed.
+291.2s	229	[stitch] FFmpeg channel-layout fix applied.
+291.2s	230	[patch] wrote corrected grade_match.py (14317 bytes)
+291.2s	231	[patch] wrote corrected face_enhance.py (8562 bytes)
+291.2s	232	[patch] render_motion.py: progressive scene chunking & sharding enabled
+291.2s	233	
+291.2s	234	--- 3.5 AUDIO SETUP ---
+315.7s	235	
+315.7s	236	--- 8. STARTING TWO COMFYUI SERVERS ---
+318.7s	237	[gpu-guard] Launching 1 ComfyUI server(s): [(0, 8188)]
+318.7s	238	Waiting for ComfyUI on GPU0 / port 8188...
+348.7s	239	✓ GPU0 online (:8188)
+348.7s	240	
+348.7s	241	--- 8.5 RESOLVING LTX-VIDEO SCHEMA ---
+348.7s	242	
+348.7s	243	--- 8.5w RESOLVING WAN2.2 14B I2V SCHEMA ---
+348.7s	244	[graph] WAN2.2 14B I2V MoE wired: GGUF high(1)+low(21) | lora H=True L=True | 4 steps split@2 | cfg 1.0 | 768x512 len 41
+348.7s	245	[graph] spatial upscaler NOT wired (model/nodes missing); VideoCombine uses native VAEDecode output.
+348.7s	246	[resume] restored 0 finished clip(s) from previous sessions.
+348.7s	247	
+348.7s	248	--- 9. EXECUTING REAL GPU CHUNK: SHOTS 1 TO 4 ---
+348.7s	249	[merge] VERIFY GATE PASSED: inline WAN graph + range patch + story assets present; shots 1-4.
+348.7s	250	[merge] auto-forge: downloading SDXL base (~6.9GB, first run only)...
+372.7s	251	[merge] auto-forge: SDXL checkpoint ready -> /kaggle/working/ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors
+372.7s	252	[merge] auto-forge: charforge.json already targets sd_xl_base_1.0.safetensors
+372.7s	253	
+372.7s	254	===== preflight (free) =====
+373.2s	255	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+373.2s	256	[preflight] OK -- 28 shots, profile=kaggle_2xt4, gpu=yes, 21GB free. Safe to render.
+373.2s	257	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+373.2s	258	[preflight] OK -- 28 shots, profile=kaggle_2xt4, gpu=yes, 21GB free. Safe to render.
+373.2s	259	
+373.2s	260	===== forge character identities =====
+373.3s	261	[forge] character forge complete. Reference stills written under refs/<target>/.
+373.4s	262	[forge] character forge complete. Reference stills written under refs/<target>/.
+373.4s	263	
+373.4s	264	--- 9b. PARALLEL RENDERING ACROSS BOTH T4 GPUs ---
+388.6s	265	  [shard 0 / GPU0] running  
+403.6s	266	  [shard 0 / GPU0] running  
+418.6s	267	  [shard 0 / GPU0] running  
+433.6s	268	  [shard 0 / GPU0] running  
+448.6s	269	  [shard 0 / GPU0] running  
+463.6s	270	  [shard 0 / GPU0] running  
+478.6s	271	  [shard 0 / GPU0] running  
+493.6s	272	  [shard 0 / GPU0] running  
+508.6s	273	  [shard 0 / GPU0] running  
+523.6s	274	  [shard 0 / GPU0] running  
+538.6s	275	  [shard 0 / GPU0] running  
+553.6s	276	  [shard 0 / GPU0] running  
+568.6s	277	  [shard 0 / GPU0] running  
+583.6s	278	  [shard 0 / GPU0] running  
+598.6s	279	  [shard 0 / GPU0] running  
+613.6s	280	  [shard 0 / GPU0] running  
+628.6s	281	  [shard 0 / GPU0] running  
+643.6s	282	  [shard 0 / GPU0] running  
+658.6s	283	  [shard 0 / GPU0] running  
+673.6s	284	  [shard 0 / GPU0] running  
+688.6s	285	  [shard 0 / GPU0] running  
+703.6s	286	  [shard 0 / GPU0] running  
+718.6s	287	  [shard 0 / GPU0] running  
+733.6s	288	  [shard 0 / GPU0] running  
+748.6s	289	  [shard 0 / GPU0] running  
+763.6s	290	  [shard 0 / GPU0] running  
+778.6s	291	  [shard 0 / GPU0] running  
+793.6s	292	  [shard 0 / GPU0] running  
+808.6s	293	  [shard 0 / GPU0] running  
+823.6s	294	  [shard 0 / GPU0] running  
+838.6s	295	  [shard 0 / GPU0] running  
+853.6s	296	  [shard 0 / GPU0] running  
+868.6s	297	  [shard 0 / GPU0] running  
+883.6s	298	  [shard 0 / GPU0] running  
+898.6s	299	  [shard 0 / GPU0] running  
+913.6s	300	  [shard 0 / GPU0] running  
+928.6s	301	  [shard 0 / GPU0] running  
+943.6s	302	  [shard 0 / GPU0] running  
+958.6s	303	  [shard 0 / GPU0] running  
+973.6s	304	  [shard 0 / GPU0] running  
+988.6s	305	  [shard 0 / GPU0] running  
+1003.6s	306	  [shard 0 / GPU0] running  
+1018.6s	307	  [shard 0 / GPU0] running  
+1033.6s	308	  [shard 0 / GPU0] running  
+1048.6s	309	  [shard 0 / GPU0] running  
+1063.6s	310	  [shard 0 / GPU0] running  
+1078.6s	311	  [shard 0 / GPU0] running  
+1093.6s	312	  [shard 0 / GPU0] running  
+1108.6s	313	  [shard 0 / GPU0] running  
+1123.6s	314	  [shard 0 / GPU0] running  
+1138.6s	315	  [shard 0 / GPU0] running  
+1153.6s	316	  [shard 0 / GPU0] running  
+1168.6s	317	  [shard 0 / GPU0] running  
+1183.6s	318	  [shard 0 / GPU0] running  
+1198.6s	319	  [shard 0 / GPU0] running  
+1213.6s	320	  [shard 0 / GPU0] running  
+1228.6s	321	  [shard 0 / GPU0] running  
+1243.6s	322	  [shard 0 / GPU0] running  
+1258.6s	323	  [shard 0 / GPU0] running  
+1273.6s	324	  [shard 0 / GPU0] running  
+1288.6s	325	  [shard 0 / GPU0] running  
+1303.6s	326	  [shard 0 / GPU0] running  
+1318.6s	327	  [shard 0 / GPU0] running  
+1333.6s	328	  [shard 0 / GPU0] running  
+1348.6s	329	  [shard 0 / GPU0] running  
+1363.6s	330	  [shard 0 / GPU0] running  
+1378.6s	331	  [shard 0 / GPU0] running  
+1393.6s	332	  [shard 0 / GPU0] running  
+1408.6s	333	  [shard 0 / GPU0] running  
+1423.6s	334	  [shard 0 / GPU0] running  
+1438.6s	335	  [shard 0 / GPU0] running  
+1453.6s	336	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1468.6s	337	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1483.6s	338	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1498.6s	339	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_01/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+1513.6s	340	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_01/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+1528.6s	341	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1543.6s	342	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1558.6s	343	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1573.6s	344	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1588.6s	345	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1603.6s	346	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1618.6s	347	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1633.6s	348	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1648.6s	349	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1663.6s	350	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1678.6s	351	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1693.6s	352	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1708.6s	353	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1723.6s	354	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1738.6s	355	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1753.6s	356	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1768.6s	357	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1783.6s	358	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1798.6s	359	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1813.6s	360	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1828.6s	361	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1843.6s	362	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1858.6s	363	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1873.6s	364	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1888.6s	365	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1903.6s	366	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1918.6s	367	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1933.6s	368	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1948.6s	369	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1963.6s	370	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1978.6s	371	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1993.6s	372	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2008.6s	373	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2023.6s	374	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2038.6s	375	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2053.6s	376	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2068.6s	377	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2083.6s	378	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2098.6s	379	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2113.6s	380	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2128.6s	381	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2143.6s	382	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2158.6s	383	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2173.6s	384	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2188.6s	385	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2203.6s	386	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2218.6s	387	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2233.6s	388	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2248.6s	389	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2263.6s	390	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2278.6s	391	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2293.6s	392	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2308.6s	393	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+2323.7s	394	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+2338.6s	395	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_02/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+2353.6s	396	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_02/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+2368.6s	397	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2383.6s	398	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2398.6s	399	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2413.6s	400	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2428.6s	401	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2443.6s	402	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2458.6s	403	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2473.6s	404	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2488.6s	405	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2503.6s	406	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2518.6s	407	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2533.6s	408	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2548.6s	409	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2563.6s	410	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2578.6s	411	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2593.6s	412	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2608.6s	413	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2623.6s	414	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2638.6s	415	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2653.6s	416	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2668.6s	417	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2683.6s	418	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2698.6s	419	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2713.6s	420	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2728.6s	421	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2743.6s	422	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2758.6s	423	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2773.6s	424	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2788.6s	425	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2803.6s	426	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2818.6s	427	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2833.6s	428	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2848.6s	429	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2863.6s	430	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2878.6s	431	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2893.6s	432	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2908.6s	433	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2923.6s	434	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2938.6s	435	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2953.6s	436	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2968.6s	437	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2983.6s	438	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2998.7s	439	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3013.6s	440	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3028.6s	441	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3043.7s	442	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3058.6s	443	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3073.6s	444	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3088.6s	445	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3103.6s	446	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3118.6s	447	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3133.7s	448	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+3148.6s	449	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+3163.6s	450	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+3178.7s	451	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_03/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+3193.6s	452	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3208.6s	453	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3223.7s	454	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3238.6s	455	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3253.6s	456	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3268.7s	457	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3283.6s	458	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3298.6s	459	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+6.6s	460	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.6s	461	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.6s	462	0.00s - to python to disable frozen modules.
+6.6s	463	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.2s	464	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.2s	465	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.2s	466	0.00s - to python to disable frozen modules.
+7.2s	467	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.2s	468	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+14.2s	469	
+14.2s	470	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+13.0s	471	[auto] HANDS-OFF render: full range, resume-on-rerun, budget=11h (no chunk knob).
+13.0s	472	[hf] loaded token from Kaggle secret 'HF_TOKEN'
+14.4s	473	[hf] login() ok; get_token sees token: True
+14.4s	474	[hf] Hugging Face authenticated for this session.
+14.4s	475	--- 1. INITIALIZING ENGINE: REAL RENDERING SHOTS 1 TO 435 ---
+14.7s	476	[setup] GODSHAND kit mounted from: /kaggle/input/datasets/kkk3213/godshand/GODSHAND_FINAL/kit
+15.8s	477	[setup] kit file structure verified OK.
+16.2s	478	[OK] STORY built from notebook block: 435 shots, 2 characters -> shots_confrontation.json
+16.2s	479	     characters: jack<-man_anchor.png, julie<-woman_anchor.png
+16.2s	480	[2min] Opening-act cut: 28 shots, ~117s (1:57).
+16.2s	481	[auto] AUTO-DERIVED from story: total=28 shots -> HANDS-OFF full-range render (resume-on-rerun, budget=11h).
+16.2s	482	[speed] rejection_samples=1 (single take/shot); active_profile=lightning_l4
+16.2s	483	[merge] PROOF MODE -> first 4 shot(s) only (the 'prelude'). Set GODSHAND_MODE=full for all 28.
+16.2s	484	$ git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git
+18.0s	485	$ pip install -q -r requirements.txt
+38.2s	486	$ git clone --depth 1 https://github.com/city96/ComfyUI-GGUF.git
+38.6s	487	$ git clone --depth 1 https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+39.0s	488	$ pip install -q gguf sentencepiece protobuf einops
+45.1s	489	[install] ComfyUI and custom nodes ready.
+111.0s	490	[model] loaded ltxv-13b-0.9.7-distilled-fp8.safetensors | 13B=True distilled=True steps=8 cfg=1.0
+136.2s	491	[download] spatial upscaler ready: RealESRGAN_x2.pth (from ai-forever/Real-ESRGAN)
+136.2s	492	[download] Assets ready. LTX-Video ckpt: ltxv-13b-0.9.7-distilled-fp8.safetensors | T5: t5xxl_fp8_e4m3fn.safetensors
+136.2s	493	
+136.2s	494	--- 4w. FETCHING WAN2.2 14B I2V (GGUF, MoE) ASSETS ---
+290.7s	495	[wan] engine READY | high=Wan2.2-I2V-A14B-HighNoise-Q4_K_M.gguf low=Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf umt5=umt5_xxl_fp8_e4m3fn_scaled.safetensors vae=wan_2.1_vae.safetensors loraH=wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors loraL=wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors steps=4 cfg=1.0
+290.7s	496	[config] takes patched: rejection_samples=2, identity_retry=0 (2 takes/shot, pick best).
+290.7s	497	[config] profile patched for VRAM safety.
+290.7s	498	
+290.7s	499	--- 5b. INGESTING CHARACTER ANCHORS FROM ATTACHED DATASET ---
+290.7s	500	[merge] AUTO-FORGE mode: skipping dataset-anchor ingest; jack/julie will be INVENTED via SDXL text-forge (set GODSHAND_FORGE=anchors to use real photos).
+291.2s	501	[OK] N-character pass: 0 extra anchored, 0 text-forged.
+291.2s	502	[client] upgraded comfy_client.py deployed.
+291.2s	503	[stitch] FFmpeg channel-layout fix applied.
+291.2s	504	[patch] wrote corrected grade_match.py (14317 bytes)
+291.2s	505	[patch] wrote corrected face_enhance.py (8562 bytes)
+291.2s	506	[patch] render_motion.py: progressive scene chunking & sharding enabled
+291.2s	507	
+291.2s	508	--- 3.5 AUDIO SETUP ---
+315.7s	509	
+315.7s	510	--- 8. STARTING TWO COMFYUI SERVERS ---
+318.7s	511	[gpu-guard] Launching 1 ComfyUI server(s): [(0, 8188)]
+318.7s	512	Waiting for ComfyUI on GPU0 / port 8188...
+348.7s	513	✓ GPU0 online (:8188)
+348.7s	514	
+348.7s	515	--- 8.5 RESOLVING LTX-VIDEO SCHEMA ---
+348.7s	516	
+348.7s	517	--- 8.5w RESOLVING WAN2.2 14B I2V SCHEMA ---
+348.7s	518	[graph] WAN2.2 14B I2V MoE wired: GGUF high(1)+low(21) | lora H=True L=True | 4 steps split@2 | cfg 1.0 | 768x512 len 41
+348.7s	519	[graph] spatial upscaler NOT wired (model/nodes missing); VideoCombine uses native VAEDecode output.
+348.7s	520	[resume] restored 0 finished clip(s) from previous sessions.
+348.7s	521	
+348.7s	522	--- 9. EXECUTING REAL GPU CHUNK: SHOTS 1 TO 4 ---
+348.7s	523	[merge] VERIFY GATE PASSED: inline WAN graph + range patch + story assets present; shots 1-4.
+348.7s	524	[merge] auto-forge: downloading SDXL base (~6.9GB, first run only)...
+372.7s	525	[merge] auto-forge: SDXL checkpoint ready -> /kaggle/working/ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors
+372.7s	526	[merge] auto-forge: charforge.json already targets sd_xl_base_1.0.safetensors
+372.7s	527	
+372.7s	528	===== preflight (free) =====
+373.2s	529	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+373.2s	530	[preflight] OK -- 28 shots, profile=kaggle_2xt4, gpu=yes, 21GB free. Safe to render.
+373.2s	531	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+373.2s	532	[preflight] OK -- 28 shots, profile=kaggle_2xt4, gpu=yes, 21GB free. Safe to render.
+373.2s	533	
+373.2s	534	===== forge character identities =====
+373.3s	535	[forge] character forge complete. Reference stills written under refs/<target>/.
+373.4s	536	[forge] character forge complete. Reference stills written under refs/<target>/.
+373.4s	537	
+373.4s	538	--- 9b. PARALLEL RENDERING ACROSS BOTH T4 GPUs ---
+388.6s	539	  [shard 0 / GPU0] running  
+403.6s	540	  [shard 0 / GPU0] running  
+418.6s	541	  [shard 0 / GPU0] running  
+433.6s	542	  [shard 0 / GPU0] running  
+448.6s	543	  [shard 0 / GPU0] running  
+463.6s	544	  [shard 0 / GPU0] running  
+478.6s	545	  [shard 0 / GPU0] running  
+493.6s	546	  [shard 0 / GPU0] running  
+508.6s	547	  [shard 0 / GPU0] running  
+523.6s	548	  [shard 0 / GPU0] running  
+538.6s	549	  [shard 0 / GPU0] running  
+553.6s	550	  [shard 0 / GPU0] running  
+568.6s	551	  [shard 0 / GPU0] running  
+583.6s	552	  [shard 0 / GPU0] running  
+598.6s	553	  [shard 0 / GPU0] running  
+613.6s	554	  [shard 0 / GPU0] running  
+628.6s	555	  [shard 0 / GPU0] running  
+643.6s	556	  [shard 0 / GPU0] running  
+658.6s	557	  [shard 0 / GPU0] running  
+673.6s	558	  [shard 0 / GPU0] running  
+688.6s	559	  [shard 0 / GPU0] running  
+703.6s	560	  [shard 0 / GPU0] running  
+718.6s	561	  [shard 0 / GPU0] running  
+733.6s	562	  [shard 0 / GPU0] running  
+748.6s	563	  [shard 0 / GPU0] running  
+763.6s	564	  [shard 0 / GPU0] running  
+778.6s	565	  [shard 0 / GPU0] running  
+793.6s	566	  [shard 0 / GPU0] running  
+808.6s	567	  [shard 0 / GPU0] running  
+823.6s	568	  [shard 0 / GPU0] running  
+838.6s	569	  [shard 0 / GPU0] running  
+853.6s	570	  [shard 0 / GPU0] running  
+868.6s	571	  [shard 0 / GPU0] running  
+883.6s	572	  [shard 0 / GPU0] running  
+898.6s	573	  [shard 0 / GPU0] running  
+913.6s	574	  [shard 0 / GPU0] running  
+928.6s	575	  [shard 0 / GPU0] running  
+943.6s	576	  [shard 0 / GPU0] running  
+958.6s	577	  [shard 0 / GPU0] running  
+973.6s	578	  [shard 0 / GPU0] running  
+988.6s	579	  [shard 0 / GPU0] running  
+1003.6s	580	  [shard 0 / GPU0] running  
+1018.6s	581	  [shard 0 / GPU0] running  
+1033.6s	582	  [shard 0 / GPU0] running  
+1048.6s	583	  [shard 0 / GPU0] running  
+1063.6s	584	  [shard 0 / GPU0] running  
+1078.6s	585	  [shard 0 / GPU0] running  
+1093.6s	586	  [shard 0 / GPU0] running  
+1108.6s	587	  [shard 0 / GPU0] running  
+1123.6s	588	  [shard 0 / GPU0] running  
+1138.6s	589	  [shard 0 / GPU0] running  
+1153.6s	590	  [shard 0 / GPU0] running  
+1168.6s	591	  [shard 0 / GPU0] running  
+1183.6s	592	  [shard 0 / GPU0] running  
+1198.6s	593	  [shard 0 / GPU0] running  
+1213.6s	594	  [shard 0 / GPU0] running  
+1228.6s	595	  [shard 0 / GPU0] running  
+1243.6s	596	  [shard 0 / GPU0] running  
+1258.6s	597	  [shard 0 / GPU0] running  
+1273.6s	598	  [shard 0 / GPU0] running  
+1288.6s	599	  [shard 0 / GPU0] running  
+1303.6s	600	  [shard 0 / GPU0] running  
+1318.6s	601	  [shard 0 / GPU0] running  
+1333.6s	602	  [shard 0 / GPU0] running  
+1348.6s	603	  [shard 0 / GPU0] running  
+1363.6s	604	  [shard 0 / GPU0] running  
+1378.6s	605	  [shard 0 / GPU0] running  
+1393.6s	606	  [shard 0 / GPU0] running  
+1408.6s	607	  [shard 0 / GPU0] running  
+1423.6s	608	  [shard 0 / GPU0] running  
+1438.6s	609	  [shard 0 / GPU0] running  
+1453.6s	610	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1468.6s	611	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1483.6s	612	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+1498.6s	613	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_01/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+1513.6s	614	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_01/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+1528.6s	615	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1543.6s	616	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1558.6s	617	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1573.6s	618	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1588.6s	619	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1603.6s	620	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1618.6s	621	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1633.6s	622	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1648.6s	623	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1663.6s	624	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1678.6s	625	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1693.6s	626	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1708.6s	627	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1723.6s	628	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1738.6s	629	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1753.6s	630	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1768.6s	631	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1783.6s	632	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1798.6s	633	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1813.6s	634	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1828.6s	635	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1843.6s	636	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1858.6s	637	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1873.6s	638	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1888.6s	639	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1903.6s	640	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1918.6s	641	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1933.6s	642	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1948.6s	643	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1963.6s	644	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1978.6s	645	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+1993.6s	646	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2008.6s	647	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2023.6s	648	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2038.6s	649	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2053.6s	650	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2068.6s	651	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2083.6s	652	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2098.6s	653	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2113.6s	654	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2128.6s	655	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2143.6s	656	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2158.6s	657	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2173.6s	658	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2188.6s	659	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2203.6s	660	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2218.6s	661	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2233.6s	662	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2248.6s	663	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2263.6s	664	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2278.6s	665	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2293.6s	666	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_01/final.mp4
+2308.6s	667	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+2323.7s	668	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+2338.6s	669	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_02/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+2353.6s	670	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_02/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+2368.6s	671	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2383.6s	672	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2398.6s	673	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2413.6s	674	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2428.6s	675	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2443.6s	676	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2458.6s	677	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2473.6s	678	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2488.6s	679	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2503.6s	680	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2518.6s	681	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2533.6s	682	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2548.6s	683	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2563.6s	684	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2578.6s	685	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2593.6s	686	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2608.6s	687	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2623.6s	688	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2638.6s	689	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2653.6s	690	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2668.6s	691	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2683.6s	692	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2698.6s	693	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2713.6s	694	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2728.6s	695	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2743.6s	696	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2758.6s	697	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2773.6s	698	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2788.6s	699	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2803.6s	700	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2818.6s	701	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2833.6s	702	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2848.6s	703	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2863.6s	704	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2878.6s	705	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2893.6s	706	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2908.6s	707	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2923.6s	708	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2938.6s	709	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2953.6s	710	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2968.6s	711	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2983.6s	712	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+2998.7s	713	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3013.6s	714	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3028.6s	715	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3043.7s	716	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3058.6s	717	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3073.6s	718	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3088.6s	719	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3103.6s	720	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3118.6s	721	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_02/final.mp4
+3133.7s	722	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+3148.6s	723	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+3163.6s	724	  [shard 0 / GPU0] running  [postprocess] interpolation skipped (16fps <= 16.0000fps*1.2) — quality preserved, fast
+3178.7s	725	  [shard 0 / GPU0] running  [grade] -> /kaggle/working/confrontation_work/i01_jungle_03/_pp/graded.mp4 (/kaggle/working/refs/grade_target.json, 0.8)
+3193.6s	726	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3208.6s	727	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3223.7s	728	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3238.6s	729	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3253.6s	730	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3268.7s	731	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3283.6s	732	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3298.6s	733	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3313.7s	734	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3328.6s	735	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3343.6s	736	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3358.7s	737	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3373.6s	738	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3388.6s	739	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3403.7s	740	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3418.6s	741	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3433.6s	742	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3448.7s	743	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3463.6s	744	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3478.6s	745	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3493.7s	746	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3508.6s	747	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3523.6s	748	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3538.7s	749	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3553.6s	750	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3568.6s	751	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3583.7s	752	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3598.7s	753	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3613.7s	754	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3628.7s	755	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3643.7s	756	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3658.7s	757	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3673.7s	758	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3688.7s	759	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3703.7s	760	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3718.7s	761	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3733.7s	762	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3748.7s	763	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3763.7s	764	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3778.7s	765	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3793.7s	766	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3808.7s	767	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3823.7s	768	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4
+3838.7s	769	  [shard 0 / GPU0] running  postprocess -> /kaggle/working/confrontation_work/i01_jungle_03/final.mp4

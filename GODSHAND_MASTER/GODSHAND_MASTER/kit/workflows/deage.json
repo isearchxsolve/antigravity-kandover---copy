@@ -1,0 +1,196 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    },
+    "_meta": {
+      "title": "Load SDXL"
+    }
+  },
+  "2": {
+    "class_type": "InstantIDModelLoader",
+    "inputs": {
+      "instantid_file": "ip-adapter.bin"
+    },
+    "_meta": {
+      "title": "Load InstantID"
+    }
+  },
+  "3": {
+    "class_type": "InstantIDFaceAnalysis",
+    "inputs": {
+      "provider": "CPU"
+    },
+    "_meta": {
+      "title": "InsightFace"
+    }
+  },
+  "4": {
+    "class_type": "ControlNetLoader",
+    "inputs": {
+      "control_net_name": "instantid_control.safetensors"
+    },
+    "_meta": {
+      "title": "InstantID ControlNet"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "anchor.png"
+    },
+    "_meta": {
+      "title": "Identity anchor"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "early 20s, same identity",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Age prompt"
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "old, grey hair, wrinkles, low quality",
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Negative"
+    }
+  },
+  "8": {
+    "class_type": "ApplyInstantID",
+    "inputs": {
+      "instantid": [
+        "2",
+        0
+      ],
+      "insightface": [
+        "3",
+        0
+      ],
+      "control_net": [
+        "4",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ],
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "weight": 0.8,
+      "start_at": 0.0,
+      "end_at": 1.0
+    },
+    "_meta": {
+      "title": "Apply InstantID"
+    }
+  },
+  "9": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "_meta": {
+      "title": "Empty latent"
+    }
+  },
+  "10": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "8",
+        0
+      ],
+      "positive": [
+        "8",
+        1
+      ],
+      "negative": [
+        "8",
+        2
+      ],
+      "latent_image": [
+        "9",
+        0
+      ],
+      "steps": 30,
+      "cfg": 5.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "seed": 1000,
+      "denoise": 1.0
+    },
+    "_meta": {
+      "title": "Sample"
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "_meta": {
+      "title": "Decode"
+    }
+  },
+  "12": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "filename_prefix": "deage"
+    },
+    "_meta": {
+      "title": "Save young ref"
+    }
+  },
+  "_bind": {
+    "prompt": [
+      "6",
+      "text"
+    ],
+    "seed": [
+      "10",
+      "seed"
+    ],
+    "identity_images": [
+      "5",
+      "image"
+    ]
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "1": {
+    "class_type": "UnetLoaderGGUF",
+    "inputs": {
+      "unet_name": "PLACEHOLDER_WAN_HIGH_Q8_0.gguf"
+    }
+  },
+  "21": {
+    "class_type": "UnetLoaderGGUF",
+    "inputs": {
+      "unet_name": "PLACEHOLDER_WAN_LOW_Q8_0.gguf"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "PLACEHOLDER_umt5_xxl.gguf",
+      "type": "wan"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "PLACEHOLDER_wan_2.1_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "POSITIVE",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "NEGATIVE",
+      "clip": [
+        "2",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "man_anchor.png"
+    }
+  },
+  "7": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift": 8
+    }
+  },
+  "14": {
+    "class_type": "WanImageToVideo",
+    "inputs": {
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ],
+      "width": 768,
+      "height": 512,
+      "length": 41,
+      "batch_size": 1,
+      "strength": 1
+    }
+  },
+  "15": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "14",
+        0
+      ],
+      "add_noise": "enable",
+      "noise_seed": 42,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 0,
+      "end_at_step": 2,
+      "return_with_leftover_noise": "disable"
+    }
+  },
+  "16": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "24",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "16",
+        0
+      ],
+      "filename_prefix": "wan_i2v_take"
+    }
+  },
+  "23": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "21",
+        0
+      ],
+      "shift": 8
+    }
+  },
+  "24": {
+    "class_type": "KSamplerAdvanced",
+    "inputs": {
+      "model": [
+        "23",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "15",
+        0
+      ],
+      "add_noise": "disable",
+      "noise_seed": 42,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "start_at_step": 2,
+      "end_at_step": 4,
+      "return_with_leftover_noise": "enable"
+    }
+  },
+  "_bind": {
+    "positive": [
+      "4",
+      "text"
+    ],
+    "negative": [
+      "5",
+      "text"
+    ],
+    "width": [
+      "14",
+      "width"
+    ],
+    "height": [
+      "14",
+      "height"
+    ],
+    "seconds": [
+      "14",
+      "length"
+    ],
+    "seed": [
+      "15",
+      "noise_seed"
+    ],
+    "ref_dirs": [
+      "6",
+      "image"
+    ]
+  },
+  "_meta": {
+    "description": "WAN 2.2 I2V 14B MoE graph snapshot. REPO STUB ONLY -- the production notebook (rainman-wan-MERGED-TUNED-FIXED.ipynb) builds the inline equivalent in Python and serializes it to /kaggle/working/workflows/flf2v.json (and phantom.json, s2v.json) at runtime (notebook line 5723), clobbering this repo copy with concrete model names / lora names / resolution / length pulled from the active env. This file is kept here so static validators (runtime_integration_validator.py) and offline readers can match the real graph topology: WanImageToVideo + UnetLoaderGGUF + CLIPLoader + VAELoader + SaveImage (PNG sequence, NOT VHS_VideoCombine MP4).",
+    "engine": "wan",
+    "topology": {
+      "engine_loader_high": "UnetLoaderGGUF @ 1 (MoE high stream)",
+      "engine_loader_low": "UnetLoaderGGUF @ 21 (MoE low stream)",
+      "clip_loader": "CLIPLoader @ 2",
+      "vae_loader": "VAELoader @ 3",
+      "text_pos": "CLIPTextEncode @ 4",
+      "text_neg": "CLIPTextEncode @ 5",
+      "anchor_image": "LoadImage @ 6 (man_anchor.png)",
+      "shift_high": "ModelSamplingSD3 @ 7",
+      "shift_low": "ModelSamplingSD3 @ 23",
+      "i2v": "WanImageToVideo @ 14",
+      "sampler_high": "KSamplerAdvanced @ 15 (add_noise=enable,  steps 0..2)",
+      "sampler_low": "KSamplerAdvanced @ 24 (add_noise=disable, steps 2..4)",
+      "decode": "VAEDecode @ 16",
+      "save": "SaveImage @ 17 (filename_prefix=wan_i2v_take, PNG)"
+    },
+    "validation": {
+      "required_nodes": [
+        "WanImageToVideo",
+        "UnetLoaderGGUF",
+        "VAELoader",
+        "CLIPLoader",
+        "SaveImage"
+      ],
+      "forbidden_nodes": [
+        "VHS_VideoCombine",
+        "VideoCombine"
+      ],
+      "saveimage_format": "PNG",
+      "vaedecode_output": "IMAGE",
+      "chain_endframe": false
+    }
+  }
+}

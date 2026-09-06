@@ -1,0 +1,108 @@
+{
+  "_README": "NEW STORY SHOTS TEMPLATE. Copy to shots_mystory.json and reference it from config_mystory.yaml (shots_file:). Edit character_design, characters, and shots. Any field starting with _comment is IGNORED by the engine and is only guidance.",
+  "film": "MY NEW FILM",
+  "note": "<EDIT> one-line logline of your story.",
+  "globals": {
+    "_comment": "Global render defaults inherited by every shot. tone + negative_prompt set the overall look.",
+    "fps": 24,
+    "width": 1280,
+    "height": 720,
+    "base_model": "Wan2.2-S2V",
+    "quant": "Q8",
+    "steps": 30,
+    "cfg": 5.5,
+    "sampler": "uni_pc",
+    "scheduler": "beta",
+    "interpolate_to_fps": 48,
+    "upscale": 1.75,
+    "rejection_samples": 3,
+    "tone": "<EDIT> overall visual grammar, e.g. high-contrast expressionist cinema, IMAX-scale nocturnal atmosphere, 35mm grain",
+    "negative_prompt": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, mutated hands, warped face, watermark, text"
+  },
+  "character_design": {
+    "_comment": "One entry per character. forge_character.py turns forge_prompts into refs/<name>/face and refs/<name>/body. Keys here MUST match config character_forge.targets and the chars[] in shots. State that each character is an ORIGINAL fictional character, not a real person.",
+    "hero": {
+      "summary": "<EDIT> one paragraph: who they are, physical look, wardrobe, demeanor. Say 'original fictional character, not a real person'.",
+      "forge_prompts": {
+        "face_front": "cinematic portrait, <hero look>, front angle against dark background, single soft key light, photoreal, 35mm",
+        "face_threequarter": "cinematic portrait, same person, three-quarter angle, motivated light, photoreal",
+        "face_profile": "cinematic profile portrait, same person, profile against dark, rim light, photoreal",
+        "body_full": "full body cinematic shot, <hero> in <wardrobe>, natural posture, photoreal",
+        "body_coat": "full body, same person from behind and side, signature silhouette, photoreal"
+      },
+      "forge_count_per_prompt": 2,
+      "seed_base": 77
+    },
+    "rival": {
+      "summary": "<EDIT> identity description for the second character (original fictional character).",
+      "forge_prompts": {
+        "face_front": "cinematic portrait, <rival look>, front angle, photoreal, 35mm",
+        "face_threequarter": "cinematic portrait, same person, three-quarter angle, photoreal",
+        "face_profile": "cinematic profile portrait, same person, profile, photoreal",
+        "body_full": "full body cinematic shot, <rival> in <wardrobe>, photoreal",
+        "body_coat": "full body, same person, signature silhouette, photoreal"
+      },
+      "forge_count_per_prompt": 2,
+      "seed_base": 161
+    }
+  },
+  "characters": {
+    "_comment": "Lightweight per-character token bag used to reinforce identity inside shot prompts. refs points at the forged folder.",
+    "hero": {
+      "refs": "refs/hero",
+      "tokens": "<EDIT> comma-separated identity tokens repeated for consistency"
+    },
+    "rival": {
+      "refs": "refs/rival",
+      "tokens": "<EDIT> identity tokens"
+    }
+  },
+  "shots": [
+    {
+      "_comment": "One object per shot. id must be UNIQUE and is referenced by config score.movements.shots. chars[] must match character_design keys. movement must match a score movement name.",
+      "id": "scene1",
+      "dur": 4,
+      "chars": ["hero"],
+      "talking": false,
+      "vo": true,
+      "camera": "wide, static, subject small and distant",
+      "mode": "A",
+      "song": "prelude",
+      "prompt": "<EDIT> describe the shot action and composition",
+      "palette": "<EDIT> color/lighting palette for this shot",
+      "negative": "nudity, nude, cleavage, revealing clothing, sensual, suggestive, vulgar, deformed anatomy, extra fingers, watermark, text",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, disciplined composition",
+      "movement": "prelude"
+    },
+    {
+      "id": "scene2",
+      "dur": 4,
+      "chars": ["hero", "rival"],
+      "talking": true,
+      "vo": false,
+      "camera": "static two-shot across a table",
+      "mode": "A",
+      "song": "prelude",
+      "prompt": "<EDIT> the two characters meet; describe blocking and emotion",
+      "palette": "warm lamp light against deep shadow, film grain",
+      "negative": "nudity, nude, cleavage, revealing clothing, sensual, suggestive, vulgar, deformed anatomy, extra fingers, watermark, text",
+      "tone": "cinematic realism, shot on 35mm with fine film grain",
+      "movement": "prelude"
+    },
+    {
+      "id": "scene3",
+      "dur": 5,
+      "chars": ["hero", "rival"],
+      "talking": true,
+      "vo": false,
+      "camera": "tight alternating close-ups",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "<EDIT> the confrontation / climax beat",
+      "palette": "cold high-contrast, single hard source, deep shadow",
+      "negative": "nudity, nude, cleavage, revealing clothing, sensual, suggestive, vulgar, deformed anatomy, extra fingers, watermark, text",
+      "tone": "cinematic realism, 35mm grain, high contrast",
+      "movement": "confrontation"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+7.2s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.2s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.2s	3	0.00s - to python to disable frozen modules.
+7.2s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.8s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.8s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.8s	7	0.00s - to python to disable frozen modules.
+7.8s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+13.9s	9	[auto] HANDS-OFF render: full range, resume-on-rerun, budget=11h (no chunk knob).
+13.9s	10	[hf] loaded token from Kaggle secret 'HF_TOKEN'
+15.0s	11	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+15.0s	12	
+15.0s	13	Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+15.2s	14	[hf] login() ok; get_token sees token: True
+15.2s	15	[hf] Hugging Face authenticated for this session.
+15.2s	16	--- 1. INITIALIZING ENGINE: REAL RENDERING SHOTS 1 TO 435 ---
+15.2s	17	[setup] GODSHAND kit mounted from: /kaggle/input/datasets/kkk3213/godshand/GODSHAND_MASTER/kit
+16.4s	18	[setup] kit file structure verified OK.
+16.7s	19	[OK] STORY built from notebook block: 435 shots, 2 characters -> shots_confrontation.json
+16.7s	20	     characters: jack<-man_anchor.png, julie<-woman_anchor.png
+16.7s	21	[2min] Opening-act cut: 28 shots, ~117s (1:57).
+16.7s	22	[auto] AUTO-DERIVED from story: total=28 shots -> HANDS-OFF full-range render (resume-on-rerun, budget=11h).
+16.7s	23	[speed] rejection_samples=1 (single take/shot); active_profile=kaggle_2xt4
+16.7s	24	[merge] FULL MODE -> all 28 shots.
+16.7s	25	$ git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git
+18.6s	26	$ pip install -q -r requirements.txt
+38.4s	27	$ git clone --depth 1 https://github.com/city96/ComfyUI-GGUF.git
+38.7s	28	$ git clone --depth 1 https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+39.0s	29	$ pip install -q gguf sentencepiece protobuf einops
+45.6s	30	[install] ComfyUI and custom nodes ready.
+103.5s	31	[model] loaded ltxv-13b-0.9.7-distilled-fp8.safetensors | 13B=True distilled=True steps=8 cfg=1.0
+138.1s	32	[download] spatial upscaler ready: RealESRGAN_x2.pth (from ai-forever/Real-ESRGAN)
+138.1s	33	[download] Assets ready. LTX-Video ckpt: ltxv-13b-0.9.7-distilled-fp8.safetensors | T5: t5xxl_fp8_e4m3fn.safetensors
+138.1s	34	
+138.1s	35	--- 4w. FETCHING WAN2.2 14B I2V (GGUF, MoE) ASSETS ---
+285.5s	36	[wan] engine READY | high=Wan2.2-I2V-A14B-HighNoise-Q4_K_M.gguf low=Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf umt5=umt5_xxl_fp8_e4m3fn_scaled.safetensors vae=wan_2.1_vae.safetensors loraH=wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors loraL=wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors steps=40 cfg=6.0
+285.5s	37	[config] takes patched: rejection_samples=2, identity_retry=0 (2 takes/shot, pick best).
+285.5s	38	[config] profile patched for VRAM safety.
+285.5s	39	
+285.5s	40	--- 5b. INGESTING CHARACTER ANCHORS FROM ATTACHED DATASET ---
+285.5s	41	✓ Selected character dataset: /kaggle/input/datasets/kkk3213/saga-custom-characters  (man='man_anchor.png', woman='woman_anchor.png')
+285.8s	42	   man_anchor.png: 988x464 px, pixel std=50.6 -> ok (real detail)
+285.8s	43	   woman_anchor.png: 1066x492 px, pixel std=64.1 -> ok (real detail)
+285.8s	44	✅ Ingested REAL character anchors into project root and ComfyUI/input/.
+285.8s	45	   refs/jack/face/man_anchor.png <- real anchor (text-forge will be skipped for jack)
+285.8s	46	   refs/julie/face/woman_anchor.png <- real anchor (text-forge will be skipped for julie)
+285.8s	47	✅ Character anchors BOUND: jack<-man_anchor, julie<-woman_anchor. Text-forge overridden.
+286.2s	48	[OK] N-character pass: 0 extra anchored, 0 text-forged.
+286.2s	49	[client] upgraded comfy_client.py deployed.
+286.2s	50	[stitch] FFmpeg channel-layout fix applied.
+286.2s	51	[patch] wrote corrected grade_match.py (14317 bytes)
+286.2s	52	[patch] wrote corrected face_enhance.py (8562 bytes)
+286.2s	53	[patch] render_motion.py: progressive scene chunking & sharding enabled
+286.2s	54	
+286.2s	55	--- 3.5 AUDIO SETUP ---
+313.0s	56	
+313.0s	57	--- 8. STARTING TWO COMFYUI SERVERS ---
+316.1s	58	[gpu-guard] Launching 1 ComfyUI server(s): [(0, 8188)]
+316.1s	59	Waiting for ComfyUI on GPU0 / port 8188...
+348.1s	60	✓ GPU0 online (:8188)
+348.1s	61	
+348.1s	62	--- 8.5 RESOLVING LTX-VIDEO SCHEMA ---
+348.1s	63	
+348.1s	64	--- 8.5w RESOLVING WAN2.2 14B I2V SCHEMA ---
+348.1s	65	[graph] WAN2.2 14B I2V MoE wired: GGUF high(1)+low(21) | lora H=True L=True | 40 steps split@20 | cfg 6.0 | 768x512 len 41
+348.1s	66	[graph] spatial upscaler NOT wired (model/nodes missing); VideoCombine uses native VAEDecode output.
+348.1s	67	[resume] restored 0 finished clip(s) from previous sessions.
+348.1s	68	
+348.1s	69	--- 9. EXECUTING REAL GPU CHUNK: SHOTS 1 TO 28 ---
+348.1s	70	[merge] VERIFY GATE PASSED: inline WAN graph + range patch + story assets present; shots 1-28.
+348.1s	71	[merge] identity via REAL anchors -> forge_character.py will skip bound leads.
+348.1s	72	
+348.1s	73	===== preflight (free) =====
+348.5s	74	[preflight] MASTER FOLDER: /kaggle/working
+348.5s	75	[preflight] all inputs (shots, refs, workflows) are read ONLY from this folder.
+348.5s	76	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+348.5s	77	[preflight] OK -- 28 shots, profile=kaggle_2xt4_max, gpu=yes, 21GB free. Safe to render.
+348.6s	78	[preflight] MASTER FOLDER: /kaggle/working
+348.6s	79	[preflight] all inputs (shots, refs, workflows) are read ONLY from this folder.
+348.6s	80	[warn] model dir missing/empty: '/kaggle/working/models' -- will download at runtime
+348.6s	81	[preflight] OK -- 28 shots, profile=kaggle_2xt4_max, gpu=yes, 21GB free. Safe to render.
+348.6s	82	
+348.6s	83	===== forge character identities =====
+348.7s	84	[forge] jack: reference set already present (/kaggle/working/refs/jack/face); skipping. (set character_forge.overwrite: true to rebuild)
+348.7s	85	[forge] julie: reference set already present (/kaggle/working/refs/julie/face); skipping. (set character_forge.overwrite: true to rebuild)
+348.7s	86	[forge] all targets already forged.
+348.7s	87	[forge] jack: reference set already present (/kaggle/working/refs/jack/face); skipping. (set character_forge.overwrite: true to rebuild)
+348.7s	88	[forge] julie: reference set already present (/kaggle/working/refs/julie/face); skipping. (set character_forge.overwrite: true to rebuild)
+348.7s	89	[forge] all targets already forged.
+348.7s	90	
+348.7s	91	===== render blueprint stills =====
+3688.3s	92	Option loop not found.
+3688.4s	93	Traceback (most recent call last):
+3688.4s	94	  File "/kaggle/working/src/render_stills.py", line 217, in <module>
+3688.4s	95	[stills] i01_jungle_01: best still -> /kaggle/working/confrontation_work/i01_jungle_01/still.png
+3688.4s	96	    main()
+3688.4s	97	  File "/kaggle/working/src/render_stills.py", line 209, in main
+3688.4s	98	    render_still(shot, cfg, root, work)
+3688.4s	99	  File "/kaggle/working/src/render_stills.py", line 160, in render_still
+3688.4s	100	    subprocess.run([
+3688.4s	101	  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+3688.4s	102	    raise CalledProcessError(retcode, process.args,
+3688.4s	103	subprocess.CalledProcessError: Command '['ffmpeg', '-y', '-loglevel', 'error', '-loop', '1', '-framerate', '24', '-i', '/kaggle/working/confrontation_work/i01_jungle_01/still.png', '-t', '5.0', '-vf', 'scale=trunc(iw/2)*2:trunc(ih/2)*2', '-c:v', 'libx264', '-preset', 'slow', '-crf', '14', '-pix_fmt', 'yuv420p', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '/kaggle/working/confrontation_work/i01_jungle_01/final.mp4']' returned non-zero exit status 1.
+3688.5s	104	Option loop not found.
+3688.5s	105	Traceback (most recent call last):
+3688.5s	106	  File "/kaggle/working/src/render_stills.py", line 217, in <module>
+3688.5s	107	    main()
+3688.5s	108	  File "/kaggle/working/src/render_stills.py", line 209, in main
+3688.5s	109	    render_still(shot, cfg, root, work)
+3688.5s	110	  File "/kaggle/working/src/render_stills.py", line 160, in render_still
+3688.5s	111	    subprocess.run([
+3688.5s	112	  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+3688.5s	113	    raise CalledProcessError(retcode, process.args,
+3688.5s	114	subprocess.CalledProcessError: Command '['ffmpeg', '-y', '-loglevel', 'error', '-loop', '1', '-framerate', '24', '-i', '/kaggle/working/confrontation_work/i01_jungle_01/still.png', '-t', '5.0', '-vf', 'scale=trunc(iw/2)*2:trunc(ih/2)*2', '-c:v', 'libx264', '-preset', 'slow', '-crf', '14', '-pix_fmt', 'yuv420p', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '/kaggle/working/confrontation_work/i01_jungle_01/final.mp4']' returned non-zero exit status 1.
+3688.5s	115	
+3688.5s	116	Option loop not found.
+3688.5s	117	Traceback (most recent call last):
+3688.5s	118	  File "/kaggle/working/src/render_stills.py", line 217, in <module>
+3688.5s	119	    main()
+3688.5s	120	  File "/kaggle/working/src/render_stills.py", line 209, in main
+3688.5s	121	    render_still(shot, cfg, root, work)
+3688.5s	122	  File "/kaggle/working/src/render_stills.py", line 160, in render_still
+3688.5s	123	    subprocess.run([
+3688.5s	124	  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+3688.5s	125	    raise CalledProcessError(retcode, process.args,
+3688.5s	126	subprocess.CalledProcessError: Command '['ffmpeg', '-y', '-loglevel', 'error', '-loop', '1', '-framerate', '24', '-i', '/kaggle/working/confrontation_work/i01_jungle_01/still.png', '-t', '5.0', '-vf', 'scale=trunc(iw/2)*2:trunc(ih/2)*2', '-c:v', 'libx264', '-preset', 'slow', '-crf', '14', '-pix_fmt', 'yuv420p', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '/kaggle/working/confrontation_work/i01_jungle_01/final.mp4']' returned non-zero exit status 1.
+3688.6s	127	[stills] i01_jungle_01: best still -> /kaggle/working/confrontation_work/i01_jungle_01/still.png
+3691.2s	128	Traceback (most recent call last):
+3691.2s	129	  File "<string>", line 1, in <module>
+3691.2s	130	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 131, in execute_notebook
+3691.2s	131	    raise_for_execution_errors(nb, output_path)
+3691.2s	132	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+3691.2s	133	    raise error
+3691.2s	134	papermill.exceptions.PapermillExecutionError: 
+3691.2s	135	---------------------------------------------------------------------------
+3691.2s	136	Exception encountered at "In [1]":
+3691.2s	137	---------------------------------------------------------------------------
+3691.2s	138	RuntimeError                              Traceback (most recent call last)
+3691.2s	139	/tmp/ipykernel_23/3819781843.py in <cell line: 0>()
+3691.2s	140	   5754     _stage("preflight (free)", sys.executable, os.path.join(SRC, "preflight.py"), fatal=False)
+3691.2s	141	   5755     _stage("forge character identities", sys.executable, os.path.join(SRC, "forge_character.py"))
+3691.2s	142	-> 5756     _stage("render blueprint stills", sys.executable, os.path.join(SRC, "render_stills.py"))
+3691.2s	143	   5757 
+3691.2s	144	   5758     print("\n--- 9b. PARALLEL RENDERING ACROSS BOTH T4 GPUs ---")
+3691.2s	145	
+3691.2s	146	/tmp/ipykernel_23/3819781843.py in _stage(title, env, fatal, timeout, *cmd)
+3691.2s	147	   5679     print("\n===== %s =====" % title, flush=True)
+3691.2s	148	   5680     r = subprocess.run(list(cmd), cwd=KIT_ROOT, env=env or {**os.environ})
+3691.2s	149	-> 5681     if r.returncode != 0 and fatal: raise RuntimeError(f"Stage '{title}' failed rc={r.returncode}")
+3691.2s	150	   5682     return r.returncode
+3691.2s	151	   5683 
+3691.2s	152	
+3691.2s	153	RuntimeError: Stage 'render blueprint stills' failed rc=1
+3691.2s	154	
+3693.7s	155	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+3693.7s	156	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+3694.0s	157	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+3694.0s	158	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+3695.3s	159	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+3695.7s	160	[NbConvertApp] Writing 536283 bytes to __notebook__.ipynb
+3698.0s	161	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+3699.3s	162	[NbConvertApp] Writing 1105047 bytes to __results__.html

@@ -1,0 +1,68 @@
+========================================================================
+EDGE-CASE + INTEGRATION TEST (real module functions)
+========================================================================
+
+[A] render_motion() structure + end-to-end COMFY_MOCK run
+  [PASS] A1 render_motion() calls _run_with_oom_fallback -- function body is missing its render loop (orphaned by mis-indented def)
+  [PASS] A2 render_motion() calls _do_postprocess -- postprocess (NEED_INTERP guard + grade) never reached
+  [PASS] A3 render_motion() applies denoise -- denoise wiring dropped
+  [PASS] A4 render_motion() does identity-aware _pick_best -- identity selection (Defect 5) not in function body
+  [PASS] A5 render_motion() writes final.mp4 -- no final output produced
+  [PASS] A6 _run_with_oom_fallback free of orphaned render_motion code -- render-loop/identity/postprocess code absorbed into OOM helper -> render_motion() is truncated
+
+  [A7] invoking render_motion() end-to-end (COMFY_MOCK=1, POST_MODE=cpu)...
+[motion] e01: no blueprint still found, using character refs.
+[motion] e01: 0/1 takes passed identity (or unknowable); selecting best-looking overall.
+[postprocess(ffmpeg)] interpolation skipped (16fps <= 24.0fps*1.2) -> C:\Users\Admin\AppData\Local\Temp\rm_e2e_q6tu52zd\work\e01\final.mp4
+[ok] e01 -> C:\Users\Admin\AppData\Local\Temp\rm_e2e_q6tu52zd\work\e01/final.mp4 (motion from blueprint)
+  [PASS] A7 render_motion() produces work/e01/final.mp4 -- final.mp4 missing after render_motion() returned
+
+[B] runtime_integration_validator.py (TEST 10 module)
+  [PASS] B1 validator exits without TypeError crash -- crashed with {} set-literal typo (rc=1)
+  [PASS] B2 no duplicate ComfyUI-VideoHelperSuite matrix entries -- found 1 key definitions inside COMPATIBILITY_MATRIX (last silently wins)
+
+[C] qc.check() on a real clip with embedded audio
+  [PASS] C1 qc reads stats from real clip -- stats={'res': '1280x720', 'fps': 24.0, 'dur': 2.0, 'audio': True, 'sharp': 195.1, 'flicker': 5.61, 'LUFS': -21.8, 'color_var': 2.91, 'frames': '48/48', 'legal_pct': 78.33, 'pix': 'yuv420p', 'a_sync': 'ok'}
+  [PASS] C2 qc flags no spurious FAIL on a clean clip -- verdict=WARN issues=['low color variance (2.9) possible color cast', 'broadcast-legal 78.33% (21.67% pixels out-of-gamut)']
+  [PASS] C3 qc populates LUFS for audio clip -- stats={'res': '1280x720', 'fps': 24.0, 'dur': 2.0, 'audio': True, 'sharp': 195.1, 'flicker': 5.61, 'LUFS': -21.8, 'color_var': 2.91, 'frames': '48/48', 'legal_pct': 78.33, 'pix': 'yuv420p', 'a_sync': 'ok'} (audio present but LUFS not measured)
+
+[D] grade_match.py real CLI: fail-soft + JSON target + direct preset
+  [PASS] D1 grade_match missing-input handled (no traceback) -- rc=0 uncaught traceback=False
+  [PASS] D2 grade_match JSON-target reads preset -- rc=0 out=ptive sharpening...
+[grade] halation bloom...
+[grade] fractal film grain...
+[grade] face enhancement...
+[grade] -> C:\Users\Admin\AppData\Local\Temp\grade_cli_dwwdzkzh\o_json.mp4 (bleach_bypass, 0.8)
+
+  [PASS] D3 grade_match direct-preset works -- rc=0
+  [PASS] D4 grade_match writes output file
+
+[E] render_stills OOM fallback tier math (multiples of 64, exhaustion)
+  [PASS] E1 reduced OOM tiers produce 64-aligned resolution
+  [PASS] E2 resolution monotonically non-increasing across tiers -- sizes=[(1280, 720), (1280, 720), (1088, 576), (960, 512), (768, 448)]
+  [PASS] E3 exhaustion raises RuntimeError (per source)
+
+[F] production profile config sanity
+  [PASS] F1 interpolate_fps <= 16 keeps NEED_INTERP guard active -- interpolate_fps=16 (>16 would re-trigger minterpolate on WAN output)
+  [PASS] F2 active_profile is kaggle_2xt4 family -- active_profile=kaggle_2xt4_max
+  [PASS] F3 base render resolution is 64-aligned (VAE requirement) -- 1280x704: w%64=0 h%64=0 -- WAN VAE may error or pad on T4
+  [PASS] F4 config shots_file exists -- shots_file=shots_confrontation.json not found in kit/
+
+[G] kaggle_log_validator module surface on captured fixtures
+  [PASS] G0 fixtures exist -- fatal=C:\dev\antigravity-kandover\godshand_tests\fixtures\kaggle_log_fatal.txt healthy=C:\dev\antigravity-kandover\godshand_tests\fixtures\kaggle_log_healthy.txt
+  [PASS] G1 scan() surfaces 'invalid_png_signature' on fatal fixture -- got ids=['invalid_data_decoding_stream', 'invalid_png_signature', 'process_killed', 'runaway_repeated_messages']
+  [PASS] G1 scan() surfaces 'invalid_data_decoding_stream' on fatal fixture -- got ids=['invalid_data_decoding_stream', 'invalid_png_signature', 'process_killed', 'runaway_repeated_messages']
+  [PASS] G1 scan() surfaces 'runaway_repeated_messages' on fatal fixture -- got ids=['invalid_data_decoding_stream', 'invalid_png_signature', 'process_killed', 'runaway_repeated_messages']
+  [PASS] G1 scan() surfaces 'process_killed' on fatal fixture -- got ids=['invalid_data_decoding_stream', 'invalid_png_signature', 'process_killed', 'runaway_repeated_messages']
+  [PASS] G1b scan() catches synthetic CUDA OOM line -- input='RuntimeError: CUDA out of memory. Tried to allocate 2.00 GiB.'
+  [PASS] G2 healthy fixture has zero FATAL findings -- got []
+  [PASS] G2b scanner surfaces VHS warning on healthy fixture -- vhs_count=1
+  [PASS] G2c vhs_warning severity is WARN not FATAL -- severity=WARN
+  [PASS] G3 extract_prompt_timings returns 5 entries -- got 5
+  [PASS] G3b every timing is a sane positive number -- seconds=[949, 861, 858, 857, 865]
+  [PASS] G3c flag_slow_prompts() returns [] on healthy log -- slow=[]
+  [PASS] G4 flag_slow_prompts() catches injected 3xmedian outlier -- slow_indices=[999]
+
+========================================================================
+RESULT: 36 passed, 0 failed
+========================================================================

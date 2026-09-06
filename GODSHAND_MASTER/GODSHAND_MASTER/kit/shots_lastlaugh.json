@@ -1,0 +1,1365 @@
+{
+  "film": "THE LAST LAUGH -- A Heath Ledger Tribute (full film)",
+  "note": "For Heath Ledger, 1979-2008. A tribute told through myth, not a reenactment. Act I THE GIFT (the unseen man, being seen, the rise) and Act II THE MASK (living the character until it consumed him -- immersion, insomnia, isolation) lead into the existing confrontation as the climax. Jack is an original Ledger-order figure, not a replica; the descent never depicts medication or a real death; the Joker's fictional end stays the character's. Dignity before the film.",
+  "globals": {
+    "fps": 24,
+    "width": 1280,
+    "height": 720,
+    "base_model": "Wan2.2-S2V",
+    "quant": "Q8",
+    "steps": 30,
+    "cfg": 5.5,
+    "sampler": "uni_pc",
+    "scheduler": "beta",
+    "interpolate_to_fps": 48,
+    "upscale": 1.75,
+    "rejection_samples": 3,
+    "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+    "negative_prompt": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter, graphic violence"
+  },
+  "character_design": {
+    "jack": {
+      "summary": "JACK — a fictional Joker-order figure and a transformed original character (not a real person, not any studio's specific character design): a tall, gaunt, severe man with hollow cheeks; worn bone-white greasepaint, cracked and imperfect, applied by hand; a fixed strained 'stressed smile' painted at the mouth — a wrong, unsettling rictus, NOT a happy grin, NOT circus clown; dark deliberate eyes carrying old ruin and an anarchic calm menace; a long dark weathered high-collared coat, monumental silhouette. Dignified, dangerous, unreadable — every broken man's grief hardened into a mask.",
+      "forge_prompts": {
+        "face_front": "cinematic portrait, a fictional Joker-order figure (transformed original character, not a real person, not a specific studio design): a gaunt severe man, hollow cheeks, worn cracked bone-white greasepaint applied by hand, a fixed strained 'stressed smile' painted at the mouth (a wrong unsettling rictus, not a happy grin, not circus clown), dark deliberate eyes, anarchic calm menace, front view, hard single key light, deep black background, dramatic chiaroscuro, photoreal, film grain, highly detailed",
+        "face_threequarter": "cinematic portrait, same gaunt severe man, worn white greasepaint and strained painted smile, three-quarter angle, single motivated key light, deep shadow, photoreal, highly detailed",
+        "face_profile": "cinematic profile portrait, same gaunt man, cracked white greasepaint, profile view against black, rim light, photoreal, highly detailed",
+        "body_full": "full body cinematic shot, tall gaunt man in a long dark weathered high-collared coat, monumental silhouette, worn white face paint, standing in volumetric haze, single hard key light, deep chiaroscuro, anamorphic, photoreal, highly detailed",
+        "body_coat": "full body, the same figure from behind and side, long dark coat trailing, high collar, iconic silhouette against a vast dark nocturnal cityscape, rim light, photoreal, highly detailed"
+      },
+      "forge_count_per_prompt": 2,
+      "seed_base": 77
+    },
+    "julie": {
+      "summary": "JULIE — a fictional Blanchett-order woman and a transformed original character (not a real person): a luminous, regal woman with a cool penetrating gaze, sharp architectural cheekbones, clear intelligent eyes, a composed and formidable presence, glacial gravitas; elegant, fair, poised and quietly commanding, warm beneath a formidable stillness; dressed in elegant tailored clothes.",
+      "forge_prompts": {
+        "face_front": "cinematic portrait, a fictional Blanchett-order woman (transformed original character, not a real person): a luminous regal woman with a cool penetrating gaze, sharp architectural cheekbones, clear intelligent eyes, composed formidable presence, glacial gravitas, fair luminous skin, front view, soft naturalistic key light, shallow depth of field, photoreal, film grain, highly detailed",
+        "face_threequarter": "cinematic portrait, the same woman, regal luminous face, intelligent eyes, three-quarter angle, soft motivated light, photoreal, highly detailed",
+        "face_profile": "cinematic profile portrait, the same woman, elegant architectural features, hair swept back, profile against soft grey, natural light, photoreal, highly detailed",
+        "body_full": "full body cinematic shot, a poised elegant woman in a graceful tailored dress, quiet commanding posture, natural light, photoreal, highly detailed",
+        "body_coat": "full body, the same woman in an elegant tailored coat, standing composed in a dim interior, single window light, photoreal, highly detailed"
+      },
+      "forge_count_per_prompt": 2,
+      "seed_base": 161
+    }
+  },
+  "characters": {
+    "jack": {
+      "refs": "refs/jack",
+      "tokens": "gaunt severe man, worn cracked white greasepaint, strained painted smile (not happy, not circus clown), anarchic calm menace, dark high-collared coat, monumental silhouette, unsmiling threat beneath the paint, fully modestly dressed"
+    },
+    "julie": {
+      "refs": "refs/julie",
+      "tokens": "elegant regal woman, glacial commanding gravitas, sharp architectural cheekbones, cool penetrating gaze, thick dark hair, fair luminous complexion, composed, formidable, restrained, ALWAYS fully modestly dressed in elegant tailored wear"
+    }
+  },
+  "shots": [
+    {
+      "id": "gift_child",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "wide, static, a small figure in a doorway",
+      "palette": "cold morning light, pale and grey, film grain",
+      "prompt": "a slight young boy alone in a doorway watching a world that never quite includes him, feeling everything too deeply, no face paint, gentle and luminous, monumental negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_unseen",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "wide, static, figure small and distant",
+      "palette": "cold desaturated grey-blue, a single pale window light, film grain",
+      "prompt": "a thin quiet young man moving through a bright indifferent city, no one turning to look at him, an ordinary unseen man before any mask, no face paint, monumental negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_stagedoor",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static, a man at the edge of a pool of light",
+      "palette": "warm stage light spilling into cold dark, film grain",
+      "prompt": "a young man lingering at the edge of a theatre stage door, hungry for a lit world that has never let him in, no face paint, longing on his face, single warm light against deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_outsider",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static wide, a figure outside a lit window",
+      "palette": "cold blue night against warm window glow, film grain",
+      "prompt": "a young man outside a bright window at night watching people laugh together inside a warmth he is not part of, no face paint, longing and separateness, cold blue exterior against warm interior glow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_hunger",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "slow push-in, close on hands and eyes",
+      "palette": "single bare bulb, warm against black, film grain",
+      "prompt": "a young man alone in a bare rented room mouthing lines to no audience, rehearsing a life he has not been given, no face paint, quiet obsession, single bare bulb, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_audition",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static wide, a man alone before an unseen table",
+      "palette": "cold overhead light, grey, film grain",
+      "prompt": "a young man standing alone in an audition room before an unseen panel, trembling and luminous, no face paint, everything at stake in a single moment, cold overhead light, monumental negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_stillroom",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "slow push-in on the face",
+      "palette": "a single hard key light warming, film grain",
+      "prompt": "the same young man mid-performance, something incandescent breaking out of the small quiet man, the room going utterly still around him, no face paint, transfixing, single hard key light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_firstlight",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "crane up, a figure lit on a stage",
+      "palette": "warm gold stage light against deep black, film grain",
+      "prompt": "a young man alone in a shaft of gold stage light for the first time, the dark auditorium beyond, luminous and alive, no face paint, a gift catching fire, single motivated light, monumental negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_theonewhosaw",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static two-shot across a table",
+      "palette": "warm lamp light against deep shadow, film grain",
+      "prompt": "a quiet room: a luminous regal woman actually looking at the young man and seeing his mind for the first time, across a plain table, he half-turned barely daring to meet her gaze, no face paint, a fragile spark of being known, warm single lamp light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_recognition",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "slow push-in, close two-shot",
+      "palette": "soft warm key, deep shadow, film grain",
+      "prompt": "the young man and the luminous woman in quiet conversation, a rare understanding passing between them, no face paint, warmth and restraint, single soft key light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_worship",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "slow push-in, eyes closed",
+      "palette": "soft warm key fading to cold, deep shadow, film grain",
+      "prompt": "the young man with his eyes shut turning his face from a soft radiant light, worshipping from a distance and never once speaking, no face paint, reverence shadowed by fear, single motivated key light, deep shadow, intimate, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "gift_unspoken",
+      "movement": "the_gift",
+      "song": "the_gift",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static, two figures apart in a wide frame",
+      "palette": "cold blue with a single warm lamp, film grain",
+      "prompt": "the man and the woman standing apart in a large quiet room, a word he cannot say hanging in the air between them, no face paint, ache and restraint, generous negative space, single warm lamp against cold, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_firstrole",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "montage-style, a man in costume under lights",
+      "palette": "warm gold and deep black, film grain",
+      "prompt": "the young man transformed by his first real role, alive under the lights, the world beginning to turn toward him, no clown paint, luminous, single hard key, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_thework",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "montage, a man deep in the craft under lights",
+      "palette": "warm gold and deep black, film grain",
+      "prompt": "the man wholly alive inside the work, transformed take after take, the good years when the gift was pure joy, no clown paint, luminous absorption, single hard key, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_rising",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "crane, a figure crossing a bright plaza",
+      "palette": "cold bright day softened by grade, film grain",
+      "prompt": "the man walking through a world that now turns to watch him, posters and lights blurred behind, no clown paint, ascendant yet strangely alone, monumental scale, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_applause",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "reverse from stage into a dark house",
+      "palette": "hot stage light into black, film grain",
+      "prompt": "the man on a stage facing a roaring dark auditorium, blinded by light, applause crashing over him, no clown paint, triumphant and hollow at once, single blazing key, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_crowned",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static portrait, low angle",
+      "palette": "gold and deep shadow, film grain",
+      "prompt": "a portrait of the man at his height, luminous and adored, no clown paint, a faint unease behind the eyes, single hard key, deep black background, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_price",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static, close on eyes that have seen too much",
+      "palette": "cold light, deep shadow, film grain",
+      "prompt": "close on the man between roles, a first shadow of cost behind the eyes, the gift beginning to ask for more than it gives, no clown paint, quiet unease, single soft key, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_lonelycrowd",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "wide, a lone figure amid blurred people",
+      "palette": "cold blue night, film grain",
+      "prompt": "the man motionless in the middle of a blurred moving crowd at a bright event, utterly alone in the noise, no clown paint, isolation at the peak, generous negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_herlight",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static two-shot, warm pool of light",
+      "palette": "warm amber against cold, film grain",
+      "prompt": "the man and the luminous woman side by side at the edge of a bright event, the one true thing in a false room, no clown paint, unspoken tenderness, single warm light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_offer",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static, a script on a table under a lamp",
+      "palette": "cold light on paper, deep shadow, film grain",
+      "prompt": "the man alone at a table staring at a script under a single lamp, a role unlike any other waiting on the page, no clown paint, fascination edged with dread, single hard light, deep black, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_thescript",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "slow push-in on eyes reading",
+      "palette": "cold blue, single lamp, film grain",
+      "prompt": "close on the man's eyes moving across the page, something in the character reaching back out of the paper toward him, no clown paint, dawning recognition, single lamp light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_temptation",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static, a man before a dark mirror",
+      "palette": "cold light, a dim mirror, film grain",
+      "prompt": "the man standing before a dim mirror, the reflection holding a fraction too long, the character already waiting inside the glass, no clown paint yet, quiet dread, single cold light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "asc_threshold",
+      "movement": "the_ascent",
+      "song": "the_ascent",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static wide, a man in a doorway of light and dark",
+      "palette": "warm light behind, cold dark ahead, film grain",
+      "prompt": "the man standing in a doorway between a warm lit room and a vast dark one, about to step from one into the other, no clown paint, a threshold moment, monumental negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_becoming",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "slow push-in, close on hands and face",
+      "palette": "single bare bulb, cold, film grain",
+      "prompt": "the man alone in a locked room building the creature, cracked bone-white greasepaint going onto his own face by hand for the first time, no happy grin, a wrong unsettling calm, single bare bulb, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_immersion",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static, the man in half-paint at a cluttered desk",
+      "palette": "warm lamp and cold shadow, film grain",
+      "prompt": "the man in half-applied paint living entirely as the character, a room papered with notes and images, no longer performing but inhabiting, a wrong unsettling calm, single lamp light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_notebook",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "insert, close on a handwritten page then eyes",
+      "palette": "cold lamp on paper, film grain",
+      "prompt": "close on a battered notebook filling with the character's thoughts in a cramped hand, then the man's hollowed eyes above it, no happy grin, obsessive quiet, single lamp light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_hotelroom",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "wide, a small figure in a large dark room",
+      "palette": "cold blue night, a single window glow, film grain",
+      "prompt": "the man small in a large bare hotel room in the dead hours of night, awake and alone with the character, no happy grin, vast isolation, monumental negative space, single window light, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_sleepless",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static, close on open eyes in the dark",
+      "palette": "near-black with a thin cold light, film grain",
+      "prompt": "close on the man's open sleepless eyes in near-darkness, hours crawling, the world thinned to a hum, no happy grin, hollow exhaustion, a thin cold light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_thevoice",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "slow push-in, half-lit face",
+      "palette": "single hard key, deep black, film grain",
+      "prompt": "the man in shadow discovering the character's laugh for the first time, a wrong sound that frightens even him, no happy grin, a chilling calm, single hard key light, deep black, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_body",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "wide, a figure moving with a wrong new gait",
+      "palette": "cold light, deep shadow, film grain",
+      "prompt": "the man moving through a dim room with the character's wrong new gait and stillness, his own body no longer quite his, no happy grin, quiet unease, single hard key, generous negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_losingedges",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static, a man half in paint half bare split by light",
+      "palette": "half warm half cold, hard division, film grain",
+      "prompt": "the man's face split by light, half bare and gentle, half painted and severe, the border between them dissolving, no happy grin, quiet horror, hard chiaroscuro, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_mirror",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static, a man before a mirror",
+      "palette": "cold light, a dim mirror, film grain",
+      "prompt": "the man before a mirror no longer recognising the face beneath the paint, the reflection a stranger wearing his features, no happy grin, quiet dread, single cold light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "mask_friends",
+      "movement": "the_mask",
+      "song": "the_mask",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "wide, a figure apart from blurred others",
+      "palette": "cold blue, warm blur beyond, film grain",
+      "prompt": "the man standing apart while blurred familiar people carry on without seeing him, only the mask visible to them now, no happy grin, isolation, generous negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_distance",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static two-shot, a widening gap",
+      "palette": "cold blue, a single warm lamp failing, film grain",
+      "prompt": "the luminous woman reaching gently toward the man and the man unable to let her close, a widening distance between them, no happy grin, ache and refusal, single failing warm light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_reaching",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static two-shot, a hand not quite meeting",
+      "palette": "cold blue, a single warm lamp, film grain",
+      "prompt": "the luminous woman extending a hand toward the man across a small gap that will not close, his eyes turned away, no happy grin, tender futility, single warm light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_silence",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static, two figures back to back in shadow",
+      "palette": "cold blue, deep shadow, film grain",
+      "prompt": "the man and the woman in the same room yet turned from each other, a silence hardened to stone between them, no happy grin, grief and restraint, generous negative space, single cold light, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_triumph",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "reverse from a bright premiere into black",
+      "palette": "hot flashbulb white into deep black, film grain",
+      "prompt": "the man in the painted role at a blazing premiere, the world crowning the performance, flashbulbs crashing, no happy grin, triumph gone hollow, single blazing key, deep black, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_aloneatpeak",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "wide, a small figure in a vast dark space",
+      "palette": "near-black, a thin cold light, film grain",
+      "prompt": "the man alone in a vast dark room after the triumph, still in half-paint, adored by millions and utterly alone, no happy grin, monumental isolation, generous negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_exhaustion",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static, close on a worn face",
+      "palette": "cold grey, deep shadow, film grain",
+      "prompt": "close on the man's worn hollow face between takes, drained to the edge, the gift burning through the last of him, no happy grin, exhaustion, single soft key, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_fadinglight",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "slow push-in, warmth draining from a face",
+      "palette": "warm fading to cold, film grain",
+      "prompt": "close on the man as the last warmth drains from his face into a cold stillness, the gentle one receding beyond reach, no happy grin, quiet grief, single key light cooling, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_warnings",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static, blurred concerned faces, a sharp lonely man",
+      "palette": "cold blue, film grain",
+      "prompt": "blurred concerned faces at the edges of frame trying to reach the man who sits sharp and unreachable at the centre, no happy grin, quiet alarm unheeded, generous negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_lastordinary",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static, warm soft light on a gentle face",
+      "palette": "warm amber, deep shadow, film grain",
+      "prompt": "a rare moment of the gentle man surfacing through the exhaustion, bare-faced and quietly tender in warm light, the last clear glimpse of who he was, no paint, fragile warmth, single warm key, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_goodbye",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "static two-shot, warm light between them",
+      "palette": "warm amber failing to cold, film grain",
+      "prompt": "the man and the luminous woman sharing an ordinary quiet moment, a goodbye neither of them knows to say, no paint, unbearable tenderness, single warm light, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_thewound",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "slow push-in, half-lit face, paint returning",
+      "palette": "cold light, paint half-on, film grain",
+      "prompt": "the man alone as the paint goes back on, an old wound reopening behind his eyes, the gentle warmth of the day already receding, no happy grin, quiet grief hardening, single hard key, deep shadow, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_prayer",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static, a bowed figure in a shaft of pale light",
+      "palette": "near-black, a single pale shaft, film grain",
+      "prompt": "the man bowed alone in a single pale shaft of light in a vast dark room, a wordless prayer for rest that he cannot name, no happy grin, exhausted reverence, monumental negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_thedark",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 7,
+      "mode": "A",
+      "camera": "slow fade toward black on a still face",
+      "palette": "collapsing to near-black, film grain",
+      "prompt": "the man's face slowly swallowed by darkness, stillness settling, the world going out one light at a time, no happy grin, a quiet terrible calm, deep black closing in, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "unr_midnight",
+      "movement": "the_unraveling",
+      "song": "the_unraveling",
+      "chars": [
+        "jack"
+      ],
+      "dur": 8,
+      "mode": "A",
+      "camera": "static wide, an empty chair in a shaft of light",
+      "palette": "near-black, a single cold shaft, film grain",
+      "prompt": "an empty chair in a shaft of cold light in a vast dark room, a low laugh stirring somewhere in the black where the man used to be, no figure clearly seen, dread and absence, monumental negative space, fully modest, cinematic realism",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "talking": false,
+      "vo": true
+    },
+    {
+      "id": "pro_alone",
+      "dur": 4,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "wide, static, figure small and distant",
+      "mode": "A",
+      "song": "prelude",
+      "prompt": "a lone gaunt man seen from behind, small and isolated in a vast empty dark room, an ordinary forgotten man before any mask, no one turning to look at him, monumental negative space, a single cold window light, deep quiet shadow, aching loneliness, fully modest, cinematic realism",
+      "palette": "cold desaturated grey-blue, a single pale window light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "movement": "prelude"
+    },
+    {
+      "id": "pro_seen",
+      "dur": 4,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "static two-shot across a table",
+      "mode": "A",
+      "song": "prelude",
+      "prompt": "a quiet interview memory: Julie, luminous and formidable, actually looking at him and seeing his mind for the first time, across a plain table; the gaunt man sits in half-light, half-turned, barely daring to meet her gaze; a fragile spark of being recognized; warm single lamp light, deep shadow, fully modest, cinematic realism",
+      "palette": "warm lamp light against deep shadow, restrained, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "movement": "prelude"
+    },
+    {
+      "id": "pro_silence",
+      "dur": 4,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in, eyes closed",
+      "mode": "A",
+      "song": "prelude",
+      "prompt": "the gaunt man with his eyes shut, turning his face from a soft radiant light, years passing in a single held breath, worshipping from a distance and never once speaking, reverence curdling slowly into grief, single motivated key light, deep shadow, intimate, fully modest, cinematic realism",
+      "palette": "soft warm key light fading to cold, deep shadow, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "movement": "prelude"
+    },
+    {
+      "id": "pro_crossing",
+      "dur": 4,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow craning reveal in shadow",
+      "mode": "A",
+      "song": "prelude",
+      "prompt": "the breaking point at midnight: everything falling into darkness, and a painted figure emerging from where the man had been, the transformation implied only in silhouette and shadow and never graphic, worn cracked greasepaint catching a sliver of cold light, a monumental new silhouette rising in volumetric haze, deep chiaroscuro, cinematic realism",
+      "palette": "near-total black with a cold sliver of light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried contemplative pacing; serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+      "movement": "prelude"
+    },
+    {
+      "id": "search_void",
+      "dur": 5,
+      "chars": [],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in / zoom-in down the empty flooded hall toward the far dark, no character in frame",
+      "mode": "A",
+      "song": "search",
+      "prompt": "an empty vast pitch-black flooded hall with many dark rooms branching off into nothing, no person, no character; sparking overhead lights burst and strobe wildly across wet stone walls, water sheets and pours down through cracked seepages, black water pooling across the floor, the corridor stretching into impenetrable deep dark; a slow zoom-in pushes down the hall toward the far black; deep chiaroscuro, volumetric haze, rain-sheen on every surface, monumental architecture dwarfing the emptiness, cinematic realism, no gore, no person",
+      "palette": "near-black torn by cold sparking blue-white flashes, wet reflections, film grain",
+      "negative": "nudity, person, human, figure, character, face, man, woman, blurry, low quality, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; IMAX-scale nocturnal atmosphere, disciplined composition, generous negative space, the emptiness vast against monumental architecture; single motivated light source, deep chiaroscuro, deep quiet shadows; shallow depth of field; severe, dread, haunted, expectant; NOT a happy ending",
+      "movement": "search",
+      "rejection_samples": 4,
+      "intensity": 0.7,
+      "fx": "slow zoom-in down the empty hall, sparking overhead lights strobing the dark, electrical flicker, water-streaked lens refractions, cold chromatic flare, shutter stutter"
+    },
+    {
+      "id": "search_run",
+      "dur": 5,
+      "chars": [
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "handheld, a hard crash zoom-in onto Julie running then a release out to a towering wide",
+      "mode": "A",
+      "song": "search",
+      "prompt": "Julie runs through a vast pitch-black flooded corridor searching for him, calling his name into the dark, her face convulsing with fear; sparking overhead lights burst and strobe, water sheets and pours down the stone walls, her small figure dwarfed by monumental architecture; a violent crash zoom-in punches onto her stricken face, then the lens pulls back out to a towering wide as water and light streak past; deep chiaroscuro, volumetric haze, rain-sheen on every surface, fully modest, cinematic realism, no gore",
+      "palette": "near-black torn by cold sparking blue-white flashes, wet reflections, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; IMAX-scale nocturnal atmosphere, disciplined composition, generous negative space, the figure small against vast architecture; single motivated light source, deep chiaroscuro, deep quiet shadows; shallow depth of field; severe, urgent, haunted; NOT a happy ending",
+      "movement": "search",
+      "rejection_samples": 4,
+      "intensity": 0.72,
+      "fx": "aggressive crash zoom-in then snap zoom-out, sparking overhead lights strobing the dark, electrical flicker, water-streaked lens refractions, shutter stutter, cold chromatic flare"
+    },
+    {
+      "id": "search_water",
+      "dur": 4,
+      "chars": [
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow contra-zoom / dolly-zoom down the flooded hall, Julie small and searching",
+      "mode": "A",
+      "song": "search",
+      "prompt": "deeper into the darkness: water falls in ropes through cracked stone seepages, dripping and trickling everywhere, black water pooling across the floor; Julie moves through the vast echoing hall, a single failing light guttering overhead, welding sparks flaring and sizzling from somewhere ahead; a slow contra-zoom / dolly-zoom warps the corridor, the far dark stretching away from her as she searches; deep shadow, volumetric haze, wet glistening stone, fully modest, cinematic realism, no gore",
+      "palette": "cold black-blue, water glinting in a single failing light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; IMAX-scale nocturnal atmosphere, disciplined composition, generous negative space, the figure small against vast architecture; single motivated light source, deep chiaroscuro, deep quiet shadows; shallow depth of field; severe, dread, haunted; NOT a happy ending",
+      "movement": "search",
+      "intensity": 0.68,
+      "fx": "dolly-zoom / contra-zoom vertigo warping the hall, dripping-water light refractions, failing-light flicker, faint static crawl, cold chromatic fringing"
+    },
+    {
+      "id": "search_fear",
+      "dur": 4,
+      "chars": [
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "extreme close-up on Julie's face, a rapid stuttering tic / step-zoom punching inward in hard increments as she rushes",
+      "mode": "A",
+      "song": "search",
+      "prompt": "extreme close on Julie's face as she rushes through the black flooded hall toward him — a convulsion of fear crossing her features, eyes wide and glassy searching the dark, jaw trembling, dreading what she will find, fearing what might already have happened to him; welding sparks and cold electrical light flare across her skin from somewhere ahead; the orchestra swelling to full dread around her; deep chiaroscuro, wet sheen, fully modest, cinematic realism, no gore",
+      "palette": "near-black with cold blue-white spark flashes raking her face, wet sheen, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, shouting, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; extreme intimate close-up, a single motivated spark light raking the face, deep chiaroscuro, deep quiet shadows; shallow depth of field; severe, urgent, fearful, convulsive; NOT a happy ending",
+      "movement": "search",
+      "rejection_samples": 4,
+      "intensity": 0.82,
+      "fx": "rapid stuttering tic-zoom / step-zoom punching in on her face in hard increments, micro-jitter convulsion, welding-spark strobe flaring across her skin, chromatic aberration, shutter stutter, cold flicker"
+    },
+    {
+      "id": "search_found",
+      "dur": 4,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push through the dark to the pillar, then a sudden snap zoom onto the fallen painted figure",
+      "mode": "A",
+      "song": "search",
+      "prompt": "at last, in the deepest darkness, Julie finds Jack lying slumped on the wet floor at the base of a great stone pillar, unmoving, the cracked greasepaint catching a thin sliver of cold light, water dripping around them; she stops, breath held; the camera pushes slowly in, then snaps a hard zoom onto his painted face as his eyes open and a faint terrible smile begins; deep chiaroscuro, a single hard key light, fully modest, cinematic realism, no gore, no blood",
+      "palette": "near-total black with a thin cold key light on the paint, wet sheen, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, graphic injury, wound detail",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, deep chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera then a sudden snap; severe, restrained, dread, intimate; NOT a happy ending",
+      "movement": "search",
+      "rejection_samples": 5
+    },
+    {
+      "id": "confr_caught",
+      "dur": 5,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "intimate two-shot, Julie leaning close to the fallen Jack against the pillar, catching his gaze drifting inward",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "Julie kneels close to Jack who is slumped against the stone pillar on the floor, too wounded to rise; she catches his eyes drifting inward for a moment and searches his face, gently but unflinchingly asking him to name the thing that hurts him; tears roll steadily down his cracked greasepaint; intimate and still, stylized in shadow and hard light, no gore, no blood, cinematic realism",
+      "palette": "deep shadow with a single cold key light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, graphic injury, wound detail, shooting the woman, aiming at the woman, hitting a person",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, dangerous, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_allblades",
+      "dur": 7,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in on Jack slumped against the pillar, Julie a still listening silhouette",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "Jack, collapsed against the stone pillar on the floor, gives a low dark half-laugh and turns his full ruined attention on Julie for the first time, offering her not one weapon but every blade in him; tears roll constantly down the cracked greasepaint as he speaks and laughs through them, wounded and coiled, one hand pressed to his wounded side; Julie listens as a still silhouette; stylized in shadow and hard light, no gore, no blood, cinematic realism",
+      "palette": "deep black with a hard low key light raking the paint, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, graphic injury, wound detail, shooting the woman, aiming at the woman, hitting a person",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, dangerous, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_dare",
+      "dur": 4,
+      "chars": [
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in close-up",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Julie, composed and regal, standing her ground and daring the fallen man slumped against a stone pillar before her, unafraid, chin lifted, glassy eyes; a single hard key light, deep shadow behind her, fully modest, cinematic realism",
+      "palette": "cold key light, deep black, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; serious, restrained, tense, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_dontouch",
+      "dur": 5,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "low two-shot on the fallen man against the pillar, muzzle flashes tearing the dark",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "Jack is collapsed on the floor with his back against a stone pillar, too wounded to stand or rise; Julie steps in and reaches out with a gentle healing hand to touch his wound; from the floor Jack recoils from that hand as if from fire and fires point-blank into the dark around them, hard muzzle flashes erupting, rounds striking the walls and glass far from her, never once aimed at her, tears rolling and a wild soft laugh, she stands untouched, stylized in shadow and hard light, no gore, no blood, no injury, cinematic realism",
+      "palette": "deep black torn by hard white muzzle flashes, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, graphic injury, wound detail, shooting the woman, aiming at the woman, hitting a person",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, dangerous, intimate; NOT a happy ending",
+      "movement": "confrontation",
+      "rejection_samples": 6,
+      "intensity": 0.8,
+      "fx": "muzzle-flash strobing as the only key light, harsh motion smear on each shot, blown highlights punching the dark, cordite haze"
+    },
+    {
+      "id": "confr_whomade",
+      "dur": 6,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in close-up",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Jack, the painted figure slumped on the floor with his back against a stone pillar, unable to stand, tears rolling steadily down through the cracked greasepaint yet he never weeps — he speaks and laughs softly through them, calm and unbroken, an anarchic grief behind the eyes; single hard key light carving him from the black, fully modest, cinematic realism, no gore",
+      "palette": "deep black with a single hard key light, cold desaturation, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, visible firearm, gun detail, graphic violence, wound detail",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, devastating, intimate; NOT a happy ending",
+      "movement": "confrontation",
+      "intensity": 0.68,
+      "fx": "unstable handheld micro-jitter, a flicker of static crawling across the wound, the frame flinching"
+    },
+    {
+      "id": "confr_blood",
+      "dur": 4,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "intimate static close-up",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "extreme close on Jack, fallen against the base of a stone pillar and unable to rise, tears still rolling down through the greasepaint while a low dark laugh threads through his words, holding her gaze like a mirror turned on her, calm and terrible, fully modest, cinematic realism, no gore, no blood",
+      "palette": "warm intimate key light, deep black, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, visible firearm, gun detail, graphic violence, wound detail",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, devastating, intimate; NOT a happy ending",
+      "movement": "confrontation",
+      "intensity": 0.7,
+      "fx": "greasepaint smear, faint mirror-doubling of the face, a wet sheen glitch across the wound"
+    },
+    {
+      "id": "confr_ect",
+      "dur": 5,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in, cold light",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Jack, slumped against the stone pillar and too weak to stand, tears rolling constantly down the greasepaint, a hollow flicker in the eyes as he remembers the lightning, speaking and laughing quietly through the tears, a cold metallic light tracing his face, fully modest, cinematic realism, no gore",
+      "palette": "cold desaturated blue-grey, hard metallic light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, medical restraints graphic, graphic violence",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, haunted, intimate; NOT a happy ending",
+      "movement": "confrontation",
+      "intensity": 0.92,
+      "fx": "harsh electrical strobe flicker, horizontal scan-line glitch, chromatic aberration splitting the face, the image stuttering and tearing like a failing memory, blown-out highlights, VHS dropout"
+    },
+    {
+      "id": "confr_sayit",
+      "dur": 4,
+      "chars": [
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in close-up",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Julie, breaking quietly, tears in her eyes, reaching toward him with her voice not her hand, pleading with all her composure cracking, luminous soft key light, fully modest, cinematic realism",
+      "palette": "soft naturalistic light, faint warmth, shallow depth of field, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; serious, restrained, aching, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_aim",
+      "dur": 4,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "intimate static close-up",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Jack, collapsed against the pillar and unable to rise, tears rolling steadily, a broken soft laugh escaping, the menace draining into helpless tenderness as he looks at her, fully modest, cinematic realism, no gore, no visible weapon",
+      "palette": "warm key light against deep shadow, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, visible firearm, gun detail, graphic violence",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, devastating, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_real",
+      "dur": 4,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in close-up",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Jack, still slumped against the pillar, tears rolling, a faint aching smile beneath the paint, quiet and unguarded for one moment, remembering a love that was real, fully modest, cinematic realism, no gore",
+      "palette": "soft warm key light, deep black, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, visible firearm, graphic violence",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; tender, restrained, devastating, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_putdown",
+      "dur": 4,
+      "chars": [
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in close-up",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Julie, tears streaming quietly, all her formidable composure gone, pleading with him gently, one hand half-raised in the dark, fully modest, cinematic realism",
+      "palette": "soft naturalistic light, faint warmth, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; serious, restrained, aching, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_reachfire",
+      "dur": 4,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "low wide two-shot on the fallen man against the pillar, muzzle flashes ringing the room",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "Julie lunges one last time to reach him; from the floor against the pillar, unable to stand, Jack fires point-blank all around her, muzzle flashes ringing the dark, shattering everything in the room except her, chaotic and deafening, tears streaming and a broken laugh, proof that he cannot aim at her, she stands untouched in the storm of it, stylized in shadow and hard light, no gore, no blood, cinematic realism",
+      "palette": "deep black shredded by hard muzzle flashes, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, graphic injury, wound detail, shooting the woman, aiming at the woman, hitting a person",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, chaotic, tragic; NOT a happy ending",
+      "movement": "confrontation",
+      "intensity": 0.8,
+      "fx": "gun-flash strobe key light, smeared motion trails, chromatic fringing, sparks and shattering glass, everything breaking but her"
+    },
+    {
+      "id": "confr_treatment",
+      "dur": 5,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "close on Julie, hands open and pleading, Jack’s shoulder in foreground against the pillar",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "Julie, all composure cracking, pleads with the fallen Jack against the pillar to let her get him to a surgeon tonight, not asking forgiveness, only that he not die on the floor; her hands open and desperate but never touching him; controlled tears in her eyes; intimate, stylized in shadow and hard light, no gore, no blood, cinematic realism",
+      "palette": "close warm-cold key light on Julie’s face, deep shadow behind, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, graphic injury, wound detail, shooting the woman, aiming at the woman, hitting a person",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, dangerous, intimate; NOT a happy ending",
+      "movement": "confrontation"
+    },
+    {
+      "id": "confr_lightning",
+      "dur": 6,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "low angle on Jack against the pillar, a faint cold electrical flicker haunting the dark behind him",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "Jack, slumped against the stone pillar, refuses Julie’s plea for treatment with a hollow broken laugh, invoking the lightning that once healed him and took the man, leaving only this; tears roll constantly down the greasepaint, cold metallic dread in his eyes, one hand pressed to his wounded side; a faint cold electrical flicker haunts the dark behind him; stylized in shadow and hard light, no gore, no blood, cinematic realism",
+      "palette": "deep black torn by a faint cold electrical flicker, hard key light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, graphic injury, wound detail, shooting the woman, aiming at the woman, hitting a person",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, dangerous, intimate; NOT a happy ending",
+      "movement": "confrontation",
+      "intensity": 0.88,
+      "fx": "arc-light strobe pulses, frame-tearing convulsions with each surge, the picture spasming, electrode-blue flashes, signal breakup"
+    },
+    {
+      "id": "confr_smile",
+      "dur": 5,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in, hardening",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Jack, still fallen against the pillar and unable to rise, tears still rolling but the face hardening back into the mask, a cold soft laugh, the strained painted smile widening as the tenderness is buried again, menace returning without any physical threat shown, fully modest, cinematic realism, no gore, no weapon",
+      "palette": "cold blue-grey, hard key light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, visible firearm, gun detail, graphic violence, self-harm depiction, wound detail",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, chilling, intimate; NOT a happy ending",
+      "movement": "confrontation",
+      "rejection_samples": 6,
+      "intensity": 0.7,
+      "fx": "subtle datamosh smear as the smile is carved, the image beginning to slip and tear at the edges"
+    },
+    {
+      "id": "confr_lastlaugh",
+      "dur": 6,
+      "chars": [
+        "jack"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "slow push-in, then still",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "close on Jack, slumped against the pillar and unable to stand, tears rolling and a rising soft laugh, a terrible serene calm settling over the painted face, eyes locked forward on her, making her watch, a tender unbearable cruelty, the moment held entirely in the face and never showing any weapon or act, fully modest, cinematic realism, no gore, no weapon, entirely implied",
+      "palette": "deep black with a single hard key light, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, visible firearm, gun detail, graphic violence, self-harm depiction, wound detail",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, generous negative space; single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera; unhurried pacing; severe, restrained, tragic, intimate; NOT a happy ending",
+      "movement": "confrontation",
+      "rejection_samples": 6,
+      "intensity": 0.76,
+      "fx": "the image glitching and doubling, reality slipping, a projector-flicker crawling over the painted face, datamosh smear as he leans in"
+    },
+    {
+      "id": "confr_fall",
+      "dur": 5,
+      "chars": [
+        "jack",
+        "julie"
+      ],
+      "talking": false,
+      "vo": true,
+      "camera": "wide, static, then slow crane to the light",
+      "mode": "A",
+      "song": "confrontation",
+      "prompt": "a wide shadowed room: the painted figure already fallen against the base of a stone pillar, a single sharp sound in the dark, and his silhouette slides limp down the pillar into the black, a last soft laugh dissolving into silence; entirely in shadow and suggestion, never graphic, no blood, no gore, nothing shown; Julie is made to watch, unable to look away, then recoils with a hand to her mouth; a shaft of pale morning light opens across the far wall and leaves her alive and alone in it; monumental negative space, cinematic realism",
+      "palette": "near-total black opening into a single shaft of pale gold dawn, film grain",
+      "negative": "nudity, nude, skin exposure, cleavage, bare shoulders, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual contact, kissing, extra fingers, deformed hands, blurry, low quality, exaggerated acting, soap opera, comedy, slapstick, circus clown makeup, rainbow colors, bright flat daylight, sitcom lighting, gore, blood, blood spatter, visible firearm, gun detail, graphic violence, graphic death, corpse detail, wound detail",
+      "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; disciplined composition, vast negative space; single motivated light source, deep quiet shadows; slow patient camera; unhurried pacing; tragic, restrained, reverent, elegiac; NOT a happy ending",
+      "movement": "confrontation",
+      "rejection_samples": 6,
+      "intensity": 0.9,
+      "fx": "slow-motion ramp collapsing into stutter, heavy motion blur, gate weave, the frame bleeding and glitching toward black, a final projector flicker"
+    }
+  ]
+}

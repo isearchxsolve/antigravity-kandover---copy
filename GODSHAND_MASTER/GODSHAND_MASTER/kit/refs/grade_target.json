@@ -1,0 +1,16 @@
+{
+  "source": "hero_alam_raveena.mp4",
+  "note": "OpenCV 8-bit LAB global mean/std; target look for grade_match.py",
+  "colorspace": "opencv-LAB-8bit",
+  "frames_sampled": 80,
+  "lab_mean": [
+    152.5306319580078,
+    128.68445604112412,
+    134.64010654025608
+  ],
+  "lab_std": [
+    73.16641264947062,
+    4.787620438692844,
+    6.818505590403651
+  ]
+}

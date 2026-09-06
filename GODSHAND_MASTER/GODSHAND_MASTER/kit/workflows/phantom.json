@@ -1,0 +1,221 @@
+{
+  "1": {
+    "class_type": "UnetLoaderGGUF",
+    "inputs": {
+      "unet_name": "Wan2.2-Phantom-Q8_0.gguf"
+    },
+    "_meta": {
+      "title": "Load Wan (GGUF)"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn.safetensors",
+      "type": "wan"
+    },
+    "_meta": {
+      "title": "UMT5 text encoder"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "_meta": {
+      "title": "Wan VAE"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "POSITIVE",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Positive"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "NEGATIVE",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Negative"
+    }
+  },
+  "6": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "subject_a.png"
+    },
+    "_meta": {
+      "title": "Subject A"
+    }
+  },
+  "7": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "subject_b.png"
+    },
+    "_meta": {
+      "title": "Subject B"
+    }
+  },
+  "8": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "6",
+        0
+      ],
+      "image2": [
+        "7",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Batch subjects"
+    }
+  },
+  "14": {
+    "class_type": "WanPhantomSubjectToVideo",
+    "inputs": {
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "images": [
+        "8",
+        0
+      ],
+      "width": 1280,
+      "height": 720,
+      "length": 121,
+      "batch_size": 1
+    },
+    "_meta": {
+      "title": "Wan Phantom"
+    }
+  },
+  "15": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "14",
+        0
+      ],
+      "negative": [
+        "14",
+        1
+      ],
+      "latent_image": [
+        "14",
+        2
+      ],
+      "steps": 30,
+      "cfg": 5.5,
+      "sampler_name": "uni_pc",
+      "scheduler": "beta",
+      "seed": 42,
+      "denoise": 1.0
+    },
+    "_meta": {
+      "title": "Sample"
+    }
+  },
+  "16": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "15",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Decode"
+    }
+  },
+  "17": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "16",
+        0
+      ],
+      "frame_rate": 24,
+      "loop_count": 0,
+      "filename_prefix": "phantom_take",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 18,
+      "save_output": true
+    },
+    "_meta": {
+      "title": "Combine -> mp4"
+    }
+  },
+  "_bind": {
+    "positive": [
+      "4",
+      "text"
+    ],
+    "negative": [
+      "5",
+      "text"
+    ],
+    "width": [
+      "14",
+      "width"
+    ],
+    "height": [
+      "14",
+      "height"
+    ],
+    "seconds": [
+      "14",
+      "length"
+    ],
+    "steps": [
+      "15",
+      "steps"
+    ],
+    "cfg": [
+      "15",
+      "cfg"
+    ],
+    "seed": [
+      "15",
+      "seed"
+    ],
+    "ref_dirs": [
+      "6",
+      "image"
+    ]
+  }
+}

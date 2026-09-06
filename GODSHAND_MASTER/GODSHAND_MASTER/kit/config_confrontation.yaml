@@ -1,0 +1,275 @@
+film_title: THE_CONFRONTATION_CLIP
+shots_file: shots_confrontation.json
+render_mode: motion_stills
+fps: 24
+interpolate_fps: 16
+width: 1280
+height: 704
+base_model: Wan2.2-S2V
+quant: Q4_K_M
+steps: 20
+cfg: 6.0
+sampler: uni_pc
+scheduler: beta
+upscale: 1.5
+rejection_samples: 3
+codeformer_fidelity: 0.5
+max_clip_seconds: 6
+denoise: 0.45
+identity_retry: 3
+paths:
+  refs: refs
+  script: script/lines_confrontation.csv
+  audio_bg: audio/bg_confrontation
+  audio_prompts: audio/prompts_confrontation.csv
+  work: /kaggle/working/confrontation_work
+  out: output_confrontation
+  models: /kaggle/working/models
+character_forge:
+  enabled: true
+  targets:
+  - jack
+  - julie
+  workflow: charforge
+  out_root: refs
+  overwrite: false
+tts:
+  english: hexgrad/Kokoro-82M
+  backup: myshell-ai/MeloTTS-English
+  hindi: ai4bharat/indic-parler-tts
+  sample_rate: 48000
+  speak_direction: false
+  voice_cast:
+    jack:
+    - am_onyx
+    - am_fenrir
+    - am_adam
+    - af_heart
+    julie:
+    - af_nicole
+    - af_sarah
+    - af_bella
+    - af_heart
+  performance:
+    jack: quiet dangerous stillness, an unsettling calm hiding menace, wounded and
+      coiled, low and deliberate, never shouting
+    julie: glacial regal precision, cool commanding authority, luminous and formidable,
+      restrained emotion beneath a formidable stillness
+score:
+  sample_rate: 48000
+  duck_db: 18
+  crossfade_ms: 2200
+  shared_pad: true
+  movements:
+    prelude:
+      file: prelude.mp3
+      shots:
+      - pro_alone
+      - pro_seen
+      - pro_silence
+      - pro_crossing
+    search:
+      file: search.mp3
+      shots:
+      - search_void
+      - search_run
+      - search_water
+      - search_fear
+      - search_found
+    confrontation:
+      file: confrontation.mp3
+      shots:
+      - confr_caught
+      - confr_allblades
+      - confr_dare
+      - confr_dontouch
+      - confr_whomade
+      - confr_blood
+      - confr_ect
+      - confr_sayit
+      - confr_aim
+      - confr_real
+      - confr_putdown
+      - confr_reachfire
+      - confr_treatment
+      - confr_lightning
+      - confr_smile
+      - confr_lastlaugh
+      - confr_fall
+  chorus_gain_db: -15
+gpu:
+  hero_shots_mode: A
+  simple_shots_mode: B
+  always_stage_split: true
+active_profile: kaggle_2xt4_zero_oom
+profiles:
+  kaggle_2xt4:
+    num_gpus: 2
+    attention: xformers
+    quant: Q8
+    rejection_samples: 3
+    steps: 30
+    upscale: 1.75
+    width: 1280
+    height: 704
+    rate_per_gpu_hr: 0.0
+    comfy_flags: --cache-none --disable-smart-memory
+  kaggle_2xt4_max:
+    num_gpus: 2
+    attention: xformers
+    quant: Q8
+    rejection_samples: 4
+    steps: 40
+    upscale: 2.0
+    width: 1280
+    height: 704
+    rate_per_gpu_hr: 0.0
+    comfy_flags: --cache-none --disable-smart-memory
+  kaggle_2xt4_zero_oom:
+    num_gpus: 2
+    attention: xformers
+    quant: Q4_K_M
+    rejection_samples: 2
+    steps: 20
+    cfg: 6.0
+    upscale: 1.5
+    width: 1280
+    height: 704
+    rate_per_gpu_hr: 0.0
+    denoise: 0.45
+    codeformer_fidelity: 0.5
+    max_clip_seconds: 6
+    identity_retry: 3
+    comfy_flags: --cache-none --disable-smart-memory --lowvram --cpuvae
+  lightning_l4:
+    num_gpus: 1
+    attention: fp8
+    quant: Q6
+    rejection_samples: 1
+    steps: 24
+    upscale: 1.5
+    width: 1152
+    height: 640
+    rate_per_gpu_hr: 0.48
+    comfy_flags: --fast --cache-none
+  lightning_h100_max:
+    num_gpus: 1
+    attention: sdpa
+    quant: bf16
+    rejection_samples: 3
+    steps: 50
+    upscale: 2.0
+    width: 1280
+    height: 704
+    rate_per_gpu_hr: 2.99
+    comfy_flags: --highvram --cache-none
+  lightning_a100_max:
+    num_gpus: 1
+    attention: sdpa
+    quant: bf16
+    rejection_samples: 3
+    steps: 50
+    upscale: 2.0
+    width: 1280
+    height: 704
+    rate_per_gpu_hr: 2.19
+    comfy_flags: --highvram --cache-none
+  lightning_a100_40gb:
+    num_gpus: 1
+    attention: sdpa
+    quant: bf16
+    rejection_samples: 3
+    steps: 45
+    upscale: 2.0
+    width: 1280
+    height: 704
+    rate_per_gpu_hr: 1.29
+    comfy_flags: --cache-none --disable-smart-memory
+music_policy:
+  under_narration: cinematic_original_score_ducked_under_dialogue
+  swell_in_wordless_beats: true
+  wordless_beats: []
+  original_only: true
+real_characters: []
+lipsync:
+  enabled: false
+realism:
+  positive: photorealistic, shot on 35mm film, natural skin texture with visible pores,
+    realistic subsurface scattering, cinematic lighting, shallow depth of field, volumetric
+    light, subtle film grain, physically accurate motion, detailed hands, ultra detailed,
+    high dynamic range
+  negative: cartoon, anime, cgi, 3d render, plastic skin, waxy skin, airbrushed, over-smoothed
+    skin, deformed hands, extra fingers, mutated fingers, warped face, identity drift,
+    flickering, temporal artifacts, oversaturated, video game, illustration, painting,
+    blurry, low detail, watermark, text
+sfx:
+  enabled: true
+  mode: cpu
+  gain_db: -8
+finale:
+  enabled: true
+  duration: 9.0
+  freeze_hold: 1.4
+  freeze_on: confr_smile
+  recap_shots:
+  - pro_seen
+  - pro_silence
+  - pro_alone
+  - pro_crossing
+  - confr_real
+  - confr_aim
+  - confr_sayit
+  - confr_smile
+intensity:
+  keep_glitch_threshold: 0.66
+# 4K cinema delivery block (consumed by clips.py / stitch.py / qc.py when
+# KIT_4K_DELIVERY=1 is set). Render pipeline still produces the 1280x704
+# shot frames; the master encoder upscales + emits a 10-bit Rec.709 4K master.
+# Env KIT_4K_DELIVERY=1 overrides `enabled`.
+delivery:
+  enabled: false              # also toggled by KIT_4K_DELIVERY env (env wins)
+  width: 3840
+  height: 2160
+  pix_fmt: yuv420p10le         # 10-bit 4:2:0 (Rec.709 SDR)
+  color_primaries: bt709       # streaming-grade color science
+  color_trc: bt709
+  colorspace: bt709
+  video_bitrate: 120M          # cinematic floor for 4K24 H.264
+  audio_bitrate: 320k
+  master_crf: null             # bitrate mode (no CRF) for master path
+
+# Theatrical (DCI) delivery block — opt-in via KIT_THEATRICAL=1 env var.
+# When enabled, emits: DCDM (JPEG 2000 XYZ 12-bit), DCP (MXF + CPL),
+# 5.1/7.1 surround audio, P3-D65 SDR + HDR PQ masters, DCI 4K flat/scope.
+theatrical:
+  enabled: false
+  aspect: flat                 # flat (1.85) | scope (2.39) | full (1.90)
+  dci_4k: true                 # true -> 4096 canvas; false -> 2K (2048x1080)
+  hdr: true                    # true -> also emit PQ ST 2084 HDR master
+  surround_layout: 5.1         # 5.1 | 7.1
+  dcdm_jpeg2000: true          # true -> JPEG 2000 DCDM; false -> uncompressed TIFF DCDM
+  dcp_encrypt: false           # true -> KDM-ready encryption stub (not real crypto)
+  video_bitrate: 250M          # DCDM bitrate
+  audio_bitrate: 384k          # DCP audio bitrate (WAV inside MXF is uncompressed)
+  max_reel_seconds: 10800      # max seconds per reel (~3h)
+audio_master:
+  sample_rate: 48000
+  bit_depth: 24
+  loudness_target: -14
+  loudness_range: 10
+  true_peak: -1.0
+  limiter_ceiling: -0.3
+  stereo_enhance: 0.25
+  reverb_send: -8
+  reverb_decay: 2.2
+  deesser_threshold: 0.3
+  sidechain_ratio: 12
+  sidechain_attack: 3
+  sidechain_release: 250
+grain:
+  enabled: true
+  strength: 4.5
+  size: 1.0
+  chroma: 0.6
+  halation: 0.25
+identity: {}

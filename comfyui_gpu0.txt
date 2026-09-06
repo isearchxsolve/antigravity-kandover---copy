@@ -1,0 +1,115 @@
+[32m[INFO][0m setup plugin alembic.autogenerate.schemas
+[32m[INFO][0m setup plugin alembic.autogenerate.tables
+[32m[INFO][0m setup plugin alembic.autogenerate.types
+[32m[INFO][0m setup plugin alembic.autogenerate.constraints
+[32m[INFO][0m setup plugin alembic.autogenerate.defaults
+[32m[INFO][0m setup plugin alembic.autogenerate.comments
+[32m[INFO][0m Setting output directory to: /kaggle/working/ComfyUI/output_gpu0
+[32m[INFO][0m Setting user directory to: /kaggle/working/ComfyUI/user_gpu0
+[1m[33m[WARNING][0m WARNING: You need pytorch with cu130 or higher to use optimized CUDA operations.
+[32m[INFO][0m Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['adaln', 'apply_rope', 'apply_rope1', 'apply_rope_split_half', 'apply_rope_split_half1', 'convrot_w4a4_linear', 'dequantize_convrot_w4a4_weight', 'dequantize_int8_convrot_weight', 'dequantize_int8_convrot_weight_dtype', 'dequantize_int8_simple', 'dequantize_int8_simple_dtype', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'gemv_awq_w4a16', 'int8_linear', 'prepare_int4_weight_for_int8_linear', 'quantize_and_rotate_rowwise', 'quantize_convrot_w4a4_weight', 'quantize_int8_convrot_weight', 'quantize_int8_rowwise', 'quantize_int8_tensorwise', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'quantize_svdquant_w4a4', 'rms_rope', 'rms_rope1', 'rms_rope_split_half', 'rms_rope_split_half1', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4', 'scaled_mm_svdquant_w4a4', 'stochastic_rounding_fp8']}
+[32m[INFO][0m Found comfy_kitchen backend triton: {'available': True, 'disabled': True, 'unavailable_reason': None, 'capabilities': ['adaln', 'apply_rope', 'apply_rope1', 'apply_rope_split_half', 'apply_rope_split_half1', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'int8_linear', 'quantize_and_rotate_rowwise', 'quantize_int8_rowwise', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8']}
+[32m[INFO][0m Found comfy_kitchen backend cuda: {'available': True, 'disabled': True, 'unavailable_reason': None, 'capabilities': ['adaln', 'apply_rope', 'apply_rope1', 'apply_rope_split_half', 'apply_rope_split_half1', 'convrot_w4a4_linear', 'dequantize_convrot_w4a4_weight', 'dequantize_int8_convrot_weight', 'dequantize_int8_convrot_weight_dtype', 'dequantize_int8_simple', 'dequantize_int8_simple_dtype', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'gemv_awq_w4a16', 'int8_linear', 'prepare_int4_weight_for_int8_linear', 'quantize_and_rotate_rowwise', 'quantize_convrot_w4a4_weight', 'quantize_int8_convrot_weight', 'quantize_int8_rowwise', 'quantize_int8_tensorwise', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'quantize_svdquant_w4a4', 'rms_rope', 'rms_rope1', 'rms_rope_split_half', 'rms_rope_split_half1', 'scaled_mm_nvfp4', 'scaled_mm_svdquant_w4a4', 'stochastic_rounding_fp8']}
+[32m[INFO][0m Checkpoint files will always be loaded safely.
+[32m[INFO][0m Total VRAM 14912 MB, total RAM 32100 MB
+[32m[INFO][0m pytorch version: 2.10.0+cu128
+[32m[INFO][0m Set vram state to: NORMAL_VRAM
+[32m[INFO][0m Disabling smart memory management
+[32m[INFO][0m Device: cuda:0 Tesla T4 : cudaMallocAsync
+[32m[INFO][0m Using async weight offloading with 2 streams
+[32m[INFO][0m Enabled pinned memory 28890.0
+[32m[INFO][0m working around nvidia conv3d memory bug.
+[32m[INFO][0m Using pytorch attention
+aimdo: /project/src-posix/cuda-funchooks.c:52:DEBUG:aimdo_setup_hooks: hooks successfully installed
+aimdo: /project/src/control.c:247:INFO:comfy-aimdo inited for GPU: Tesla T4 (VRAM: 14911 MB)
+[32m[INFO][0m DynamicVRAM support detected and enabled
+[32m[INFO][0m Python version: 3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]
+[32m[INFO][0m ComfyUI version: 0.28.0
+[32m[INFO][0m comfy-aimdo version: 0.4.10
+[32m[INFO][0m comfy-kitchen version: 0.2.22
+[32m[INFO][0m comfyui-frontend-package version: 1.47.10
+[32m[INFO][0m comfyui-workflow-templates version: 0.11.17
+[32m[INFO][0m comfyui-embedded-docs version: 0.5.8
+[32m[INFO][0m comfy-kitchen version: 0.2.22
+[32m[INFO][0m comfy-aimdo version: 0.4.10
+[32m[INFO][0m [Prompt Server] web root: /usr/local/lib/python3.12/dist-packages/comfyui_frontend_package/static
+[32m[INFO][0m Asset seeder disabled
+[32m[INFO][0m No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+[32m[INFO][0m ComfyUI-GGUF: Allowing full torch compile
+[32m[INFO][0m 
+Import times for custom nodes:
+[32m[INFO][0m    0.0 seconds: /kaggle/working/ComfyUI/custom_nodes/websocket_image_save.py
+[32m[INFO][0m    0.1 seconds: /kaggle/working/ComfyUI/custom_nodes/ComfyUI-GGUF
+[32m[INFO][0m    0.3 seconds: /kaggle/working/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+[32m[INFO][0m 
+[1m[31m[ERROR][0m Failed to initialize database. Please ensure you have installed the latest requirements. If the error persists, please report this as in future the database will be required: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m Starting server
+
+[32m[INFO][0m To see the GUI go to: http://127.0.0.1:8188
+[32m[INFO][0m got prompt
+[32m[INFO][0m Using pytorch attention in VAE
+[32m[INFO][0m Using pytorch attention in VAE
+[32m[INFO][0m VAE load device: cuda:0, offload device: cpu, dtype: torch.float16
+[32m[INFO][0m Found quantization metadata version 1
+[32m[INFO][0m Using MixedPrecisionOps for text encoder
+[32m[INFO][0m CLIP/text encoder model load device: cuda:0, offload device: cpu, current: cpu, dtype: torch.float16
+[32m[INFO][0m Requested to load WanTEModel
+[32m[INFO][0m Model WanTEModel prepared for dynamic VRAM loading. 6419MB Staged. 0 patches attached. Force pre-loaded 73 weights: 488 KB.
+[32m[INFO][0m Model WanTEModel prepared for dynamic VRAM loading. 6419MB Staged. 0 patches attached. Force pre-loaded 73 weights: 488 KB.
+[32m[INFO][0m Requested to load WanVAE
+[32m[INFO][0m Model WanVAE prepared for dynamic VRAM loading. 241MB Staged. 0 patches attached. Force pre-loaded 60 weights: 61 KB.
+[32m[INFO][0m gguf qtypes: F16 (694), Q4_K (280), Q6_K (120), F32 (1)
+[32m[INFO][0m model weight dtype torch.float16, manual cast: None
+[32m[INFO][0m model_type FLOW
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13497.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:19<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:19<06:01, 19.02s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:35<06:01, 19.02s/it]                                    10%|█         | 2/20 [00:35<05:23, 17.96s/it] 15%|█▌        | 3/20 [00:54<05:18, 18.71s/it] 20%|██        | 4/20 [01:14<05:14, 19.64s/it] 25%|██▌       | 5/20 [01:35<05:16, 21.09s/it] 30%|███       | 6/20 [01:57<05:05, 21.81s/it] 35%|███▌      | 7/20 [02:18<04:31, 20.90s/it] 40%|████      | 8/20 [02:38<04:07, 20.60s/it] 45%|████▌     | 9/20 [02:59<03:48, 20.77s/it] 50%|█████     | 10/20 [03:20<03:30, 21.09s/it] 55%|█████▌    | 11/20 [03:41<03:09, 21.04s/it] 60%|██████    | 12/20 [04:02<02:47, 20.93s/it] 65%|██████▌   | 13/20 [04:23<02:25, 20.80s/it] 70%|███████   | 14/20 [04:44<02:05, 20.97s/it] 75%|███████▌  | 15/20 [05:05<01:45, 21.08s/it] 80%|████████  | 16/20 [05:26<01:24, 21.02s/it] 85%|████████▌ | 17/20 [05:47<01:03, 21.14s/it] 90%|█████████ | 18/20 [06:08<00:42, 21.05s/it] 95%|█████████▌| 19/20 [06:29<00:20, 20.89s/it]100%|██████████| 20/20 [06:50<00:00, 20.88s/it]100%|██████████| 20/20 [06:50<00:00, 20.52s/it]
+[32m[INFO][0m gguf qtypes: F16 (694), Q4_K (280), Q6_K (120), F32 (1)
+[32m[INFO][0m model weight dtype torch.float16, manual cast: None
+[32m[INFO][0m model_type FLOW
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13496.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:21<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:21<06:53, 21.76s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:44<06:53, 21.76s/it]                                    10%|█         | 2/20 [00:44<06:36, 22.01s/it] 15%|█▌        | 3/20 [01:04<05:54, 20.84s/it] 20%|██        | 4/20 [01:25<05:27, 20.44s/it] 25%|██▌       | 5/20 [01:45<05:09, 20.65s/it] 30%|███       | 6/20 [02:07<04:54, 21.04s/it] 35%|███▌      | 7/20 [02:28<04:33, 21.06s/it] 40%|████      | 8/20 [02:49<04:12, 21.07s/it] 45%|████▌     | 9/20 [03:10<03:51, 21.06s/it] 50%|█████     | 10/20 [03:31<03:30, 21.02s/it] 55%|█████▌    | 11/20 [03:52<03:07, 20.82s/it] 60%|██████    | 12/20 [04:12<02:46, 20.83s/it] 65%|██████▌   | 13/20 [04:33<02:27, 21.01s/it] 70%|███████   | 14/20 [04:54<02:06, 21.03s/it] 75%|███████▌  | 15/20 [05:15<01:44, 20.96s/it] 80%|████████  | 16/20 [05:36<01:23, 20.89s/it] 85%|████████▌ | 17/20 [05:57<01:02, 21.00s/it] 90%|█████████ | 18/20 [06:18<00:42, 21.02s/it] 95%|█████████▌| 19/20 [06:39<00:20, 20.96s/it]100%|██████████| 20/20 [07:00<00:00, 20.91s/it]100%|██████████| 20/20 [07:00<00:00, 21.03s/it]
+[32m[INFO][0m Requested to load WanVAE
+[32m[INFO][0m Model WanVAE prepared for dynamic VRAM loading. 241MB Staged. 0 patches attached. Force pre-loaded 60 weights: 61 KB.
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for save_metadata has been set to True
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for trim_to_audio has been set to False
+[32m[INFO][0m [32mPrompt executed in 00:15:49[0m
+[32m[INFO][0m got prompt
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13496.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:21<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:21<06:55, 21.86s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:44<06:55, 21.86s/it]                                    10%|█         | 2/20 [00:44<06:37, 22.08s/it] 15%|█▌        | 3/20 [01:05<05:55, 20.93s/it] 20%|██        | 4/20 [01:25<05:27, 20.49s/it] 25%|██▌       | 5/20 [01:46<05:12, 20.86s/it] 30%|███       | 6/20 [02:07<04:56, 21.21s/it] 35%|███▌      | 7/20 [02:28<04:33, 21.06s/it] 40%|████      | 8/20 [02:49<04:09, 20.76s/it] 45%|████▌     | 9/20 [03:10<03:49, 20.91s/it] 50%|█████     | 10/20 [03:31<03:29, 20.99s/it] 55%|█████▌    | 11/20 [03:52<03:09, 21.04s/it] 60%|██████    | 12/20 [04:13<02:48, 21.04s/it] 65%|██████▌   | 13/20 [04:34<02:26, 20.99s/it] 70%|███████   | 14/20 [04:55<02:05, 20.96s/it] 75%|███████▌  | 15/20 [05:16<01:44, 20.93s/it] 80%|████████  | 16/20 [05:37<01:24, 21.00s/it] 85%|████████▌ | 17/20 [05:58<01:03, 21.01s/it] 90%|█████████ | 18/20 [06:19<00:41, 20.92s/it] 95%|█████████▌| 19/20 [06:40<00:20, 20.93s/it]100%|██████████| 20/20 [07:01<00:00, 20.94s/it]100%|██████████| 20/20 [07:01<00:00, 21.06s/it]
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13496.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:20<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:20<06:34, 20.76s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:43<06:34, 20.76s/it]                                    10%|█         | 2/20 [00:43<06:29, 21.65s/it] 15%|█▌        | 3/20 [01:04<05:56, 20.95s/it] 20%|██        | 4/20 [01:25<05:32, 20.75s/it] 25%|██▌       | 5/20 [01:45<05:12, 20.81s/it] 30%|███       | 6/20 [02:06<04:54, 21.01s/it] 35%|███▌      | 7/20 [02:27<04:34, 21.09s/it] 40%|████      | 8/20 [02:48<04:11, 20.99s/it] 45%|████▌     | 9/20 [03:09<03:51, 21.00s/it] 50%|█████     | 10/20 [03:30<03:29, 20.95s/it] 55%|█████▌    | 11/20 [03:51<03:08, 20.91s/it] 60%|██████    | 12/20 [04:12<02:46, 20.76s/it] 65%|██████▌   | 13/20 [04:33<02:26, 20.89s/it] 70%|███████   | 14/20 [04:54<02:05, 20.87s/it] 75%|███████▌  | 15/20 [05:15<01:44, 20.83s/it] 80%|████████  | 16/20 [05:35<01:23, 20.81s/it] 85%|████████▌ | 17/20 [05:56<01:02, 20.83s/it] 90%|█████████ | 18/20 [06:17<00:41, 20.82s/it] 95%|█████████▌| 19/20 [06:38<00:20, 20.84s/it]100%|██████████| 20/20 [06:59<00:00, 20.88s/it]100%|██████████| 20/20 [06:59<00:00, 20.96s/it]
+[32m[INFO][0m Requested to load WanVAE
+[32m[INFO][0m Model WanVAE prepared for dynamic VRAM loading. 241MB Staged. 0 patches attached. Force pre-loaded 60 weights: 61 KB.
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for save_metadata has been set to True
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for trim_to_audio has been set to False
+[32m[INFO][0m [32mPrompt executed in 00:14:21[0m
+[32m[INFO][0m got prompt
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13496.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:20<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:20<06:38, 21.00s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:43<06:38, 21.00s/it]                                    10%|█         | 2/20 [00:43<06:29, 21.64s/it] 15%|█▌        | 3/20 [01:04<05:57, 21.01s/it] 20%|██        | 4/20 [01:25<05:31, 20.73s/it] 25%|██▌       | 5/20 [01:45<05:13, 20.93s/it] 30%|███       | 6/20 [02:07<04:55, 21.08s/it] 35%|███▌      | 7/20 [02:28<04:34, 21.15s/it] 40%|████      | 8/20 [02:49<04:12, 21.00s/it] 45%|████▌     | 9/20 [03:10<03:50, 20.92s/it] 50%|█████     | 10/20 [03:30<03:28, 20.86s/it] 55%|█████▌    | 11/20 [03:51<03:08, 20.89s/it] 60%|██████    | 12/20 [04:12<02:47, 20.98s/it] 65%|██████▌   | 13/20 [04:33<02:27, 21.01s/it] 70%|███████   | 14/20 [04:54<02:06, 21.09s/it] 75%|███████▌  | 15/20 [05:16<01:45, 21.10s/it] 80%|████████  | 16/20 [05:37<01:24, 21.03s/it] 85%|████████▌ | 17/20 [05:58<01:03, 21.06s/it] 90%|█████████ | 18/20 [06:19<00:41, 20.94s/it] 95%|█████████▌| 19/20 [06:40<00:21, 21.01s/it]100%|██████████| 20/20 [07:01<00:00, 20.98s/it]100%|██████████| 20/20 [07:01<00:00, 21.05s/it]
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13496.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:20<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:20<06:35, 20.83s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:43<06:35, 20.83s/it]                                    10%|█         | 2/20 [00:43<06:28, 21.61s/it] 15%|█▌        | 3/20 [01:04<05:54, 20.86s/it] 20%|██        | 4/20 [01:24<05:30, 20.63s/it] 25%|██▌       | 5/20 [01:45<05:10, 20.72s/it] 30%|███       | 6/20 [02:06<04:54, 21.00s/it] 35%|███▌      | 7/20 [02:27<04:32, 20.98s/it] 40%|████      | 8/20 [02:48<04:11, 20.95s/it] 45%|████▌     | 9/20 [03:09<03:50, 20.93s/it] 50%|█████     | 10/20 [03:30<03:27, 20.79s/it] 55%|█████▌    | 11/20 [03:50<03:07, 20.86s/it] 60%|██████    | 12/20 [04:11<02:46, 20.80s/it] 65%|██████▌   | 13/20 [04:32<02:26, 20.91s/it] 70%|███████   | 14/20 [04:53<02:05, 20.85s/it] 75%|███████▌  | 15/20 [05:14<01:44, 20.83s/it] 80%|████████  | 16/20 [05:35<01:23, 20.78s/it] 85%|████████▌ | 17/20 [05:55<01:02, 20.86s/it] 90%|█████████ | 18/20 [06:16<00:41, 20.98s/it] 95%|█████████▌| 19/20 [06:37<00:20, 20.91s/it]100%|██████████| 20/20 [06:58<00:00, 20.80s/it]100%|██████████| 20/20 [06:58<00:00, 20.93s/it]
+[32m[INFO][0m Requested to load WanVAE
+[32m[INFO][0m Model WanVAE prepared for dynamic VRAM loading. 241MB Staged. 0 patches attached. Force pre-loaded 60 weights: 61 KB.
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for save_metadata has been set to True
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for trim_to_audio has been set to False
+[32m[INFO][0m [32mPrompt executed in 00:14:18[0m
+[32m[INFO][0m got prompt
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13496.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:20<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:20<06:38, 20.99s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:42<06:38, 20.99s/it]                                    10%|█         | 2/20 [00:42<06:26, 21.46s/it] 15%|█▌        | 3/20 [01:03<05:55, 20.93s/it] 20%|██        | 4/20 [01:24<05:33, 20.81s/it] 25%|██▌       | 5/20 [01:45<05:15, 21.03s/it] 30%|███       | 6/20 [02:06<04:55, 21.13s/it] 35%|███▌      | 7/20 [02:27<04:34, 21.14s/it] 40%|████      | 8/20 [02:49<04:12, 21.06s/it] 45%|████▌     | 9/20 [03:10<03:50, 20.99s/it] 50%|█████     | 10/20 [03:30<03:28, 20.89s/it] 55%|█████▌    | 11/20 [03:51<03:08, 20.95s/it] 60%|██████    | 12/20 [04:12<02:47, 20.88s/it] 65%|██████▌   | 13/20 [04:33<02:26, 20.87s/it] 70%|███████   | 14/20 [04:54<02:04, 20.81s/it] 75%|███████▌  | 15/20 [05:15<01:44, 20.86s/it] 80%|████████  | 16/20 [05:36<01:23, 20.86s/it] 85%|████████▌ | 17/20 [05:57<01:02, 20.97s/it] 90%|█████████ | 18/20 [06:18<00:41, 21.00s/it] 95%|█████████▌| 19/20 [06:39<00:21, 21.01s/it]100%|██████████| 20/20 [07:00<00:00, 21.06s/it]100%|██████████| 20/20 [07:00<00:00, 21.01s/it]
+[32m[INFO][0m Requested to load WAN21
+[32m[INFO][0m loaded completely; 13496.26 MB usable, 9337.18 MB loaded, full load: True
+  0%|          | 0/20 [00:00<?, ?it/s]  0%|          | 0/20 [00:00<?, ?it/s,   Model Initializing ...  ]  0%|          | 0/20 [00:20<?, ?it/s,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:20<06:36, 20.89s/it,  Model Initialization complete!  ]  5%|▌         | 1/20 [00:42<06:36, 20.89s/it]                                    10%|█         | 2/20 [00:42<06:26, 21.48s/it] 15%|█▌        | 3/20 [01:03<05:54, 20.83s/it] 20%|██        | 4/20 [01:24<05:32, 20.75s/it] 25%|██▌       | 5/20 [01:45<05:13, 20.88s/it] 30%|███       | 6/20 [02:06<04:54, 21.02s/it] 35%|███▌      | 7/20 [02:27<04:32, 20.99s/it] 40%|████      | 8/20 [02:48<04:10, 20.88s/it] 45%|████▌     | 9/20 [03:09<03:49, 20.89s/it] 50%|█████     | 10/20 [03:30<03:28, 20.84s/it] 55%|█████▌    | 11/20 [03:50<03:07, 20.87s/it] 60%|██████    | 12/20 [04:11<02:47, 20.98s/it] 65%|██████▌   | 13/20 [04:32<02:27, 21.03s/it] 70%|███████   | 14/20 [04:53<02:05, 20.94s/it] 75%|███████▌  | 15/20 [05:14<01:44, 20.92s/it] 80%|████████  | 16/20 [05:35<01:23, 20.94s/it] 85%|████████▌ | 17/20 [05:56<01:02, 20.89s/it] 90%|█████████ | 18/20 [06:17<00:41, 20.95s/it] 95%|█████████▌| 19/20 [06:38<00:20, 20.99s/it]100%|██████████| 20/20 [06:59<00:00, 20.85s/it]100%|██████████| 20/20 [06:59<00:00, 20.97s/it]
+[32m[INFO][0m Requested to load WanVAE
+[32m[INFO][0m Model WanVAE prepared for dynamic VRAM loading. 241MB Staged. 0 patches attached. Force pre-loaded 60 weights: 61 KB.
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for save_metadata has been set to True
+[VideoHelperSuite] - [0;33mWARNING[0m - Missing input for trim_to_audio has been set to False
+[32m[INFO][0m [32mPrompt executed in 00:14:17[0m

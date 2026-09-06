@@ -1,0 +1,14 @@
+{
+  "film": "THE MOMENT (10-min extended cut)",
+  "note": "Same 7-scene spine as the 5-min cut with each scene's beats roughly doubled (~120 chained clips): more establishing shots, longer montages, extra reaction/insert shots, fuller VO. No new story. Same engine/quality/voices.",
+  "inherit_globals_from": "shots_moment.json",
+  "scenes": [
+    { "id": "S1_shadow_of_ridicule", "seconds": 70, "clips": 14, "song": "ambient_bed" },
+    { "id": "S2_seven_months_rejection", "seconds": 60, "clips": 12, "song": "ambient_bed" },
+    { "id": "S3_shock_of_grace", "seconds": 110, "clips": 22, "song": "Sarki Chunariya / Aaoge Jab Tum" },
+    { "id": "S4_trembling_appraisals", "seconds": 100, "clips": 20, "song": "Mora Piya Mose Bolat Nahi" },
+    { "id": "S5_conflict_of_reverence", "seconds": 120, "clips": 24, "song": "Nindarian" },
+    { "id": "S6_resignation_exit", "seconds": 80, "clips": 16, "song": "Chal Chale (Apne Ghar)" },
+    { "id": "S7_sanctuary_of_silchar", "seconds": 60, "clips": 12, "song": "Boba Tunnel" }
+  ]
+}

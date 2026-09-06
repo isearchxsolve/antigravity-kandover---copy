@@ -1,0 +1,639 @@
+{
+ "film": "THE MOMENT — The Bangalore Years (definitive cut)",
+ "note": "The complete ~2.5-year Bangalore/Gita arc, built faithfully from your 'The Observer' master prompt. Woman renamed Gunja throughout. Marriage, legal matter, assault and police are DELIBERATELY EXCLUDED. Restrained, modest, no happy ending. English confession/reply are condensed here; the full verbatim text lives in your 'The Observer' page.",
+ "globals": {
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "base_model": "Wan2.2-S2V",
+  "quant": "Q8",
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "uni_pc",
+  "scheduler": "beta",
+  "interpolate_to_fps": 48,
+  "upscale": 1.75,
+  "rejection_samples": 3,
+  "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+  "negative_prompt": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality"
+ },
+ "characters": {
+  "kunal": {
+   "refs": "refs/kunal",
+   "era_default": "young",
+   "era_refs": {
+    "young": "refs/kunal_young",
+    "40s": "refs/kunal_40s"
+   },
+   "tokens": "serious, solemn, sorrowful, reverent, silent, tense jaw, downcast or fixed gaze, no smile, modestly dressed in simple formal attire"
+  },
+  "gunja": {
+   "refs": "refs/gunja",
+   "tokens": "tall elegant dignified woman, late 20s, strong expressive brows, thick wavy dark hair, fair luminous complexion; serious, warm, emotional; (rare) faint guarded almost-smile, restrained; ALWAYS fully modestly dressed in an elegant dress or formal wear"
+  }
+ },
+ "shots": [
+  {
+   "id": "p01_thin_boy",
+   "dur": 7,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "low-angle push-in",
+   "mode": "B",
+   "song": "origin",
+   "prompt": "a frail thin young man sits completely alone in a dark empty college library, staring down at his own thin hands, a single cold shaft of window light, deep shadows, desaturated, melancholic and vulnerable",
+   "palette": "colour palette: faded and desaturated, cold pale morning light, muted blue-grey, the drab colourlessness of a life not yet touched by warmth"
+  },
+  {
+   "id": "p02_rejection",
+   "dur": 7,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "tracking",
+   "mode": "B",
+   "song": "origin",
+   "prompt": "cinematic tracking shot, the slender young man walks through heavy night rain on a grey empty street clutching a wet folder of certificates to his chest, blurred headlights, exhausted and defeated, glistening wet pavement",
+   "palette": "colour palette: faded and desaturated, cold pale morning light, muted blue-grey, the drab colourlessness of a life not yet touched by warmth"
+  },
+  {
+   "id": "b03_interview",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "static two-shot",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "bright modern corporate interview room, warm soft daylight, a weary slender young man sits across a desk from Gunja, a tall elegant dignified woman in modest formal attire; as she reads his profile her eyes fill with sudden deep warmth and intellectual admiration; love at first sight, restrained",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03_tribute",
+   "dur": 10,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "reverent slow push-in",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "slow reverent push-in on Gunja at the interview desk, a brilliant dignified mind, warm window light, statuesque and composed, fully modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03a_minute",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "warm medium",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "warm office daylight, Gunja quietly pulls a chair and sits beside the young man who is absorbed in his computer screen; she watches him with a soft patient expression for a long moment while he remains oblivious; at last she gently says his name and he startles and looks up; modest, tender",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03b_tap",
+   "dur": 6,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "intimate close",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "intimate close-up, Gunja lightly taps the young man's shoulder; a small flicker of discomfort crosses his face; she notices instantly, her hand withdraws with quiet understanding and tenderness; she never reaches to touch him again; strictly modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03b2_embrace",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": true,
+   "camera": "slow, tender",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "quiet office cafeteria corner, Gunja has fled and sits weeping with her face buried in her hands; the young man lowers himself beside her and gently, respectfully draws her into a comforting embrace; she resists, then gives up and sinks into his shoulder and weeps; the only time he ever held her; strictly modest, comforting and sorrowful, never romantic, never through the body; his lips move in a quiet repeated apology",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03b2_confession",
+   "dur": 10,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "static close",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "close on the young man beside her, speaking softly through tears, heartfelt, low-key light, no smile, reverent sorrow",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03b2_reply",
+   "dur": 10,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "static close",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "close on Gunja through her tears, speaking with quiet fierce tenderness, dignified, modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03b2_plea",
+   "dur": 6,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "close",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "Gunja almost pleading, the simple human longing beneath the vision, restrained",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03b2_vo",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "slow",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "his hands holding her as she cries into his shoulder, his gaze distant with realization, sorrowful, modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03c_nooneshearing",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "tender two-shot",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "a quiet closed meeting room, the young man glances nervously toward the door to check it is shut, gathering courage to speak; Gunja leans in gently, warm and reassuring; his courage fails and he looks away into aimless words; she waits with patient aching tenderness as the moment slips past",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03c2_possessive",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "office medium",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "an office; another woman colleague perches on the edge of his desk chatting with him; across the room Gunja watches and waits; after the colleague leaves, Gunja crosses to him and confronts him head-on, quietly aggressive and deeply hurt, telling him never to speak with that woman again; he looks afraid and lowers his eyes; restrained, fully modest",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b03e_appraisal",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, two-shot",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "a small office appraisal meeting room, the young man and Gunja sit across a narrow table stacked with review papers; she leans in and speaks with soft, caring exasperation, urging him to assert himself and claim what is his; he listens with lowered eyes, gentle and unresisting; restrained, fully modest, warm fluorescent light",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b03e2_angel",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, tightening",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "same meeting room moments later; the young man quietly answers her, and something in his words overwhelms her; her eyes fill, she cannot hold her composure, she rises abruptly and hurries out of the frame; he remains seated, stricken and still; restrained, sorrowful, fully modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness"
+  },
+  {
+   "id": "b03f_apology",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "office corridor, following",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "a quiet office corridor; he catches up to Gunja as she walks away wiping her eyes; he stops at a respectful distance, head lowered, and offers a trembling apology; she pauses, half-turned, listening; strictly modest, contrite and sorrowful, no physical contact",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b03d_father",
+   "dur": 10,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "still, grief",
+   "mode": "B",
+   "song": "my_beloved",
+   "prompt": "muted grief-stricken interior, cold pale daylight through a window, a young man in plain dark mourning clothes sits alone in a near-empty room, hollowed and exposed by loss, head bowed; a framed photograph of an older man rests nearby with a single lit candle; profound stillness; the doorway stays empty, no one comes; beyond the window, cold grey rain",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b04_trembling",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "close, cut",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "close-up on Gunja at a polished corporate desk during a meeting, hands trembling on a pen, throat tightening, eyes welling with unshed tears, restrained; cut to the young man opposite, face frozen like stone, staring down at the floor, unresponsive; quiet unbearable tension",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b04a_leaving_project",
+   "dur": 7,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "sequence",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "the young man quietly clears his desk and transfers off her project without telling her; later inside a sleek corporate elevator he offers a small tentative hopeful look; she meets it with a wounded, angry look and turns her face away; the steel doors slide shut between them",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b04b_lift",
+   "dur": 7,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "tense close quarters",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "tense crowded corporate elevator, the young man presses into the far corner trying to disappear; Gunja steps in and crosses to stand beside him, asking gently and warmly how he is and how his new project is going; his face hardens and his reply is curt and cold; the light in her eyes quietly dims",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b04c_observer",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "surreal",
+   "mode": "B",
+   "song": "my_beloved",
+   "prompt": "surreal introspective image, the young man sits in shadow behind a pane of glass, calm and analytical, observing as through a laboratory window a warm tender scene on the other side where another version of himself sits beside Gunja; the watching self studies every gesture like a specimen, his faint reflection overlaid on the glass; present and absent at once; cerebral, deeply human, never cold",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey"
+  },
+  {
+   "id": "b05_doctor",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "clinical",
+   "mode": "B",
+   "song": "lady_in_red",
+   "prompt": "dimly lit doctor's consultation room, cold clinical tones, a frustrated doctor pushes a stack of perfect medical reports across the desk toward a still wide-eyed young man whose face mixes sorrow and clarity; a brief dreamlike flash of Gunja looking at him with pleading warmth; the young man slowly closes his eyes and turns his face away in quiet agony",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone"
+  },
+  {
+   "id": "b05i_dress",
+   "dur": 9,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "reverent push-in",
+   "mode": "A",
+   "song": "lady_in_red",
+   "prompt": "warm luminous golden-hour light, Gunja stands gently before the viewer in a graceful flowing pure-white gown, delicate and luminous, hair loose and open, fair complexion, warm admiring eyes looking toward camera, soft rim backlight forming a halo, ethereal soft glow, fully modest and reverent, the world dissolving into warm light",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone"
+  },
+  {
+   "id": "b05i_vo",
+   "dur": 9,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "slow",
+   "mode": "A",
+   "song": "lady_in_red",
+   "prompt": "the world dissolving into warm light around her radiance, his reverent point of view, stillness and awe, modest",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone"
+  },
+  {
+   "id": "b05e_numbing",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "claustrophobic",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "dim claustrophobic interior at night, sickly low light, a gaunt hollow-eyed young man slumped against the wall of a dark cluttered room, dishevelled and unraveling, lost in a haze trying to numb an unbearable grief, a single flickering light, deep sorrow rather than spectacle",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone"
+  },
+  {
+   "id": "b05f_hallucination",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "disorienting",
+   "mode": "A",
+   "song": "hallucination_bed",
+   "prompt": "disorienting dreamlike sequence, cold clinical light fracturing into warped reflections, a frightened young man moves through hallucination, sterile laboratory and hospital imagery, test tubes and medical reports pressing in, an abstract non-explicit sense of his very being examined and judged; he turns to a mirror and sees not his own face but Gunja's face gazing back; reality splinters; profound vulnerability, tender, never horror",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone"
+  },
+  {
+   "id": "b05f2_ect",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "clinical, compassionate",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "harrowing yet tender clinical scene, cold hospital light and deep shadow, a young man lies on a treatment table undergoing electroconvulsive therapy, his body trembling and shivering, exhausted and nauseated, attended by clinical staff, the long ordeal of treatment rendered abstractly with deep compassion and empathy, never graphic, never spectacle",
+   "palette": "colour palette: sterile and harsh, cold blue-white clinical light, bleached and desaturated, unforgiving"
+  },
+  {
+   "id": "b05f3_aftermath",
+   "dur": 10,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": false,
+   "camera": "office, quiet and close",
+   "mode": "A",
+   "song": "without_you",
+   "prompt": "an ordinary office, some days after a therapy session; the young man has come back to work with an IV cannula and needle still taped to the back of his hand; ashamed, he keeps tugging his sleeve down and turning the hand away, trying to hide it from everyone; across the room Gunja notices it, and she is silently devastated, her eyes brimming; she comes near and slowly lifts her hand toward his wounded hand, aching to touch it, to feel it — but she stops just short, her fingers hovering in the air, unable to cross the boundary she once promised him she never would; the withheld touch says everything; strictly modest, wordless, sorrowful and tender, no contact",
+   "palette": "colour palette: sterile and harsh, cold blue-white clinical light, bleached and desaturated, unforgiving"
+  },
+  {
+   "id": "b05f4_vegetable",
+   "dur": 10,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "desk, static, hollow",
+   "mode": "B",
+   "song": "without_you",
+   "prompt": "an open-plan office in muted desaturated light; a young man sits at his desk utterly emotionless, propped in the chair like a lifeless thing, blank hollow eyes fixed on nothing, no tear, no smile, not a flicker of expression; colleagues move and work around him while he stays frozen and drained; his hand works mechanically at the screen yet he is wholly absent behind the eyes; profound emotional emptiness, restrained, modest",
+   "negative": "laughing, cheerful, joyful, happy expression, warm genuine smile, delight, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless"
+  },
+  {
+   "id": "b05f5_norecognition",
+   "dur": 11,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "office corridor, passing like a ghost",
+   "mode": "A",
+   "song": "without_you",
+   "prompt": "an office corridor; Gunja steps gently into his path and searches his face, quietly trying to make him recognise her, her eyes pleading for a single flicker of the man he was; but he looks straight through her, blank and unseeing, and drifts past her like a ghost, recognising no one; she is left standing behind him, aching; desaturated, hollow, sorrowful; strictly modest, no contact",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless"
+  },
+  {
+   "id": "b05wl_wohlamhe",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "intimate night",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "intimate melancholic interior at night, the soft flickering glow of a screen washing over a dim room, a lone young man sits alone in the dark watching a film, the light playing across his face, tears welling as he recognizes his own unraveling mind mirrored in the story on screen, a quiet aching sense of being seen by a stranger's art",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless"
+  },
+  {
+   "id": "b05om_omkara",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "hallucinatory",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "dark hallucinatory interior, deep shadow pierced by the cold flickering glow of a screen, a tormented young man sits transfixed in near-darkness watching a bleak intense film, a melancholic song washing over him, the boundary between the screen and his own mind dissolving, shadows swirling at the edges, deep anguish and eerie beauty intertwined, tender and dreamlike, never lurid",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless"
+  },
+  {
+   "id": "b05g_panic",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "harrowing close",
+   "mode": "B",
+   "song": "without_you",
+   "prompt": "harrowing yet tender interior at night, cold sickly light and deep shadow, a young man in the grip of relentless panic attacks, chest heaving, drenched and trembling, stands over a bathroom sink repeatedly pouring mugs of cold water over his own head, gasping for breath, desperately trying to break the waves of terror; water and sweat streaming down his face, eyes wide with fear and exhaustion; deep compassion, never spectacle",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless"
+  },
+  {
+   "id": "b05f6_doyouremember",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, close two-shot",
+   "mode": "A",
+   "song": "without_you",
+   "prompt": "an office appraisal meeting room once more; Gunja leans in, her voice trembling as she holds back tears, crying deep inside her heart, desperately searching his face for even the smallest flicker that he still remembers her; the young man returns only a hollow, vacant grin — not a real smile, the empty reflex of a hollowed-out man, no recognition behind it; her silent anguish against his blank grin; muted light, aching, strictly modest, sorrowful",
+   "negative": "laughing, cheerful, joyful, happy expression, warm genuine smile, delight, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless"
+  },
+  {
+   "id": "b05f7_lastpoint",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, he sits alone",
+   "mode": "B",
+   "song": "let_us_go",
+   "prompt": "the same meeting room; she finally rises to leave, saying nothing more, and as she turns away tears simply roll down her face, nothing else; the young man stays seated wearing the same hollow, vacant grin, unable to give her anything at all; an empty chair, the door closing softly behind her; this is the last moment of their life together; profound sorrow, strictly modest",
+   "negative": "laughing, cheerful, joyful, happy expression, warm genuine smile, delight, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "palette": "colour palette: near-monochrome grey, but a single faint warm amber note survives in the frame, the last trace of the love still alive inside"
+  },
+  {
+   "id": "b05f8_emptyroom",
+   "dur": 11,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": false,
+   "camera": "empty room after she has gone, still",
+   "mode": "B",
+   "song": "let_us_go",
+   "prompt": "the appraisal room now empty after she has walked out; the door she left through is closed, her chair sits vacant across from him; the young man remains alone in the still, silent room, hollow and utterly spent, the weight of the last goodbye settling over him; a lone shaft of muted light; wordless, only stillness, aching and final; strictly modest, profound sorrow",
+   "palette": "colour palette: near-monochrome grey, but a single faint warm amber note survives in the frame, the last trace of the love still alive inside"
+  },
+  {
+   "id": "b06_leaving_bangalore",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "wide, neon",
+   "mode": "B",
+   "song": "let_us_go",
+   "prompt": "cinematic wide shot, neon-lit rainy railway station at dusk, anamorphic lens flare, heavy film grain, a lone silhouette carrying a heavy suitcase walks slowly along the platform toward a waiting train and boards it, cold blue light and neon reflections shimmering in the rain, melancholic, the feeling of leaving a city forever",
+   "palette": "colour palette: cold grey dawn, desaturated, the last warm amber note fading from the frame"
+  },
+  {
+   "id": "b07_silchar",
+   "dur": 10,
+   "chars": [
+    "kunal"
+   ],
+   "era": "40s",
+   "talking": false,
+   "vo": true,
+   "camera": "slow tracking",
+   "mode": "B",
+   "song": "the_tunnel",
+   "prompt": "serene cinematic wide shot on the banks of the Barak River in Silchar, soft silver light shimmering across gently flowing water, a calm 47-year-old man with white hair and a soft neatly kept white beard, his face gentle and kind, sits peacefully at the river's edge, eyes half-closed, taking a slow deep breath, a quiet look of acceptance and peace, restrained and NOT a broad smile; slow steady tracking, deep tranquility and belonging",
+   "palette": "colour palette: muted and quiet, softened greys, a single warm amber note persisting, an aching unresolved calm, not happiness"
+  },
+  {
+   "id": "b07_endcard",
+   "dur": 7,
+   "chars": [],
+   "era": "40s",
+   "talking": false,
+   "vo": true,
+   "camera": "fade to black",
+   "mode": "B",
+   "song": "the_tunnel",
+   "prompt": "the moonlit Barak River slowly fades from image to black; in the stillness a few lines of white text fade gently in, hold for a long quiet beat, and fade out, unhurried, like a confession finally spoken aloud after twenty years",
+   "palette": "colour palette: muted and quiet, softened greys, a single warm amber note persisting, an aching unresolved calm, not happiness"
+  }
+ ]
+}

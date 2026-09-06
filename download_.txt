@@ -1,0 +1,42 @@
+7.1s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.1s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.1s 3 0.00s - to python to disable frozen modules.
+7.1s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.7s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.7s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.7s 7 0.00s - to python to disable frozen modules.
+7.7s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.9s 9 === GATE 0: Dataset Mount & Kit Copy ===
+8.9s 10 [hf] loaded token from Kaggle secret 'HF_TOKEN'
+10.0s 11 Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+10.0s 12 
+10.0s 13 Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+10.0s 14 [hf] login() ok; get_token sees token: True
+10.3s 15 Traceback (most recent call last):
+10.3s 16 File "<string>", line 1, in <module>
+10.3s 17 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 131, in execute_notebook
+10.3s 18 raise_for_execution_errors(nb, output_path)
+10.3s 19 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+10.3s 20 raise error
+10.3s 21 papermill.exceptions.PapermillExecutionError:
+10.3s 22 ---------------------------------------------------------------------------
+10.3s 23 Exception encountered at "In [1]":
+10.3s 24 ---------------------------------------------------------------------------
+10.3s 25 FileNotFoundError                         Traceback (most recent call last)
+10.3s 26 /tmp/ipykernel_24/1160772795.py in <cell line: 0>()
+10.3s 27 86 for req in required:
+10.3s 28 87     if not os.path.exists(req):
+10.3s 29 ---> 88         raise FileNotFoundError(f'MISSING REQUIRED FILE: {req}')
+10.3s 30 89 print('[setup] Kit file structure verified OK.')
+10.3s 31 90
+10.3s 32 
+10.3s 33 FileNotFoundError: MISSING REQUIRED FILE: /kaggle/working/godshand/kit/src/render_motion.py
+10.3s 34 
+12.5s 35 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+12.5s 36 cells[i][c] = re.sub('\\\\\|', '|', cell)
+12.7s 37 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+12.7s 38 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+13.3s 39 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+13.6s 40 [NbConvertApp] Writing 51075 bytes to __notebook__.ipynb
+15.9s 41 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+16.8s 42 [NbConvertApp] Writing 437130 bytes to __results__.html

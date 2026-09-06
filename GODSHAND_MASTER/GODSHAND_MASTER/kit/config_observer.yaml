@@ -1,0 +1,162 @@
+film_title: THE OBSERVER
+shots_file: shots_observer.json
+render_mode: motion_stills
+fps: 24
+interpolate_fps: 16
+width: 1280
+height: 720
+base_model: Wan2.2-S2V
+quant: Q8
+steps: 40
+cfg: 7.0
+sampler: uni_pc
+scheduler: beta
+upscale: 2.0
+rejection_samples: 5
+codeformer_fidelity: 0.9
+max_clip_seconds: 5
+denoise: 0.25
+identity_retry: 4
+paths:
+  refs: refs
+  script: script/lines_observer.csv
+  audio_bg: audio/bg_observer
+  audio_prompts: audio/prompts_observer.csv
+  work: /kaggle/working/observer_work
+  out: output_observer
+  models: /kaggle/working/models
+character_forge:
+  enabled: true
+  targets:
+  - observer
+  workflow: charforge
+  out_root: refs
+  overwrite: false
+tts:
+  english: hexgrad/Kokoro-82M
+  backup: myshell-ai/MeloTTS-English
+  hindi: ai4bharat/indic-parler-tts
+  sample_rate: 48000
+  speak_direction: true
+score:
+  duck_db: 16
+  crossfade_ms: 1600
+  shared_pad: true
+  movements:
+    cold_open:
+      file: cold_open.mp3
+      shots:
+      - obs01_myth
+      - obs02_facereveal
+      - obs03_walk
+    the_chair:
+      file: the_chair.mp3
+      shots:
+      - obs04_chair
+      - obs05_lightsdie
+    midnight:
+      file: midnight.mp3
+      shots:
+      - obs06_stillness
+      - obs07_laugh
+      - obs08_blackout
+    machine_years:
+      file: machine_years.mp3
+      shots:
+      - obs09_coma
+      - obs10_ectoverload
+      - obs11_rebuild
+      - obs12_firstcurrent
+    the_waking:
+      file: the_waking.mp3
+      shots:
+      - obs13_rise
+      - obs14_mirror_first
+      - obs15_stand
+    the_mirror:
+      file: the_mirror.mp3
+      shots:
+      - obs16_city
+      - obs17_doctors
+      - obs18_satire
+      - obs19_world
+    the_amber_note:
+      file: the_amber_note.mp3
+      shots:
+      - obs20_sealed
+      - obs21_hershadow
+      - obs22_unreachable
+    the_verdict:
+      file: the_verdict.mp3
+      shots:
+      - obs23_monologue
+      - obs24_riseabove
+    the_unreadable:
+      file: the_unreadable.mp3
+      shots:
+      - obs25_dawn
+      - obs26_lastlook
+      - obs27_gone
+      - obs28_endcard
+gpu:
+  hero_shots_mode: A
+  simple_shots_mode: B
+  always_stage_split: true
+active_profile: kaggle_2xt4
+profiles:
+  kaggle_2xt4:
+    num_gpus: 2
+    attention: xformers
+    quant: Q8
+    rejection_samples: 3
+    steps: 30
+    upscale: 1.75
+    width: 1280
+    height: 720
+    rate_per_gpu_hr: 0.0
+    comfy_flags: --cache-none --disable-smart-memory
+    denoise: 0.35
+    codeformer_fidelity: 0.8
+  lightning_l4:
+    num_gpus: 1
+    attention: fp8
+    quant: Q6
+    rejection_samples: 1
+    steps: 24
+    upscale: 1.5
+    width: 1152
+    height: 648
+    rate_per_gpu_hr: 0.48
+    comfy_flags: --fast --cache-none
+music_policy:
+  under_narration: instrumental_original
+  swell_in_wordless_beats: true
+  wordless_beats:
+  - obs07_laugh
+  - obs10_ectoverload
+  - obs11_rebuild
+  - obs15_stand
+  - obs26_lastlook
+  - obs27_gone
+  original_only: true
+audio_master:
+  sample_rate: 48000
+  bit_depth: 24
+  loudness_target: -14
+  loudness_range: 10
+  true_peak: -1.0
+  limiter_ceiling: -0.3
+  stereo_enhance: 0.25
+  reverb_send: -8
+  reverb_decay: 2.2
+  deesser_threshold: 0.3
+  sidechain_ratio: 12
+  sidechain_attack: 3
+  sidechain_release: 250
+grain:
+  enabled: true
+  strength: 4.5
+  size: 1.0
+  chroma: 0.6
+  halation: 0.25
+identity: {}

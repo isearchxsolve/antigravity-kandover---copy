@@ -1,0 +1,22 @@
+[Trimmed canonical signature of a fatal Kaggle run -- the original 79-min
+hang that Defect #2 in GODSHAND_FULL_AUDIT_AND_FIXES_REPORT.md describes.
+Sanitized to a fixed-width pattern that the parser must hit while staying
+tiny. NOTE: comments at top begin with `;` so the regex engine never
+matches them as Python-structure or graph JSON.]
+
+4750.8s 1 [png @ 0x5889ace1a500] Invalid PNG signature 0x2066747970.
+4750.8s 2 Error while decoding stream #0:0: Invalid data found when processing input
+4750.8s 3 [png @ 0x5889ace1bc80] Invalid PNG signature 0x2066747970.
+4750.8s 4 [png @ 0x5889ace1d3c0] Invalid PNG signature 0x2066747970.
+4750.8s 5 Error while decoding stream #0:0: Invalid data found when processing input
+4750.8s 6 Last message repeated 1 times
+4750.9s 7 Last message repeated 12 times
+4750.9s 8 Last message repeated 25 times
+4750.9s 9 Last message repeated 40 times
+4751.0s 10 Last message repeated 60 times
+4751.0s 11 Last message repeated 80 times
+4751.0s 12 [png @ 0x5889acdfa200] Invalid PNG signature 0x2066747970.
+4751.0s 13 Error while decoding stream #0:0: Invalid data found when processing input
+4751.0s 14 Last message repeated 100 times
+4751.0s 15 [png @ 0x5889ace1a500] Invalid PNG signature 0x2066747970.
+4759.0s 1889 Killed

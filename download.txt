@@ -1,0 +1,491 @@
+7.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.5s 3 0.00s - to python to disable frozen modules.
+7.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.1s 7 0.00s - to python to disable frozen modules.
+8.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.6s 9 Found extracted kit: /kaggle/input/datasets/kkk3213/godshand/GODSHAND_FINAL
+9.6s 10 ✅ HF token loaded from Kaggle Secret.
+9.6s 11 → Authenticated HF downloads (fast).
+9.6s 12 Found extracted kit: /kaggle/input/datasets/kkk3213/godshand/GODSHAND_FINAL
+20.8s 13 W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu jammy InRelease' does not seem to provide it (sources.list entry misspelt?)
+21.0s 14 W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu jammy InRelease' does not seem to provide it (sources.list entry misspelt?)
+21.0s 15 
+21.0s 16 W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu jammy InRelease' does not seem to provide it (sources.list entry misspelt?)
+27.6s 17 Selecting previously unselected package imagemagick-6.q16.
+27.8s 18 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%Selecting previously unselected package imagemagick-6.q16.
+28.4s 19 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 121026 files and directories currently installed.)
+28.4s 20 Preparing to unpack .../imagemagick-6.q16_8%3a6.9.11.60+dfsg-1.3ubuntu0.22.04.5_amd64.deb ...
+28.5s 21 Unpacking imagemagick-6.q16 (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+28.6s 22 (Reading database ... 100%(Reading database ... 121026 files and directories currently installed.)
+28.6s 23 Preparing to unpack .../imagemagick-6.q16_8%3a6.9.11.60+dfsg-1.3ubuntu0.22.04.5_amd64.deb ...
+28.6s 24 Unpacking imagemagick-6.q16 (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+28.7s 25 Selecting previously unselected package imagemagick.
+28.7s 26 Preparing to unpack .../imagemagick_8%3a6.9.11.60+dfsg-1.3ubuntu0.22.04.5_amd64.deb ...
+28.7s 27 Unpacking imagemagick (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+28.8s 28 Selecting previously unselected package libnetpbm10.
+28.8s 29 Preparing to unpack .../libnetpbm10_2%3a10.0-15.4_amd64.deb ...
+28.8s 30 Unpacking libnetpbm10 (2:10.0-15.4) ...
+28.9s 31 Selecting previously unselected package imagemagick.
+28.9s 32 Preparing to unpack .../imagemagick_8%3a6.9.11.60+dfsg-1.3ubuntu0.22.04.5_amd64.deb ...
+28.9s 33 Unpacking imagemagick (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+28.9s 34 Selecting previously unselected package libnetpbm10.
+28.9s 35 Preparing to unpack .../libnetpbm10_2%3a10.0-15.4_amd64.deb ...
+28.9s 36 Unpacking libnetpbm10 (2:10.0-15.4) ...
+28.9s 37 Selecting previously unselected package netpbm.
+28.9s 38 Preparing to unpack .../netpbm_2%3a10.0-15.4_amd64.deb ...
+28.9s 39 Unpacking netpbm (2:10.0-15.4) ...
+29.1s 40 Selecting previously unselected package netpbm.
+29.1s 41 Preparing to unpack .../netpbm_2%3a10.0-15.4_amd64.deb ...
+29.1s 42 Unpacking netpbm (2:10.0-15.4) ...
+29.2s 43 Setting up libnetpbm10 (2:10.0-15.4) ...
+29.2s 44 Setting up netpbm (2:10.0-15.4) ...
+29.2s 45 Setting up imagemagick-6.q16 (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+29.3s 46 update-alternatives: using /usr/bin/compare-im6.q16 to provide /usr/bin/compare (compare) in auto mode
+29.4s 47 update-alternatives: using /usr/bin/compare-im6.q16 to provide /usr/bin/compare-im6 (compare-im6) in auto mode
+29.4s 48 Setting up libnetpbm10 (2:10.0-15.4) ...
+29.4s 49 Setting up netpbm (2:10.0-15.4) ...
+29.4s 50 Setting up imagemagick-6.q16 (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+29.4s 51 update-alternatives: using /usr/bin/compare-im6.q16 to provide /usr/bin/compare (compare) in auto mode
+29.4s 52 update-alternatives: using /usr/bin/compare-im6.q16 to provide /usr/bin/compare-im6 (compare-im6) in auto mode
+29.4s 53 update-alternatives: using /usr/bin/animate-im6.q16 to provide /usr/bin/animate (animate) in auto mode
+29.4s 54 update-alternatives: using /usr/bin/animate-im6.q16 to provide /usr/bin/animate-im6 (animate-im6) in auto mode
+29.4s 55 update-alternatives: using /usr/bin/convert-im6.q16 to provide /usr/bin/convert (convert) in auto mode
+29.4s 56 update-alternatives: using /usr/bin/convert-im6.q16 to provide /usr/bin/convert-im6 (convert-im6) in auto mode
+29.4s 57 update-alternatives: using /usr/bin/composite-im6.q16 to provide /usr/bin/composite (composite) in auto mode
+29.4s 58 update-alternatives: using /usr/bin/composite-im6.q16 to provide /usr/bin/composite-im6 (composite-im6) in auto mode
+29.4s 59 update-alternatives: using /usr/bin/conjure-im6.q16 to provide /usr/bin/conjure (conjure) in auto mode
+29.4s 60 update-alternatives: using /usr/bin/conjure-im6.q16 to provide /usr/bin/conjure-im6 (conjure-im6) in auto mode
+29.4s 61 update-alternatives: using /usr/bin/import-im6.q16 to provide /usr/bin/import (import) in auto mode
+29.5s 62 update-alternatives: using /usr/bin/import-im6.q16 to provide /usr/bin/import-im6 (import-im6) in auto mode
+29.5s 63 update-alternatives: using /usr/bin/identify-im6.q16 to provide /usr/bin/identify (identify) in auto mode
+29.5s 64 update-alternatives: using /usr/bin/identify-im6.q16 to provide /usr/bin/identify-im6 (identify-im6) in auto mode
+29.5s 65 update-alternatives: using /usr/bin/stream-im6.q16 to provide /usr/bin/stream (stream) in auto mode
+29.5s 66 update-alternatives: using /usr/bin/stream-im6.q16 to provide /usr/bin/stream-im6 (stream-im6) in auto mode
+29.5s 67 update-alternatives: using /usr/bin/display-im6.q16 to provide /usr/bin/display (display) in auto mode
+29.5s 68 update-alternatives: using /usr/bin/display-im6.q16 to provide /usr/bin/display-im6 (display-im6) in auto mode
+29.5s 69 update-alternatives: using /usr/bin/montage-im6.q16 to provide /usr/bin/montage (montage) in auto mode
+29.6s 70 update-alternatives: using /usr/bin/montage-im6.q16 to provide /usr/bin/montage-im6 (montage-im6) in auto mode
+29.6s 71 update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /usr/bin/mogrify (mogrify) in auto mode
+29.6s 72 update-alternatives: using /usr/bin/animate-im6.q16 to provide /usr/bin/animate (animate) in auto mode
+29.6s 73 update-alternatives: using /usr/bin/animate-im6.q16 to provide /usr/bin/animate-im6 (animate-im6) in auto mode
+29.6s 74 update-alternatives: using /usr/bin/convert-im6.q16 to provide /usr/bin/convert (convert) in auto mode
+29.6s 75 update-alternatives: using /usr/bin/convert-im6.q16 to provide /usr/bin/convert-im6 (convert-im6) in auto mode
+29.6s 76 update-alternatives: using /usr/bin/composite-im6.q16 to provide /usr/bin/composite (composite) in auto mode
+29.6s 77 update-alternatives: using /usr/bin/composite-im6.q16 to provide /usr/bin/composite-im6 (composite-im6) in auto mode
+29.6s 78 update-alternatives: using /usr/bin/conjure-im6.q16 to provide /usr/bin/conjure (conjure) in auto mode
+29.6s 79 update-alternatives: using /usr/bin/conjure-im6.q16 to provide /usr/bin/conjure-im6 (conjure-im6) in auto mode
+29.6s 80 update-alternatives: using /usr/bin/import-im6.q16 to provide /usr/bin/import (import) in auto mode
+29.6s 81 update-alternatives: using /usr/bin/import-im6.q16 to provide /usr/bin/import-im6 (import-im6) in auto mode
+29.6s 82 update-alternatives: using /usr/bin/identify-im6.q16 to provide /usr/bin/identify (identify) in auto mode
+29.6s 83 update-alternatives: using /usr/bin/identify-im6.q16 to provide /usr/bin/identify-im6 (identify-im6) in auto mode
+29.6s 84 update-alternatives: using /usr/bin/stream-im6.q16 to provide /usr/bin/stream (stream) in auto mode
+29.6s 85 update-alternatives: using /usr/bin/stream-im6.q16 to provide /usr/bin/stream-im6 (stream-im6) in auto mode
+29.6s 86 update-alternatives: using /usr/bin/display-im6.q16 to provide /usr/bin/display (display) in auto mode
+29.6s 87 update-alternatives: using /usr/bin/display-im6.q16 to provide /usr/bin/display-im6 (display-im6) in auto mode
+29.6s 88 update-alternatives: using /usr/bin/montage-im6.q16 to provide /usr/bin/montage (montage) in auto mode
+29.6s 89 update-alternatives: using /usr/bin/montage-im6.q16 to provide /usr/bin/montage-im6 (montage-im6) in auto mode
+29.6s 90 update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /usr/bin/mogrify-im6 (mogrify-im6) in auto mode
+29.6s 91 Setting up imagemagick (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+29.6s 92 Processing triggers for hicolor-icon-theme (0.17-2) ...
+29.8s 93 update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /usr/bin/mogrify (mogrify) in auto mode
+29.8s 94 update-alternatives: using /usr/bin/mogrify-im6.q16 to provide /usr/bin/mogrify-im6 (mogrify-im6) in auto mode
+29.8s 95 Setting up imagemagick (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5) ...
+29.8s 96 Processing triggers for hicolor-icon-theme (0.17-2) ...
+29.9s 97 Processing triggers for libc-bin (2.35-0ubuntu3.13) ...
+30.1s 98 Processing triggers for libc-bin (2.35-0ubuntu3.13) ...
+30.2s 99 /sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link
+30.2s 100 
+30.2s 101 /sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link
+30.2s 102 
+30.2s 103 /sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link
+30.2s 104 
+30.2s 105 /sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero_v2.so.0 is not a symbolic link
+30.2s 106 
+30.2s 107 /sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link
+30.2s 108 
+30.2s 109 /sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link
+30.2s 110 
+30.2s 111 /sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link
+30.2s 112 
+30.2s 113 /sbin/ldconfig.real: /usr/local/lib/libumf.so.1 is not a symbolic link
+30.2s 114 
+30.2s 115 /sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link
+30.2s 116 
+30.2s 117 /sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link
+30.2s 118 
+30.2s 119 /sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link
+30.2s 120 
+30.2s 121 /sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link
+30.2s 122 
+30.2s 123 /sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link
+30.2s 124 
+30.2s 125 /sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link
+30.2s 126 
+30.4s 127 /sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link
+30.4s 128 
+30.4s 129 /sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link
+30.4s 130 
+30.4s 131 /sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link
+30.4s 132 
+30.4s 133 /sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero_v2.so.0 is not a symbolic link
+30.4s 134 
+30.4s 135 /sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link
+30.4s 136 
+30.4s 137 /sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link
+30.4s 138 
+30.4s 139 /sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link
+30.4s 140 
+30.4s 141 /sbin/ldconfig.real: /usr/local/lib/libumf.so.1 is not a symbolic link
+30.4s 142 
+30.4s 143 /sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link
+30.4s 144 
+30.4s 145 /sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link
+30.4s 146 
+30.4s 147 /sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link
+30.4s 148 
+30.4s 149 /sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link
+30.4s 150 
+30.4s 151 /sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link
+30.4s 152 
+30.4s 153 /sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link
+30.4s 154 
+31.4s 155 Processing triggers for man-db (2.10.2-1) ...
+31.6s 156 Processing triggers for man-db (2.10.2-1) ...
+32.1s 157 Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+32.2s 158 Active profile now: active_profile: kaggle_2xt4
+32.2s 159 
+32.2s 160 [1;36m[oneclick][0m kit root: /kaggle/working/GODSHAND_FINAL/kit
+32.2s 161 
+32.2s 162 [1;36m[oneclick][0m work base: /kaggle/working/godshand   ComfyUI: /kaggle/working/godshand/ComfyUI
+32.2s 163 
+32.2s 164 [1;36m[oneclick][0m repointing paths + re-asserting every fix and tuning value...
+32.3s 165 paths repointed + fixes/tuning re-asserted
+32.3s 166 Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+32.3s 167 Active profile now: active_profile: kaggle_2xt4
+32.3s 168 
+32.3s 169 [1;36m[oneclick][0m kit root: /kaggle/working/GODSHAND_FINAL/kit
+32.3s 170 
+32.3s 171 [1;36m[oneclick][0m work base: /kaggle/working/godshand   ComfyUI: /kaggle/working/godshand/ComfyUI
+32.3s 172 
+32.3s 173 [1;36m[oneclick][0m repointing paths + re-asserting every fix and tuning value...
+32.3s 174 paths repointed + fixes/tuning re-asserted
+32.3s 175 
+32.3s 176 [1;36m[oneclick][0m verifying ALL fixes + hardening + tuning are intact...
+32.3s 177 [32m OK [0m FIX: NEED_INTERP interpolation guard
+32.3s 178 [32m OK [0m FIX: vectorized face_enhance mask
+32.3s 179 [32m OK [0m HARDEN: interpolate_fps <= 16
+32.3s 180 [32m OK [0m TUNE: L4 profile active
+32.3s 181 [32m OK [0m TUNE: denoise 0.55
+32.3s 182 [32m OK [0m TUNE: codeformer_fidelity 0.5
+32.3s 183 [32m OK [0m TUNE: softened hqdn3d
+32.3s 184 [32m OK [0m TUNE: face-composite gated OFF by default
+32.3s 185 [32m OK [0m postprocess.sh bash syntax
+32.3s 186 
+32.3s 187 [1;36m[oneclick][0m all fixes + hardening + tuning verified.
+32.3s 188 
+32.3s 189 [1;36m[oneclick][0m installing ComfyUI + custom nodes (first run only)
+32.3s 190 Cloning into '/kaggle/working/godshand/ComfyUI'...
+32.5s 191 
+32.5s 192 [1;36m[oneclick][0m verifying ALL fixes + hardening + tuning are intact...
+32.5s 193 [32m OK [0m FIX: NEED_INTERP interpolation guard
+32.5s 194 [32m OK [0m FIX: vectorized face_enhance mask
+32.5s 195 [32m OK [0m HARDEN: interpolate_fps <= 16
+32.5s 196 [32m OK [0m TUNE: L4 profile active
+32.5s 197 [32m OK [0m TUNE: denoise 0.55
+32.5s 198 [32m OK [0m TUNE: codeformer_fidelity 0.5
+32.5s 199 [32m OK [0m TUNE: softened hqdn3d
+32.5s 200 [32m OK [0m TUNE: face-composite gated OFF by default
+32.5s 201 [32m OK [0m postprocess.sh bash syntax
+32.5s 202 
+32.5s 203 [1;36m[oneclick][0m all fixes + hardening + tuning verified.
+32.5s 204 
+32.5s 205 [1;36m[oneclick][0m installing ComfyUI + custom nodes (first run only)
+32.5s 206 Cloning into '/kaggle/working/godshand/ComfyUI'...
+32.5s 207 
+32.5s 208 Cloning into '/kaggle/working/godshand/ComfyUI'...
+40.9s 209 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.7/20.7 MB 45.7 MB/s eta 0:00:00
+41.1s 210 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.7/20.7 MB 45.7 MB/s eta 0:00:00
+41.2s 211 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.5/15.5 MB 56.8 MB/s eta 0:00:00
+41.4s 212 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.5/15.5 MB 56.8 MB/s eta 0:00:00
+41.8s 213 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.4/29.4 MB 39.5 MB/s eta 0:00:00
+41.8s 214 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.8/346.8 kB 18.8 MB/s eta 0:00:00
+41.9s 215 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.7/66.7 kB 3.5 MB/s eta 0:00:00
+42.0s 216 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.4/29.4 MB 39.5 MB/s eta 0:00:00
+42.0s 217 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.8/346.8 kB 18.8 MB/s eta 0:00:00
+42.0s 218 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.7/66.7 kB 3.5 MB/s eta 0:00:00
+42.0s 219 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 54.7 MB/s eta 0:00:00
+42.2s 220 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 54.7 MB/s eta 0:00:00
+44.3s 221 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.1/100.1 MB 13.5 MB/s eta 0:00:00
+44.5s 222 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.1/100.1 MB 13.5 MB/s eta 0:00:00
+44.8s 223 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 33.6 MB/s eta 0:00:00
+45.0s 224 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 33.6 MB/s eta 0:00:00
+49.7s 225 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.4/89.4 MB 7.4 MB/s eta 0:00:00
+49.9s 226 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.4/89.4 MB 7.4 MB/s eta 0:00:00
+76.4s 227 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.1/89.1 MB 1.8 MB/s eta 0:00:00
+76.6s 228 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.1/89.1 MB 1.8 MB/s eta 0:00:00
+118.1s 229 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.3/104.3 MB 1.9 MB/s eta 0:00:00
+118.1s 230 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 1.8 MB/s eta 0:00:00
+118.3s 231 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.3/104.3 MB 1.9 MB/s eta 0:00:00
+118.3s 232 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 1.8 MB/s eta 0:00:00
+129.1s 233 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.5/35.5 MB 2.9 MB/s eta 0:00:00
+129.3s 234 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.5/35.5 MB 2.9 MB/s eta 0:00:00
+129.3s 235 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 320.8/320.8 kB 2.6 MB/s eta 0:00:00
+129.5s 236 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 320.8/320.8 kB 2.6 MB/s eta 0:00:00
+131.3s 237 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 2.4 MB/s eta 0:00:00
+131.5s 238 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 2.4 MB/s eta 0:00:00
+140.3s 239 Cloning into 'ComfyUI-GGUF'...
+140.5s 240 Cloning into 'ComfyUI-GGUF'...
+140.5s 241 
+140.5s 242 Cloning into 'ComfyUI-GGUF'...
+141.1s 243 Cloning into 'ComfyUI-WanVideoWrapper'...
+141.3s 244 Cloning into 'ComfyUI-WanVideoWrapper'...
+141.3s 245 
+141.3s 246 Cloning into 'ComfyUI-WanVideoWrapper'...
+143.4s 247 Cloning into 'ComfyUI_InstantID'...
+143.6s 248 Cloning into 'ComfyUI_InstantID'...
+143.6s 249 
+143.6s 250 Cloning into 'ComfyUI_InstantID'...
+144.3s 251 Cloning into 'ComfyUI-VideoHelperSuite'...
+144.5s 252 Cloning into 'ComfyUI-VideoHelperSuite'...
+144.5s 253 
+144.5s 254 Cloning into 'ComfyUI-VideoHelperSuite'...
+146.5s 255 Cloning into 'ComfyUI_UltimateSDUpscale'...
+146.7s 256 Cloning into 'ComfyUI_UltimateSDUpscale'...
+146.7s 257 
+146.7s 258 Cloning into 'ComfyUI_UltimateSDUpscale'...
+149.7s 259 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.5/118.5 kB 1.2 MB/s eta 0:00:00
+149.9s 260 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.5/118.5 kB 1.2 MB/s eta 0:00:00
+150.0s 261 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 13.1 MB/s eta 0:00:00
+150.2s 262 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 13.1 MB/s eta 0:00:00
+151.9s 263 
+151.9s 264 [1;36m[oneclick][0m downloading WAN 2.2 models (first run only; tens of GB over the network)
+152.1s 265 
+152.1s 266 [1;36m[oneclick][0m downloading WAN 2.2 models (first run only; tens of GB over the network)
+243.0s 267 /usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 6735.91 MB. The target location /kaggle/working/godshand/ComfyUI/models/text_encoders/.cache/huggingface/download/split_files/text_encoders only has 1479.95 MB free disk space.
+243.0s 268 warnings.warn(
+243.0s 269 /usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 6735.91 MB. The target location /kaggle/working/godshand/ComfyUI/models/text_encoders/split_files/text_encoders only has 1479.95 MB free disk space.
+243.0s 270 warnings.warn(
+243.2s 271 /usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 6735.91 MB. The target location /kaggle/working/godshand/ComfyUI/models/text_encoders/.cache/huggingface/download/split_files/text_encoders only has 1479.95 MB free disk space.
+243.2s 272 warnings.warn(
+243.2s 273 /usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 6735.91 MB. The target location /kaggle/working/godshand/ComfyUI/models/text_encoders/split_files/text_encoders only has 1479.95 MB free disk space.
+243.2s 274 warnings.warn(
+243.2s 275 
+243.2s 276 /usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 6735.91 MB. The target location /kaggle/working/godshand/ComfyUI/models/text_encoders/.cache/huggingface/download/split_files/text_encoders only has 1479.95 MB free disk space.
+243.2s 277 warnings.warn(
+243.2s 278 /usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py:731: UserWarning: Not enough free disk space to download the file. The expected file size is: 6735.91 MB. The target location /kaggle/working/godshand/ComfyUI/models/text_encoders/split_files/text_encoders only has 1479.95 MB free disk space.
+243.2s 279 warnings.warn(
+268.7s 280 [wan] listing GGUF experts from QuantStack/Wan2.2-I2V-A14B-GGUF
+268.7s 281 Traceback (most recent call last):
+268.7s 282 File "/kaggle/working/GODSHAND_FINAL/kit/l4_model_setup.py", line 55, in <module>
+268.7s 283 WAN_UMT5 = _dl(WAN_COMFY_REPO, _umt5, "text_encoders")
+268.7s 284 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.7s 285 File "/kaggle/working/GODSHAND_FINAL/kit/l4_model_setup.py", line 32, in _dl
+268.7s 286 lp = hf_hub_download(repo, filename=fn, local_dir=str(MODELS / sub), token=_tok)
+268.7s 287 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.7s 288 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+268.7s 289 return fn(*args, **kwargs)
+268.7s 290 ^^^^^^^^^^^^^^^^^^^
+268.7s 291 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+268.7s 292 return _hf_hub_download_to_local_dir(
+268.7s 293 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.7s 294 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+268.7s 295 _download_to_tmp_and_move(
+268.7s 296 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1842, in _download_to_tmp_and_move
+268.7s 297 xet_get(
+268.7s 298 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 558, in xet_get
+268.7s 299 download_files(
+268.7s 300 RuntimeError: Data processing error: File reconstruction error: IO Error: No space left on device (os error 28)
+268.9s 301 [wan] listing GGUF experts from QuantStack/Wan2.2-I2V-A14B-GGUF
+268.9s 302 Traceback (most recent call last):
+268.9s 303 File "/kaggle/working/GODSHAND_FINAL/kit/l4_model_setup.py", line 55, in <module>
+268.9s 304 WAN_UMT5 = _dl(WAN_COMFY_REPO, _umt5, "text_encoders")
+268.9s 305 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.9s 306 File "/kaggle/working/GODSHAND_FINAL/kit/l4_model_setup.py", line 32, in _dl
+268.9s 307 lp = hf_hub_download(repo, filename=fn, local_dir=str(MODELS / sub), token=_tok)
+268.9s 308 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.9s 309 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+268.9s 310 return fn(*args, **kwargs)
+268.9s 311 ^^^^^^^^^^^^^^^^^^^
+268.9s 312 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+268.9s 313 return _hf_hub_download_to_local_dir(
+268.9s 314 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.9s 315 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+268.9s 316 _download_to_tmp_and_move(
+268.9s 317 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1842, in _download_to_tmp_and_move
+268.9s 318 xet_get(
+268.9s 319 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 558, in xet_get
+268.9s 320 download_files(
+268.9s 321 RuntimeError: Data processing error: File reconstruction error: IO Error: No space left on device (os error 28)
+268.9s 322 
+268.9s 323 Traceback (most recent call last):
+268.9s 324 File "/kaggle/working/GODSHAND_FINAL/kit/l4_model_setup.py", line 55, in <module>
+268.9s 325 WAN_UMT5 = _dl(WAN_COMFY_REPO, _umt5, "text_encoders")
+268.9s 326 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.9s 327 File "/kaggle/working/GODSHAND_FINAL/kit/l4_model_setup.py", line 32, in _dl
+268.9s 328 lp = hf_hub_download(repo, filename=fn, local_dir=str(MODELS / sub), token=_tok)
+268.9s 329 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.9s 330 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+268.9s 331 return fn(*args, **kwargs)
+268.9s 332 ^^^^^^^^^^^^^^^^^^^
+268.9s 333 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 976, in hf_hub_download
+268.9s 334 return _hf_hub_download_to_local_dir(
+268.9s 335 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+268.9s 336 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1427, in _hf_hub_download_to_local_dir
+268.9s 337 _download_to_tmp_and_move(
+268.9s 338 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1842, in _download_to_tmp_and_move
+268.9s 339 xet_get(
+268.9s 340 File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 558, in xet_get
+268.9s 341 download_files(
+268.9s 342 RuntimeError: Data processing error: File reconstruction error: IO Error: No space left on device (os error 28)
+269.2s 343 Traceback (most recent call last):
+269.2s 344 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 371, in execute_notebook
+269.2s 345 cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+269.2s 346 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 443, in execute_managed_notebook
+269.2s 347 return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+269.2s 348 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 349 File "/usr/local/lib/python3.12/dist-packages/papermill/clientwrap.py", line 45, in execute
+269.2s 350 self.papermill_execute_cells()
+269.2s 351 File "/usr/local/lib/python3.12/dist-packages/papermill/clientwrap.py", line 77, in papermill_execute_cells
+269.2s 352 self.nb_man.cell_complete(self.nb.cells[index], cell_index=index)
+269.2s 353 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+269.2s 354 return func(self, *args, **kwargs)
+269.2s 355 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 356 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 274, in cell_complete
+269.2s 357 self.save()
+269.2s 358 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+269.2s 359 return func(self, *args, **kwargs)
+269.2s 360 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 361 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 153, in save
+269.2s 362 write_ipynb(self.nb, self.output_path)
+269.2s 363 File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 486, in write_ipynb
+269.2s 364 papermill_io.write(nbformat.writes(nb), path)
+269.2s 365 File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 102, in write
+269.2s 366 return self.get_handler(path, extensions).write(buf, path)
+269.2s 367 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 368 File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 215, in write
+269.2s 369 f.write(buf)
+269.2s 370 OSError: [Errno 28] No space left on device
+269.2s 371 
+269.2s 372 During handling of the above exception, another exception occurred:
+269.2s 373 
+269.2s 374 Traceback (most recent call last):
+269.2s 375 File "<string>", line 1, in <module>
+269.2s 376 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 116, in execute_notebook
+269.2s 377 nb = papermill_engines.execute_notebook_with_engine(
+269.2s 378 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 379 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+269.2s 380 return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+269.2s 381 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 382 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 374, in execute_notebook
+269.2s 383 nb_man.notebook_complete()
+269.2s 384 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+269.2s 385 return func(self, *args, **kwargs)
+269.2s 386 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 387 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 302, in notebook_complete
+269.2s 388 self.save()
+269.2s 389 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 77, in wrapper
+269.2s 390 return func(self, *args, **kwargs)
+269.2s 391 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 392 File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 153, in save
+269.2s 393 write_ipynb(self.nb, self.output_path)
+269.2s 394 File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 486, in write_ipynb
+269.2s 395 papermill_io.write(nbformat.writes(nb), path)
+269.2s 396 File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 102, in write
+269.2s 397 return self.get_handler(path, extensions).write(buf, path)
+269.2s 398 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+269.2s 399 File "/usr/local/lib/python3.12/dist-packages/papermill/iorw.py", line 215, in write
+269.2s 400 f.write(buf)
+269.2s 401 OSError: [Errno 28] No space left on device
+269.7s 402 /bin/sh: 1: echo: echo: I/O error
+271.6s 403 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+271.6s 404 cells[i][c] = re.sub('\\\\\|', '|', cell)
+271.7s 405 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+271.7s 406 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+272.4s 407 Traceback (most recent call last):
+272.4s 408 File "/usr/local/lib/python3.12/dist-packages/traitlets/utils/importstring.py", line 35, in import_item
+272.4s 409 pak = getattr(module, obj)
+272.4s 410 ^^^^^^^^^^^^^^^^^^^^
+272.4s 411 AttributeError: module 'remove_papermill_header' has no attribute 'RemovePapermillHeader'
+272.4s 412 
+272.4s 413 The above exception was the direct cause of the following exception:
+272.4s 414 
+272.4s 415 Traceback (most recent call last):
+272.4s 416 File "/usr/local/bin/jupyter-nbconvert", line 10, in <module>
+272.4s 417 sys.exit(main())
+272.4s 418 ^^^^^^
+272.4s 419 File "/usr/local/lib/python3.12/dist-packages/jupyter_core/application.py", line 284, in launch_instance
+272.4s 420 super().launch_instance(argv=argv, **kwargs)
+272.4s 421 File "/usr/local/lib/python3.12/dist-packages/traitlets/config/application.py", line 1082, in launch_instance
+272.4s 422 app.start()
+272.4s 423 File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 369, in start
+272.4s 424 self.convert_notebooks()
+272.4s 425 File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 536, in convert_notebooks
+272.4s 426 self.exporter = cls(config=self.config)
+272.4s 427 ^^^^^^^^^^^^^^^^^^^^^^^
+272.4s 428 File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 118, in __init__
+272.4s 429 self._init_preprocessors()
+272.4s 430 File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 275, in _init_preprocessors
+272.4s 431 self.register_preprocessor(preprocessor, enabled=True)
+272.4s 432 File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 236, in register_preprocessor
+272.4s 433 preprocessor_cls = import_item(preprocessor)
+272.4s 434 ^^^^^^^^^^^^^^^^^^^^^^^^^
+272.4s 435 File "/usr/local/lib/python3.12/dist-packages/traitlets/utils/importstring.py", line 37, in import_item
+272.4s 436 raise ImportError("No module named %s" % obj) from e
+272.4s 437 ImportError: No module named RemovePapermillHeader
+274.7s 438 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+274.7s 439 Traceback (most recent call last):
+274.7s 440 File "/usr/local/lib/python3.12/dist-packages/nbformat/reader.py", line 19, in parse_json
+274.7s 441 nb_dict = json.loads(s, **kwargs)
+274.7s 442 ^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 443 File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+274.7s 444 return _default_decoder.decode(s)
+274.7s 445 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 446 File "/usr/lib/python3.12/json/decoder.py", line 338, in decode
+274.7s 447 obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+274.7s 448 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 449 File "/usr/lib/python3.12/json/decoder.py", line 354, in raw_decode
+274.7s 450 obj, end = self.scan_once(s, idx)
+274.7s 451 ^^^^^^^^^^^^^^^^^^^^^^
+274.7s 452 json.decoder.JSONDecodeError: Unterminated string starting at: line 443 column 7 (char 19017)
+274.7s 453 
+274.7s 454 The above exception was the direct cause of the following exception:
+274.7s 455 
+274.7s 456 Traceback (most recent call last):
+274.7s 457 File "/usr/local/bin/jupyter-nbconvert", line 10, in <module>
+274.7s 458 sys.exit(main())
+274.7s 459 ^^^^^^
+274.7s 460 File "/usr/local/lib/python3.12/dist-packages/jupyter_core/application.py", line 284, in launch_instance
+274.7s 461 super().launch_instance(argv=argv, **kwargs)
+274.7s 462 File "/usr/local/lib/python3.12/dist-packages/traitlets/config/application.py", line 1082, in launch_instance
+274.7s 463 app.start()
+274.7s 464 File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 369, in start
+274.7s 465 self.convert_notebooks()
+274.7s 466 File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 541, in convert_notebooks
+274.7s 467 self.convert_single_notebook(notebook_filename)
+274.7s 468 File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 506, in convert_single_notebook
+274.7s 469 output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)
+274.7s 470 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 471 File "/usr/local/lib/python3.12/dist-packages/nbconvert/nbconvertapp.py", line 435, in export_single_notebook
+274.7s 472 output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+274.7s 473 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 474 File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 190, in from_filename
+274.7s 475 return self.from_file(f, resources=resources, **kw)
+274.7s 476 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 477 File "/usr/local/lib/python3.12/dist-packages/nbconvert/exporters/exporter.py", line 208, in from_file
+274.7s 478 return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+274.7s 479 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 480 File "/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py", line 174, in read
+274.7s 481 return reads(buf, as_version, capture_validation_error, **kwargs)
+274.7s 482 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 483 File "/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py", line 92, in reads
+274.7s 484 nb = reader.reads(s, **kwargs)
+274.7s 485 ^^^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 486 File "/usr/local/lib/python3.12/dist-packages/nbformat/reader.py", line 75, in reads
+274.7s 487 nb_dict = parse_json(s, **kwargs)
+274.7s 488 ^^^^^^^^^^^^^^^^^^^^^^^
+274.7s 489 File "/usr/local/lib/python3.12/dist-packages/nbformat/reader.py", line 25, in parse_json
+274.7s 490 raise NotJSONError(message) from e
+274.7s 491 nbformat.reader.NotJSONError: Notebook does not appear to be JSON: '{\n "cells": [\n  {\n   "cell_type": "c...

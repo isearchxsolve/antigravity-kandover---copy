@@ -1,0 +1,42 @@
+{
+  "film": "THE MOMENT",
+  "globals": {
+    "fps": 24,
+    "width": 1280,
+    "height": 720,
+    "base_model": "Wan2.2-S2V",
+    "quant": "Q8",
+    "steps": 30,
+    "cfg": 5.5,
+    "sampler": "uni_pc",
+    "scheduler": "beta",
+    "interpolate_to_fps": 48,
+    "upscale": 1.75,
+    "rejection_samples": 3,
+    "tone": "serious, restrained, melancholic, reverent; NOT a happy ending",
+    "negative_prompt": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality"
+  },
+  "characters": {
+    "kunal": {
+      "refs": "refs/kunal",
+      "era_default": "young",
+      "era_refs": { "young": "refs/kunal_young", "40s": "refs/kunal_40s" },
+      "tokens": "serious, solemn, sorrowful, reverent, silent, tense jaw, downcast or fixed gaze, no smile, modestly dressed in simple formal attire"
+    },
+    "gunja": {
+      "refs": "refs/gunja",
+      "tokens": "serious, emotional, fearful, teary; (rare) faint guarded almost-smile, lips barely curved, restrained; modestly dressed in saree or salwar-kameez"
+    }
+  },
+  "shots": [
+    { "id": "m00_office_reveal", "dur": 6, "chars": ["kunal"], "era": "young", "talking": false, "camera": "slow push-in", "mode": "B", "song": "descent", "prompt": "office interior, young man at a desk, anticipation, muted cool light, serious" },
+    { "id": "m01_angel_descent", "dur": 8, "chars": ["gunja","kunal"], "era": "young", "talking": true, "camera": "static, reverent", "mode": "A", "song": "descent", "prompt": "a woman descends a staircase as if an angel arriving, he watches frozen in awe, sacred stillness" },
+    { "id": "m02_dissolve_to_cafeteria", "dur": 5, "chars": ["gunja"], "era": "young", "talking": false, "camera": "dissolve", "mode": "B", "song": "descent", "prompt": "soft dissolve into an office cafeteria, murmur, serious aching mood" },
+    { "id": "m03_her_weeping_corner", "dur": 7, "chars": ["gunja"], "era": "young", "talking": true, "camera": "static close", "mode": "A", "song": "love", "prompt": "she sits alone in a corner, quietly weeping, guarded, fully clothed" },
+    { "id": "m04_the_embrace", "dur": 7, "chars": ["kunal","gunja"], "era": "young", "talking": true, "camera": "slow", "mode": "A", "song": "love", "prompt": "a respectful, restrained comforting embrace, sorrowful and tender, modest" },
+    { "id": "m05_his_confession", "dur": 8, "chars": ["kunal"], "era": "young", "talking": true, "camera": "static", "mode": "A", "song": "love", "prompt": "he confesses quietly, heartfelt, low-key light, no smile" },
+    { "id": "m06_her_reply", "dur": 7, "chars": ["gunja"], "era": "young", "talking": true, "camera": "static", "mode": "A", "song": "love", "prompt": "she replies, emotional and relieved, a faint guarded almost-smile" },
+    { "id": "m07_her_again_plea", "dur": 7, "chars": ["gunja"], "era": "young", "talking": true, "camera": "close", "mode": "A", "song": "love", "prompt": "she pleads softly to stay, yearning, close, restrained" },
+    { "id": "m08_him_frozen_voiceover", "dur": 8, "chars": ["kunal"], "era": "40s", "talking": false, "vo": true, "camera": "still", "mode": "B", "song": "close", "prompt": "present-day, older, reflective, still, at peace by a river in Silchar, muted" }
+  ]
+}

@@ -1,0 +1,81 @@
+7.7s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.7s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.7s 3 0.00s - to python to disable frozen modules.
+7.7s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.3s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.3s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.3s 7 0.00s - to python to disable frozen modules.
+8.3s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.8s 9 [auto] HANDS-OFF render: full range, resume-on-rerun, budget=11h (no chunk knob).
+14.8s 10 [hf] loaded token from Kaggle secret 'HF_TOKEN'
+15.9s 11 Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+15.9s 12 
+15.9s 13 Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+16.1s 14 [hf] login() ok; get_token sees token: True
+16.1s 15 [hf] Hugging Face authenticated for this session.
+16.1s 16 --- 1. INITIALIZING ENGINE: REAL RENDERING SHOTS 1 TO 435 ---
+16.1s 17 [setup] GODSHAND kit mounted from: /kaggle/input/datasets/kkk3213/godshand/GODSHAND_MASTER/kit
+17.3s 18 [setup] kit file structure verified OK.
+17.7s 19 [OK] STORY built from notebook block: 435 shots, 2 characters -> shots_confrontation.json
+17.7s 20 characters: jack<-man_anchor.png, julie<-woman_anchor.png
+17.7s 21 [2min] Opening-act cut: 28 shots, ~117s (1:57).
+17.7s 22 [auto] AUTO-DERIVED from story: total=28 shots -> HANDS-OFF full-range render (resume-on-rerun, budget=11h).
+17.7s 23 [speed] rejection_samples=1 (single take/shot); active_profile=kaggle_2xt4
+17.7s 24 [merge] FULL MODE -> all 28 shots.
+17.7s 25 $ git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git
+19.4s 26 $ pip install -q -r requirements.txt
+40.0s 27 $ git clone --depth 1 https://github.com/city96/ComfyUI-GGUF.git
+40.3s 28 $ git clone --depth 1 https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+40.5s 29 $ pip install -q gguf sentencepiece protobuf einops
+46.5s 30 [install] ComfyUI and custom nodes ready.
+122.0s 31 [model] loaded ltxv-13b-0.9.7-distilled-fp8.safetensors | 13B=True distilled=True steps=8 cfg=1.0
+149.9s 32 [download] spatial upscaler ready: RealESRGAN_x2.pth (from ai-forever/Real-ESRGAN)
+149.9s 33 [download] Assets ready. LTX-Video ckpt: ltxv-13b-0.9.7-distilled-fp8.safetensors | T5: t5xxl_fp8_e4m3fn.safetensors
+149.9s 34 
+149.9s 35 --- 4w. FETCHING WAN2.2 14B I2V (GGUF, MoE) ASSETS ---
+299.3s 36 [wan] engine READY | high=Wan2.2-I2V-A14B-HighNoise-Q4_K_M.gguf low=Wan2.2-I2V-A14B-LowNoise-Q4_K_M.gguf umt5=umt5_xxl_fp8_e4m3fn_scaled.safetensors vae=wan_2.1_vae.safetensors loraH=wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors loraL=wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors steps=40 cfg=6.0
+299.3s 37 [config] takes patched: rejection_samples=2, identity_retry=0 (2 takes/shot, pick best).
+299.3s 38 [config] profile patched for VRAM safety.
+299.3s 39 
+299.3s 40 --- 5b. INGESTING CHARACTER ANCHORS FROM ATTACHED DATASET ---
+299.3s 41 ✓ Selected character dataset: /kaggle/input/datasets/kkk3213/saga-custom-characters  (man='man_anchor.png', woman='woman_anchor.png')
+299.3s 42 man_anchor.png: 988x464 px, pixel std=50.6 -> ok (real detail)
+299.5s 43 woman_anchor.png: 1066x492 px, pixel std=64.1 -> ok (real detail)
+299.5s 44 ✅ Ingested REAL character anchors into project root and ComfyUI/input/.
+299.5s 45 refs/jack/face/man_anchor.png <- real anchor (text-forge will be skipped for jack)
+299.5s 46 refs/julie/face/woman_anchor.png <- real anchor (text-forge will be skipped for julie)
+299.5s 47 ✅ Character anchors BOUND: jack<-man_anchor, julie<-woman_anchor. Text-forge overridden.
+299.8s 48 [OK] N-character pass: 0 extra anchored, 0 text-forged.
+299.8s 49 [client] upgraded comfy_client.py deployed.
+299.8s 50 [stitch] FFmpeg channel-layout fix applied.
+299.8s 51 [patch] wrote corrected grade_match.py (14317 bytes)
+299.8s 52 [patch] wrote corrected face_enhance.py (8562 bytes)
+299.8s 53 [patch] render_motion.py: progressive scene chunking & sharding enabled
+303.1s 54 Traceback (most recent call last):
+303.1s 55 File "<string>", line 1, in <module>
+303.1s 56 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 131, in execute_notebook
+303.1s 57 raise_for_execution_errors(nb, output_path)
+303.1s 58 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+303.1s 59 raise error
+303.1s 60 papermill.exceptions.PapermillExecutionError:
+303.1s 61 ---------------------------------------------------------------------------
+303.1s 62 Exception encountered at "In [1]":
+303.1s 63 ---------------------------------------------------------------------------
+303.1s 64 NameError                                 Traceback (most recent call last)
+303.1s 65 /tmp/ipykernel_23/463846552.py in <cell line: 0>()
+303.1s 66 5393     print("[patch] render_motion.py: progressive scene chunking & sharding enabled")
+303.1s 67 5394 # [patch] fix FFmpeg demuxer flag in render_stills.py
+303.1s 68 -> 5395 _rs_py = os.path.join(SRC, 'render_stills.py')
+303.1s 69 5396 if os.path.exists(_rs_py):
+303.1s 70 5397     with open(_rs_py, 'r') as _f: _c = _f.read()
+303.1s 71 
+303.1s 72 NameError: name 'SRC' is not defined
+303.1s 73 
+305.5s 74 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+305.5s 75 cells[i][c] = re.sub('\\\\\|', '|', cell)
+305.7s 76 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+305.7s 77 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+306.3s 78 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+306.7s 79 [NbConvertApp] Writing 531128 bytes to __notebook__.ipynb
+309.1s 80 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+310.2s 81 [NbConvertApp] Writing 1101409 bytes to __results__.html

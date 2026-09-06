@@ -1,0 +1,267 @@
+film_title: THE MOMENT
+shots_file: shots_bangalore.json
+render_mode: motion_stills
+fps: 24
+interpolate_fps: 16
+width: 1280
+height: 720
+base_model: HunyuanVideo-1.5-I2V-480p-Distilled
+quant: Q4_K_S
+steps: 8
+cfg: 7.0
+sampler: uni_pc
+scheduler: beta
+upscale: 2.0
+rejection_samples: 5
+codeformer_fidelity: 0.9
+max_clip_seconds: 5
+denoise: 0.25
+identity_retry: 4
+paths:
+  refs: refs
+  script: script/lines.csv
+  audio_bg: audio/bg
+  audio_prompts: audio/prompts.csv
+  work: /kaggle/working/moment_work
+  out: output
+  models: /kaggle/working/models
+tts:
+  hindi: ai4bharat/indic-parler-tts
+  english: hexgrad/Kokoro-82M
+  backup: myshell-ai/MeloTTS-English
+  speak_direction: true
+  sample_rate: 48000
+  voice_cast: null
+  performance: null
+score:
+  sample_rate: 48000
+  duck_db: 18
+  duck_freq_lo: 80
+  duck_freq_hi: 8000
+  crossfade_ms: 1200
+  shared_pad: true
+  master_loudness: -16
+  master_true_peak: -1.5
+  movements:
+    origin:
+      file: origin.mp3
+      shots:
+      - p01_thin_boy
+      - p02_rejection
+    gehra_hua:
+      file: gehra_hua.mp3
+      shots:
+      - b03_interview
+      - b03_tribute
+      - b03a_minute
+      - b03b_tap
+    nindaraan:
+      file: nindaraan.mp3
+      shots:
+      - b03b2_embrace
+      - b03b2_confession
+      - b03b2_reply
+      - b03b2_plea
+      - b03b2_vo
+    mora_piya:
+      file: mora_piya.mp3
+      shots:
+      - b03c_nooneshearing
+      - b03c2_possessive
+      - b03e_appraisal
+      - b03e2_angel
+      - b03f_apology
+      - b03d_father
+      - b04_trembling
+      - b04a_leaving_project
+      - b04b_lift
+      - b04c_observer
+    lady_in_red:
+      file: lady_in_red.mp3
+      shots:
+      - b05_doctor
+      - b05i_dress
+      - b05i_vo
+    hallucination_bed:
+      file: hallucination_bed.mp3
+      shots:
+      - b05e_numbing
+      - b05f_hallucination
+    tu_jo_nahin:
+      file: tu_jo_nahin.mp3
+      shots:
+      - b05f2_ect
+      - b05f3_aftermath
+      - b05f4_vegetable
+      - b05f5_norecognition
+      - b05wl_wohlamhe
+      - b05om_omkara
+      - b05g_panic
+      - b05f6_doyouremember
+    chal_chale:
+      file: chal_chale.mp3
+      shots:
+      - b05f7_lastpoint
+      - b05f8_emptyroom
+      - b06_leaving_bangalore
+    boba_tunnel:
+      file: boba_tunnel.mp3
+      shots:
+      - b07_silchar
+      - b07_endcard
+gpu:
+  hero_shots_mode: A
+  simple_shots_mode: B
+  always_stage_split: true
+active_profile: kaggle_2xt4
+profiles:
+  kaggle_2xt4:
+    num_gpus: 2
+    attention: xformers
+    quant: Q4_K_S
+    rejection_samples: 5
+    steps: 8
+    cfg: 7.0
+    upscale: 2.0
+    width: 1280
+    height: 720
+    rate_per_gpu_hr: 0.0
+    denoise: 0.35
+    codeformer_fidelity: 0.8
+    comfy_flags: --cache-none --disable-smart-memory
+  lightning_l4:
+    num_gpus: 1
+    attention: fp8
+    quant: Q6
+    rejection_samples: 1
+    steps: 24
+    cfg: 5.5
+    upscale: 1.5
+    width: 1152
+    height: 648
+    rate_per_gpu_hr: 0.48
+    denoise: 0.45
+    codeformer_fidelity: 0.7
+    comfy_flags: --fast --cache-none
+  lightning_a100_40g:
+    num_gpus: 1
+    attention: xformers
+    quant: Q8
+    rejection_samples: 5
+    steps: 50
+    cfg: 6.5
+    upscale: 2.0
+    width: 1920
+    height: 1080
+    rate_per_gpu_hr: 0.0
+    denoise: 0.3
+    codeformer_fidelity: 0.85
+    comfy_flags: --cache-none
+  colab_t4:
+    num_gpus: 1
+    attention: xformers
+    quant: Q6
+    rejection_samples: 1
+    steps: 28
+    cfg: 5.5
+    upscale: 1.5
+    width: 1152
+    height: 648
+    rate_per_gpu_hr: 0.0
+    denoise: 0.45
+    codeformer_fidelity: 0.7
+    comfy_flags: --cache-none --disable-smart-memory
+music_policy:
+  under_narration: instrumental
+  vocals_swell_at_end: true
+  end_movement: boba_tunnel
+clips:
+  horizontal:
+    w: 1920
+    h: 1080
+  vertical:
+    w: 1080
+    h: 1920
+  thumbnail_at: 0.5
+  music_under_clip: true
+  ai_label: true
+  creator: Niloy Das
+identity_override:
+  enabled: false
+  refs_dir: refs/original_identity
+qc:
+  min_w: 640
+  min_h: 360
+  dur_tol: 0.75
+  fps_tol: 1.5
+  sharp_min: 20
+  flicker_max: 10
+  lufs_hi: -9
+  lufs_lo: -30
+identity:
+  drift_cosine: 0.25
+  sample_frames: 20
+  min_det_score: 0.7
+# 4K cinema delivery block (consumed by clips.py / stitch.py / qc.py when
+# KIT_4K_DELIVERY=1 is set). Render pipeline still produces the per-shot
+# frames at the active profile resolution; the master encoder upscales
+# + emits a 10-bit Rec.709 4K master. Env KIT_4K_DELIVERY=1 overrides `enabled`.
+delivery:
+  enabled: false
+  width: 3840
+  height: 2160
+  pix_fmt: yuv420p10le
+  color_primaries: bt709
+  color_trc: bt709
+  colorspace: bt709
+  video_bitrate: 120M
+  audio_bitrate: 320k
+  master_crf: null
+
+# Theatrical (DCI) delivery block — opt-in via KIT_THEATRICAL=1 env var.
+# When enabled, emits: DCDM (JPEG 2000 XYZ 12-bit), DCP (MXF + CPL),
+# 5.1/7.1 surround audio, P3-D65 SDR + HDR PQ masters, DCI 4K flat/scope.
+theatrical:
+  enabled: false
+  aspect: flat                 # flat (1.85) | scope (2.39) | full (1.90)
+  dci_4k: true                 # true -> 4096 canvas; false -> 2K (2048x1080)
+  hdr: true                    # true -> also emit PQ ST 2084 HDR master
+  surround_layout: 5.1         # 5.1 | 7.1
+  dcdm_jpeg2000: true          # true -> JPEG 2000 DCDM; false -> uncompressed TIFF DCDM
+  dcp_encrypt: false           # true -> KDM-ready encryption stub (not real crypto)
+  video_bitrate: 250M          # DCDM bitrate
+  audio_bitrate: 384k          # DCP audio bitrate (WAV inside MXF is uncompressed)
+  max_reel_seconds: 10800      # max seconds per reel (~3h)
+audio_master:
+  sample_rate: 48000
+  bit_depth: 24
+  loudness_target: -14
+  loudness_range: 10
+  true_peak: -1.0
+  limiter_ceiling: -0.3
+  stereo_enhance: 0.25
+  reverb_send: -8
+  reverb_decay: 2.2
+  deesser_threshold: 0.3
+  sidechain_ratio: 12
+  sidechain_attack: 3
+  sidechain_release: 250
+grain:
+  enabled: true
+  strength: 4.5
+  size: 1.0
+  chroma: 0.6
+  halation: 0.25
+realism:
+  positive: photographed on real film, genuine human expression, natural skin texture,
+    subsurface scattering, true-to-life lighting, cinematic color grading, filmic
+    depth of field, sharp focus on subject, authentic emotions, realistic proportions
+    and anatomy, lived-in expressions
+  negative: cartoon, illustration, painting, CGI, 3D render, video game, plastic skin,
+    airbrushed, over-smooth, waxy skin, doll-like, mannequin, artificial lighting,
+    flat lighting, overexposed, underexposed, oversaturated, desaturated, unnatural
+    colors, deformity, anatomical error, extra fingers, missing fingers, bad anatomy,
+    distorted face, blurred face, low quality, worst quality, watermark, signature,
+    text, logo, border, frame, anime, manga, stylized, abstract, surreal
+intensity:
+  keep_glitch_threshold: 0.66

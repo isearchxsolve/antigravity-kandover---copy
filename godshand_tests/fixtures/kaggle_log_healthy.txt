@@ -1,0 +1,27 @@
+[Trimmed canonical signature of a healthy Kaggle T4 run -- the actual
+comfyui_gpu0.txt evidence I supplied per the engine audit. Five WAN I2V
+prompts complete in ~14 min each; only VHS-plugin-chatter warnings,
+which the log validator treats as WARN (not FATAL) per documented policy.
+Sanitized signature of the original log.]
+
+[INFO] Device: cuda:0 Tesla T4 : cudaMallocAsync
+[INFO] Total VRAM 14912 MB, total RAM 32100 MB
+[INFO] python version: 3.12.13
+[INFO] ComfyUI version: 0.28.0
+[INFO] importing time for custom nodes:
+[INFO]    0.1 seconds: /kaggle/working/ComfyUI/custom_nodes/ComfyUI-GGUF
+[INFO]    0.3 seconds: /kaggle/working/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+[INFO]   gguf qtypes: F16 (694), Q4_K (280), Q6_K (120), F32 (1)
+[INFO]   Requested to load WAN21
+[INFO] loaded completely; 13497.26 MB usable, 9337.18 MB loaded, full load: True
+[INFO] Prompt executed in 00:15:49
+[INFO] got prompt
+[INFO] Prompt executed in 00:14:21
+[INFO] got prompt
+[INFO] Prompt executed in 00:14:18
+[INFO] got prompt
+[INFO] Prompt executed in 00:14:17
+[INFO] got prompt
+[INFO] Prompt executed in 00:14:25
+[VideoHelperSuite] - WARNING - Missing input for save_metadata has been set to True
+[VideoHelperSuite] - WARNING - Missing input for trim_to_audio has been set to False

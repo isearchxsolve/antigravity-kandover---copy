@@ -1,0 +1,1185 @@
+{
+ "film": "THE ONE - Same Wound (the single film)",
+ "note": "One original film, end to end. The real memoir (Act I, real likeness) crosses at the midnight laugh (real face) into the metabolized creature (Act II, forged, no photos). A recurring chorus voice carries the theme: the ugly one and the beautiful one are one man - the same identity-wound, metabolized, not merely accepted.",
+ "globals": {
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "base_model": "Wan2.2-S2V",
+  "quant": "Q8",
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "uni_pc",
+  "scheduler": "beta",
+  "interpolate_to_fps": 48,
+  "upscale": 1.75,
+  "rejection_samples": 3,
+  "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+  "negative_prompt": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter"
+ },
+ "character_design": {
+  "observer": {
+   "summary": "A wholly invented, separate character — NOT Kunal's likeness. A tall, gaunt, aged man in his late 40s–50s: weathered skin, deep lines, a greying dark beard, hollow cheeks, a once-boyish face now hardened by years. Machine-augmented resurrection: subtle cybernetics, a faint chrome seam tracing the left jaw and temple, a hairline of metal at the neck, one eye faintly luminous (cold pale-blue augmented iris), the other human and dark. Gray-shade Joker register: worn bone-white greasepaint, cracked and imperfect, with a fixed 'stressed smile' painted at the mouth — a strained rictus, NOT a happy grin, NOT circus clown. The greasepaint is concealment, not decoration: beneath it the face was lost to a therapy-machine detonation and rebuilt, so the paint and the chrome half-hide old ruin where flesh was erased (always suggested in shadow, never shown graphically). Costume: a long, dark, weathered high-collared coat, an iconic monumental silhouette. Dignified, severe, unreadable.",
+   "forge_prompts": {
+    "face_front": "cinematic portrait, a gaunt aged man late 40s, weathered deeply-lined face, greying dark beard, hollow cheeks, worn cracked bone-white greasepaint, a fixed strained 'stressed smile' painted at the mouth (not a happy grin, not circus clown), one cold pale-blue faintly-luminous augmented eye and one dark human eye, a faint chrome seam along the left jaw and temple, the cracked greasepaint half-concealing suggested old scarring and a chrome-rebuilt jaw where flesh was lost (kept in shadow, never graphic), front view, hard single key light, deep black background, dramatic chiaroscuro, photoreal, film grain, highly detailed",
+    "face_threequarter": "cinematic portrait, same gaunt aged bearded man, worn white greasepaint and strained painted smile, augmented left jaw seam catching the light, three-quarter angle, single motivated key light, deep shadow, photoreal, highly detailed",
+    "face_profile": "cinematic profile portrait, same gaunt aged bearded man, white greasepaint, chrome seam at temple and neck, luminous augmented eye, profile view against black, rim light, photoreal, highly detailed",
+    "body_full": "full body cinematic shot, tall gaunt aged man in a long dark weathered high-collared coat, monumental silhouette, worn white face paint, standing in volumetric haze, single hard key light, deep chiaroscuro, anamorphic, photoreal, highly detailed",
+    "body_coat": "full body, the same figure from behind and side, long dark coat trailing, high collar, iconic silhouette against a vast dark nocturnal cityscape, rim light, photoreal, highly detailed"
+   },
+   "forge_count_per_prompt": 2,
+   "seed_base": 77
+  },
+  "kunal_young": {
+   "summary": "The protagonist as a young man (early-mid 20s): an original invented character (not a real or famous person): a gentle-faced man with warm deep-set dark eyes holding a quiet melancholy, soft expressive features, calm tender mouth, understated cinematic gravitas, fair-skinned Western, lean, smooth unlined skin, thick dark hair, a boyish softness and luminous hopeful eyes, vulnerable and tender. Naturalistic, real.",
+   "forge_prompts": {
+    "face_front": "cinematic portrait, an original invented character (not a real or famous person): a gentle-faced man with warm deep-set dark eyes holding a quiet melancholy, soft expressive features, calm tender mouth, understated cinematic gravitas, fair-skinned Western, early-mid 20s, lean smooth unlined face, thick dark hair, boyish softness, luminous hopeful eyes, front view, soft naturalistic key light, shallow depth of field, photoreal, film grain, highly detailed",
+    "face_threequarter": "cinematic portrait, same young man, early-mid 20s, tender expressive eyes, thick dark hair, three-quarter angle, soft motivated light, photoreal, highly detailed",
+    "face_profile": "cinematic profile portrait, same young man early 20s, gentle features, dark hair, profile against soft grey, natural light, photoreal, highly detailed",
+    "body_full": "full body cinematic shot, a slender gentle young man early 20s in plain modest 1990s Western clothes, quiet posture, natural daylight, photoreal, highly detailed",
+    "body_coat": "full body, the same young man walking, plain shirt, ordinary Western city street behind, natural light, photoreal, highly detailed"
+   },
+   "forge_count_per_prompt": 2,
+   "seed_base": 101
+  },
+  "kunal_40s": {
+   "summary": "The same man aged into his 40s: an original invented character (not a real or famous person): a gentle-faced man with warm deep-set dark eyes holding a quiet melancholy, soft expressive features, calm tender mouth, understated cinematic gravitas, fair-skinned Western, now lined and worn, tired shadowed eyes, flecks of grey at the temples, heavier and slower, dignified but broken-in. The same bone structure and the same gentle eyes as the young man.",
+   "forge_prompts": {
+    "face_front": "cinematic portrait, an original invented character (not a real or famous person): a gentle-faced man with warm deep-set dark eyes holding a quiet melancholy, soft expressive features, calm tender mouth, understated cinematic gravitas, fair-skinned Western, aged into the 40s, lined forehead, tired shadowed deep-set eyes, flecks of grey at the temples, worn dignified face, front view, hard motivated key light, deep shadow, photoreal, film grain, highly detailed",
+    "face_threequarter": "cinematic portrait, same man in his 40s, lined weary gentle face, greying temples, three-quarter angle, dramatic single key light, deep chiaroscuro, photoreal, highly detailed",
+    "face_profile": "cinematic profile portrait, same man in his 40s, worn gentle features, greying hair, profile against black, rim light, photoreal, highly detailed",
+    "body_full": "full body cinematic shot, a tired dignified man in his 40s in plain dark clothes, heavier slower posture, volumetric low light, photoreal, highly detailed",
+    "body_coat": "full body, the same 40s man standing alone in a dim room, plain dark clothes, single window light, photoreal, highly detailed"
+   },
+   "forge_count_per_prompt": 2,
+   "seed_base": 131
+  },
+  "gunja": {
+   "summary": "Her, the woman he loved (late 20s-30s): an original invented character (not a real or famous person): a luminous, regal woman with a cool penetrating gaze, sharp architectural cheekbones, clear intelligent eyes, a composed and formidable presence, understated cinematic gravitas, an elegant, fair, luminous Western woman, poised and brilliant, quietly commanding, warm beneath a formidable stillness, dressed in elegant evening gowns and tailored dresses. Naturalistic, real.",
+   "forge_prompts": {
+    "face_front": "cinematic portrait, an original invented character (not a real or famous person): a luminous, regal woman with a cool penetrating gaze, sharp architectural cheekbones, clear intelligent eyes, a composed and formidable presence, understated cinematic gravitas, an elegant, fair, luminous Western woman, late 20s-30s, luminous skin, sharp cheekbones, clear penetrating intelligent eyes, composed formidable expression, front view, soft naturalistic key light, shallow depth of field, photoreal, film grain, highly detailed",
+    "face_threequarter": "cinematic portrait, the same woman, late 20s-30s, regal luminous face, intelligent eyes, three-quarter angle, soft motivated light, photoreal, highly detailed",
+    "face_profile": "cinematic profile portrait, the same woman, elegant architectural features, hair swept back, profile against soft grey, natural light, photoreal, highly detailed",
+    "body_full": "full body cinematic shot, a poised elegant woman late 20s-30s in a graceful evening gown, quiet commanding posture, natural daylight, photoreal, highly detailed",
+    "body_coat": "full body, the same woman in an elegant tailored dress, standing composed in a bright architect studio, natural light, photoreal, highly detailed"
+   },
+   "forge_count_per_prompt": 2,
+   "seed_base": 161
+  }
+ },
+ "characters": {
+  "kunal": {
+   "refs": "refs/kunal",
+   "era_default": "young",
+   "era_refs": {
+    "young": "refs/kunal_young",
+    "40s": "refs/kunal_40s"
+   },
+   "tokens": "serious, solemn, sorrowful, reverent, silent, tense jaw, downcast or fixed gaze, no smile, modestly dressed in simple formal attire"
+  },
+  "gunja": {
+   "refs": "refs/gunja",
+   "tokens": "tall elegant dignified woman, late 20s, strong expressive brows, thick wavy dark hair, fair luminous complexion; serious, warm, emotional; (rare) faint guarded almost-smile, restrained; ALWAYS fully modestly dressed in an elegant dress or formal wear"
+  },
+  "observer": "The invented machine-augmented creature. Generated, never photographed. The only recurring figure in the film."
+ },
+ "shots": [
+  {
+   "id": "p01_thin_boy",
+   "dur": 7,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "low-angle push-in",
+   "mode": "B",
+   "song": "origin",
+   "prompt": "a frail thin young man sits completely alone in a dark empty college library, staring down at his own thin hands, a single cold shaft of window light, deep shadows, desaturated, melancholic and vulnerable",
+   "palette": "colour palette: faded and desaturated, cold pale morning light, muted blue-grey, the drab colourlessness of a life not yet touched by warmth",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "origin"
+  },
+  {
+   "id": "p02_rejection",
+   "dur": 7,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "tracking",
+   "mode": "B",
+   "song": "origin",
+   "prompt": "cinematic tracking shot, the slender young man walks through heavy night rain on a grey empty street clutching a wet folder of certificates to his chest, blurred headlights, exhausted and defeated, glistening wet pavement",
+   "palette": "colour palette: faded and desaturated, cold pale morning light, muted blue-grey, the drab colourlessness of a life not yet touched by warmth",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "origin"
+  },
+  {
+   "id": "b03_interview",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "static two-shot",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "bright modern corporate interview room, warm soft daylight, a weary slender young man sits across a desk from Gunja, a tall elegant dignified woman in modest formal attire; as she reads his profile her eyes fill with sudden deep warmth and intellectual admiration; love at first sight, restrained",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_deepening"
+  },
+  {
+   "id": "b03_tribute",
+   "dur": 10,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "reverent slow push-in",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "slow reverent push-in on Gunja at the interview desk, a brilliant dignified mind, warm window light, statuesque and composed, fully modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_deepening"
+  },
+  {
+   "id": "b03a_minute",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "warm medium",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "warm office daylight, Gunja quietly pulls a chair and sits beside the young man who is absorbed in his computer screen; she watches him with a soft patient expression for a long moment while he remains oblivious; at last she gently says his name and he startles and looks up; modest, tender",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_deepening"
+  },
+  {
+   "id": "b03b_tap",
+   "dur": 6,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "intimate close",
+   "mode": "A",
+   "song": "the_deepening",
+   "prompt": "intimate close-up, Gunja lightly taps the young man's shoulder; a small flicker of discomfort crosses his face; she notices instantly, her hand withdraws with quiet understanding and tenderness; she never reaches to touch him again; strictly modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_deepening"
+  },
+  {
+   "id": "b03b2_embrace",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": true,
+   "camera": "slow, tender",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "quiet office cafeteria corner, Gunja has fled and sits weeping with her face buried in her hands; the young man lowers himself beside her and gently, respectfully draws her into a comforting embrace; she resists, then gives up and sinks into his shoulder and weeps; the only time he ever held her; strictly modest, comforting and sorrowful, never romantic, never through the body; his lips move in a quiet repeated apology",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lullaby"
+  },
+  {
+   "id": "b03b2_confession",
+   "dur": 10,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "static close",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "close on the young man beside her, speaking softly through tears, heartfelt, low-key light, no smile, reverent sorrow",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lullaby"
+  },
+  {
+   "id": "b03b2_reply",
+   "dur": 10,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "static close",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "close on Gunja through her tears, speaking with quiet fierce tenderness, dignified, modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lullaby"
+  },
+  {
+   "id": "b03b2_plea",
+   "dur": 6,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "close",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "Gunja almost pleading, the simple human longing beneath the vision, restrained",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lullaby"
+  },
+  {
+   "id": "b03b2_vo",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "slow",
+   "mode": "A",
+   "song": "lullaby",
+   "prompt": "his hands holding her as she cries into his shoulder, his gaze distant with realization, sorrowful, modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lullaby"
+  },
+  {
+   "id": "b03c_nooneshearing",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "tender two-shot",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "a quiet closed meeting room, the young man glances nervously toward the door to check it is shut, gathering courage to speak; Gunja leans in gently, warm and reassuring; his courage fails and he looks away into aimless words; she waits with patient aching tenderness as the moment slips past",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b03c2_possessive",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "office medium",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "an office; another woman colleague perches on the edge of his desk chatting with him; across the room Gunja watches and waits; after the colleague leaves, Gunja crosses to him and confronts him head-on, quietly aggressive and deeply hurt, telling him never to speak with that woman again; he looks afraid and lowers his eyes; restrained, fully modest",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b03e_appraisal",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, two-shot",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "a small office appraisal meeting room, the young man and Gunja sit across a narrow table stacked with review papers; she leans in and speaks with soft, caring exasperation, urging him to assert himself and claim what is his; he listens with lowered eyes, gentle and unresisting; restrained, fully modest, warm fluorescent light",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b03e2_angel",
+   "dur": 8,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, tightening",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "same meeting room moments later; the young man quietly answers her, and something in his words overwhelms her; her eyes fill, she cannot hold her composure, she rises abruptly and hurries out of the frame; he remains seated, stricken and still; restrained, sorrowful, fully modest",
+   "palette": "colour palette: warm and gently saturated, honeyed amber light, soft golden tungsten glow, the tender warmth of new closeness",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b03f_apology",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "office corridor, following",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "a quiet office corridor; he catches up to Gunja as she walks away wiping her eyes; he stops at a respectful distance, head lowered, and offers a trembling apology; she pauses, half-turned, listening; strictly modest, contrite and sorrowful, no physical contact",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b03d_father",
+   "dur": 10,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "still, grief",
+   "mode": "B",
+   "song": "my_beloved",
+   "prompt": "muted grief-stricken interior, cold pale daylight through a window, a young man in plain dark mourning clothes sits alone in a near-empty room, hollowed and exposed by loss, head bowed; a framed photograph of an older man rests nearby with a single lit candle; profound stillness; the doorway stays empty, no one comes; beyond the window, cold grey rain",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b04_trembling",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "close, cut",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "close-up on Gunja at a polished corporate desk during a meeting, hands trembling on a pen, throat tightening, eyes welling with unshed tears, restrained; cut to the young man opposite, face frozen like stone, staring down at the floor, unresponsive; quiet unbearable tension",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b04a_leaving_project",
+   "dur": 7,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "sequence",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "the young man quietly clears his desk and transfers off her project without telling her; later inside a sleek corporate elevator he offers a small tentative hopeful look; she meets it with a wounded, angry look and turns her face away; the steel doors slide shut between them",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b04b_lift",
+   "dur": 7,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "tense close quarters",
+   "mode": "A",
+   "song": "my_beloved",
+   "prompt": "tense crowded corporate elevator, the young man presses into the far corner trying to disappear; Gunja steps in and crosses to stand beside him, asking gently and warmly how he is and how his new project is going; his face hardens and his reply is curt and cold; the light in her eyes quietly dims",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b04c_observer",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "surreal",
+   "mode": "B",
+   "song": "my_beloved",
+   "prompt": "surreal introspective image, the young man sits in shadow behind a pane of glass, calm and analytical, observing as through a laboratory window a warm tender scene on the other side where another version of himself sits beside Gunja; the watching self studies every gesture like a specimen, his faint reflection overlaid on the glass; present and absent at once; cerebral, deeply human, never cold",
+   "palette": "colour palette: warmth slowly draining away, softly desaturating, cooler shadows creeping in, the golden glow fading toward grey",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "my_beloved"
+  },
+  {
+   "id": "b05_doctor",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "clinical",
+   "mode": "B",
+   "song": "lady_in_red",
+   "prompt": "dimly lit doctor's consultation room, cold clinical tones, a frustrated doctor pushes a stack of perfect medical reports across the desk toward a still wide-eyed young man whose face mixes sorrow and clarity; a brief dreamlike flash of Gunja looking at him with pleading warmth; the young man slowly closes his eyes and turns his face away in quiet agony",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lady_in_red"
+  },
+  {
+   "id": "b05i_dress",
+   "dur": 9,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "reverent push-in",
+   "mode": "A",
+   "song": "lady_in_red",
+   "prompt": "warm luminous golden-hour light, Gunja stands gently before the viewer in a graceful flowing pure-white gown, delicate and luminous, hair loose and open, fair complexion, warm admiring eyes looking toward camera, soft rim backlight forming a halo, ethereal soft glow, fully modest and reverent, the world dissolving into warm light",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lady_in_red"
+  },
+  {
+   "id": "b05i_vo",
+   "dur": 9,
+   "chars": [
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "slow",
+   "mode": "A",
+   "song": "lady_in_red",
+   "prompt": "the world dissolving into warm light around her radiance, his reverent point of view, stillness and awe, modest",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "lady_in_red"
+  },
+  {
+   "id": "b05e_numbing",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "claustrophobic",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "dim claustrophobic interior at night, sickly low light, a gaunt hollow-eyed young man slumped against the wall of a dark cluttered room, dishevelled and unraveling, lost in a haze trying to numb an unbearable grief, a single flickering light, deep sorrow rather than spectacle",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "hallucination_bed"
+  },
+  {
+   "id": "b05f_hallucination",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "disorienting",
+   "mode": "A",
+   "song": "hallucination_bed",
+   "prompt": "disorienting dreamlike sequence, cold clinical light fracturing into warped reflections, a frightened young man moves through hallucination, sterile laboratory and hospital imagery, test tubes and medical reports pressing in, an abstract non-explicit sense of his very being examined and judged; he turns to a mirror and sees not his own face but Gunja's face gazing back; reality splinters; profound vulnerability, tender, never horror",
+   "palette": "colour palette: cold and clinical, sickly desaturated tones, pale fluorescent light, the warmth almost gone",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "hallucination_bed"
+  },
+  {
+   "id": "b05f2_ect",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "clinical, compassionate",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "harrowing yet tender clinical scene, cold hospital light and deep shadow, a young man lies on a treatment table undergoing electroconvulsive therapy, his body trembling and shivering, exhausted and nauseated, attended by clinical staff, the long ordeal of treatment rendered abstractly with deep compassion and empathy, never graphic, never spectacle",
+   "palette": "colour palette: sterile and harsh, cold blue-white clinical light, bleached and desaturated, unforgiving",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05f3_aftermath",
+   "dur": 10,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": false,
+   "camera": "office, quiet and close",
+   "mode": "A",
+   "song": "without_you",
+   "prompt": "an ordinary office, some days after a therapy session; the young man has come back to work with an IV cannula and needle still taped to the back of his hand; ashamed, he keeps tugging his sleeve down and turning the hand away, trying to hide it from everyone; across the room Gunja notices it, and she is silently devastated, her eyes brimming; she comes near and slowly lifts her hand toward his wounded hand, aching to touch it, to feel it — but she stops just short, her fingers hovering in the air, unable to cross the boundary she once promised him she never would; the withheld touch says everything; strictly modest, wordless, sorrowful and tender, no contact",
+   "palette": "colour palette: sterile and harsh, cold blue-white clinical light, bleached and desaturated, unforgiving",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05f4_vegetable",
+   "dur": 10,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "desk, static, hollow",
+   "mode": "B",
+   "song": "without_you",
+   "prompt": "an open-plan office in muted desaturated light; a young man sits at his desk utterly emotionless, propped in the chair like a lifeless thing, blank hollow eyes fixed on nothing, no tear, no smile, not a flicker of expression; colleagues move and work around him while he stays frozen and drained; his hand works mechanically at the screen yet he is wholly absent behind the eyes; profound emotional emptiness, restrained, modest",
+   "negative": "laughing, cheerful, joyful, happy expression, warm genuine smile, delight, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05f5_norecognition",
+   "dur": 11,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "office corridor, passing like a ghost",
+   "mode": "A",
+   "song": "without_you",
+   "prompt": "an office corridor; Gunja steps gently into his path and searches his face, quietly trying to make him recognise her, her eyes pleading for a single flicker of the man he was; but he looks straight through her, blank and unseeing, and drifts past her like a ghost, recognising no one; she is left standing behind him, aching; desaturated, hollow, sorrowful; strictly modest, no contact",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05wl_wohlamhe",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "intimate night",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "intimate melancholic interior at night, the soft flickering glow of a screen washing over a dim room, a lone young man sits alone in the dark watching a film, the light playing across his face, tears welling as he recognizes his own unraveling mind mirrored in the story on screen, a quiet aching sense of being seen by a stranger's art",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05om_omkara",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "hallucinatory",
+   "mode": "B",
+   "song": "hallucination_bed",
+   "prompt": "dark hallucinatory interior, deep shadow pierced by the cold flickering glow of a screen, a tormented young man sits transfixed in near-darkness watching a bleak intense film, a melancholic song washing over him, the boundary between the screen and his own mind dissolving, shadows swirling at the edges, deep anguish and eerie beauty intertwined, tender and dreamlike, never lurid",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05g_panic",
+   "dur": 9,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "harrowing close",
+   "mode": "B",
+   "song": "without_you",
+   "prompt": "harrowing yet tender interior at night, cold sickly light and deep shadow, a young man in the grip of relentless panic attacks, chest heaving, drenched and trembling, stands over a bathroom sink repeatedly pouring mugs of cold water over his own head, gasping for breath, desperately trying to break the waves of terror; water and sweat streaming down his face, eyes wide with fear and exhaustion; deep compassion, never spectacle",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless",
+   "negative": "smiling, grinning, laughing, cheerful, happy expression, teeth showing, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05f6_doyouremember",
+   "dur": 9,
+   "chars": [
+    "kunal",
+    "gunja"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, close two-shot",
+   "mode": "A",
+   "song": "without_you",
+   "prompt": "an office appraisal meeting room once more; Gunja leans in, her voice trembling as she holds back tears, crying deep inside her heart, desperately searching his face for even the smallest flicker that he still remembers her; the young man returns only a hollow, vacant grin — not a real smile, the empty reflex of a hollowed-out man, no recognition behind it; her silent anguish against his blank grin; muted light, aching, strictly modest, sorrowful",
+   "negative": "laughing, cheerful, joyful, happy expression, warm genuine smile, delight, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "palette": "colour palette: near-monochrome, colour drained almost entirely to grey, flat lifeless light, emotionally colourless",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "b05f7_lastpoint",
+   "dur": 8,
+   "chars": [
+    "kunal"
+   ],
+   "era": "young",
+   "talking": false,
+   "vo": true,
+   "camera": "appraisal room, he sits alone",
+   "mode": "B",
+   "song": "let_us_go",
+   "prompt": "the same meeting room; she finally rises to leave, saying nothing more, and as she turns away tears simply roll down her face, nothing else; the young man stays seated wearing the same hollow, vacant grin, unable to give her anything at all; an empty chair, the door closing softly behind her; this is the last moment of their life together; profound sorrow, strictly modest",
+   "negative": "laughing, cheerful, joyful, happy expression, warm genuine smile, delight, playful, celebratory, nudity, nude, skin exposure, cleavage, bare shoulders, bare midriff, revealing or short clothing, sensual, seductive, suggestive, vulgar, sexual or intimate contact, kissing, extra fingers, deformed hands, blurry, low quality",
+   "palette": "colour palette: near-monochrome grey, but a single faint warm amber note survives in the frame, the last trace of the love still alive inside",
+   "tone": "cinematic realism, shot on 35mm with fine film grain, subtle anamorphic flare; deliberate disciplined composition with generous negative space, the figure often small and isolated in the frame; a single motivated light source, soft chiaroscuro, deep quiet shadows; shallow depth of field, slow patient camera, mostly static or barely drifting; unhurried contemplative pacing that lets each moment breathe; mood-driven shadows, serious, restrained, melancholic, reverent, intimate; NOT a happy ending",
+   "movement": "the_breaking"
+  },
+  {
+   "id": "obs05_lightsdie",
+   "dur": 6,
+   "chars": [
+    "kunal"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_chair",
+   "camera": "static wide; banks of lights switching off row by row",
+   "mode": "B",
+   "palette": "fluorescent white collapsing to darkness, cold",
+   "prompt": "A vast open-plan office at night, banks of overhead lights switching off row by row until only a faint glow remains over the single unmoving seated silhouette, growing dark swallowing the room.",
+   "negative": "white face paint, coat, beard, smile, daylight",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_crossing",
+   "era": "40s"
+  },
+  {
+   "id": "obs06_stillness",
+   "dur": 5,
+   "chars": [
+    "kunal"
+   ],
+   "talking": false,
+   "vo": false,
+   "song": "midnight",
+   "camera": "static macro; only a face faintly lit in near-total black",
+   "mode": "B",
+   "palette": "near-monochrome black, a single cold violin-blue rim of light",
+   "prompt": "Almost total darkness. Only the faint edge of a seated man's exhausted face catches a cold blue rim of light. A clock somewhere reads 11:59. Absolute stillness.",
+   "negative": "white face paint, coat, beard, bright light, smile",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_crossing",
+   "era": "40s"
+  },
+  {
+   "id": "obs07_laugh",
+   "dur": 7,
+   "chars": [
+    "kunal"
+   ],
+   "talking": false,
+   "vo": false,
+   "song": "midnight",
+   "camera": "handheld, slow creeping push-in",
+   "mode": "A",
+   "palette": "cold blue-black, a single hard rim light, deep shadow",
+   "prompt": "In the dark the numb seated man begins to laugh — a small tremor at first, then a rising, uncontrollable, full-bodied hysterical laughter, head tipping back, the drained body convulsing as if a current has finally found a wire.",
+   "negative": "white face paint, coat, beard, cheerful joyful smile, warm light",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_crossing",
+   "era": "40s"
+  },
+  {
+   "id": "obs08_blackout",
+   "dur": 3,
+   "chars": [
+    "kunal"
+   ],
+   "talking": false,
+   "vo": false,
+   "song": "midnight",
+   "camera": "hard cut to black; a single frame of the empty chair",
+   "mode": "B",
+   "palette": "pure black, one dim cold frame",
+   "prompt": "At the peak of the laughter, everything cuts to black. For a single held moment, a dim empty office chair in the dark, the man gone from frame.",
+   "negative": "person, face, smile, bright light",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_crossing",
+   "era": "40s"
+  },
+  {
+   "id": "obs09_coma",
+   "dur": 8,
+   "chars": [],
+   "talking": false,
+   "vo": true,
+   "song": "machine_years",
+   "camera": "overhead, very slow drift down",
+   "mode": "A",
+   "palette": "sterile surgical blue-white, chrome highlights, cold",
+   "prompt": "A gaunt body lies still as death on a futuristic regeneration table submerged in cold blue medical light, translucent tubes and cabling, a vast quiet automated ward, machines breathing for him.",
+   "negative": "white face paint, smile, warm light, daylight",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "machine_years"
+  },
+  {
+   "id": "obs10_ectoverload",
+   "dur": 5,
+   "chars": [],
+   "talking": false,
+   "vo": true,
+   "song": "machine_years",
+   "camera": "extreme close, violent flash cut to hard shadow",
+   "mode": "B",
+   "palette": "sterile blue-white detonating to a white surge, then near-black",
+   "prompt": "Extreme close on electrodes clamped at a temple; the therapy machine overloads and detonates in a searing white surge of current; hard cut to the aftermath in deep shadow - a ruined profile half-swallowed by black, the wreck of the face implied in silhouette and never shown plainly, a single cold highlight on exposed chrome where flesh once was.",
+   "negative": "face paint, coat, cheerful, warm light, graphic gore, explicit wound detail, exposed viscera",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "machine_years"
+  },
+  {
+   "id": "obs11_rebuild",
+   "dur": 8,
+   "chars": [],
+   "talking": false,
+   "vo": true,
+   "song": "machine_years",
+   "camera": "clinical macro, precise robotic movement",
+   "mode": "A",
+   "palette": "cold chrome and surgical blue, sparks of warm orange from micro-welds",
+   "prompt": "Slender robotic surgical arms work with terrible precision over a half-built face, laying a fine chrome seam along the jaw, micro-sparks, synthetic tissue knitting over metal, an augmented eye being seated into its socket.",
+   "negative": "circus clown, cheerful, daylight",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "machine_years"
+  },
+  {
+   "id": "obs12_firstcurrent",
+   "dur": 5,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": false,
+   "song": "machine_years",
+   "camera": "close, static; a single eye opening",
+   "mode": "A",
+   "palette": "cold blue-white, the augmented iris igniting pale-blue",
+   "prompt": "A rebuilt hand twitches; then the augmented eye opens for the first time, its pale-blue iris igniting from within, catching cold light, the new face still and unreadable beneath faint white paint.",
+   "negative": "happy smile, warm light, daylight",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "machine_years"
+  },
+  {
+   "id": "obs13_rise",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_waking",
+   "camera": "slow, reverent; silhouette against a grey window",
+   "mode": "A",
+   "palette": "ash-grey, a first cold thread of amber at the window",
+   "prompt": "The rebuilt figure slowly sits upright on the table, aged and scarred, cables and wires sliding away from him, silhouetted against a tall grey dawn window, gaunt and monumental.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_waking"
+  },
+  {
+   "id": "obs14_mirror_first",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_waking",
+   "camera": "close on a warped steel reflection",
+   "mode": "A",
+   "palette": "ash-grey steel, cold, a faint amber note",
+   "prompt": "He studies his own reflection in a warped sheet of surgical steel: the weathered bearded face, the worn white greasepaint, the strained painted smile, the luminous augmented eye — recognising, without alarm, the stranger who has joined the dots.",
+   "negative": "circus clown, cheerful, bright colors",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_waking"
+  },
+  {
+   "id": "obs02_facereveal",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "cold_open",
+   "camera": "slow push-in to a partial face, half in shadow",
+   "mode": "A",
+   "palette": "cold slate blue, a single hard key raking one side of the face, black negative space",
+   "prompt": "Slow push onto a partial face emerging from darkness: worn bone-white greasepaint, a fixed strained painted smile, deep weathered lines, a greying beard, one dark human eye and one faintly-luminous pale-blue augmented eye, a thin chrome seam along the jaw.",
+   "negative": "circus clown makeup, happy grin, cheerful, bright colors, warm light",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_waking"
+  },
+  {
+   "id": "obs15_stand",
+   "dur": 6,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": false,
+   "song": "the_waking",
+   "camera": "low angle, monumental, slow craning up",
+   "mode": "A",
+   "palette": "ash-grey and black, hard key, single amber edge",
+   "prompt": "Full body: the figure rises and draws on a long dark high-collared coat, an iconic monumental silhouette assembling out of the grey, shot from a low reverent angle.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_waking"
+  },
+  {
+   "id": "obs01_myth",
+   "dur": 8,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "cold_open",
+   "camera": "extreme wide, high angle, slow drift; the figure tiny on a rain-slick rooftop edge",
+   "mode": "A",
+   "palette": "cold desaturated slate blue-black, sodium-vapour amber pinpoints far below, deep chiaroscuro",
+   "prompt": "A tall gaunt caped figure in a long dark coat stands motionless at the very edge of a rain-slick city rooftop at 3am, back to camera, coat and collar stirring in the wind, the vast electric city sprawling far below through haze.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_reveal"
+  },
+  {
+   "id": "obs03_walk",
+   "dur": 6,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "cold_open",
+   "camera": "tracking, low, through a flooded underpass; fractured reflections",
+   "mode": "A",
+   "palette": "cold blue-black water, neon smears fractured on the flood, deep shadow",
+   "prompt": "The figure walks unhurried through a flooded neon underpass at night, ankle-deep still water throwing fractured reflections of him that never quite cohere, haze and dripping concrete, monumental and alone.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_reveal"
+  },
+  {
+   "id": "obs16_city",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_mirror",
+   "camera": "slow tracking; a crowd parting around him",
+   "mode": "A",
+   "palette": "high-contrast expressionist black, bone-white face, one bleed of red neon",
+   "prompt": "He walks through a dense nocturnal city crowd that unconsciously parts around him, faces turning, unreadable and unhurried, a single red neon sign bleeding across the wet street.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_reveal"
+  },
+  {
+   "id": "obs17_doctors",
+   "dur": 8,
+   "chars": [
+    "observer"
+   ],
+   "talking": true,
+   "vo": false,
+   "song": "the_mirror",
+   "camera": "static, perfectly symmetrical (Nolan symmetry)",
+   "mode": "A",
+   "palette": "stark black and bone-white, a hard clinical key",
+   "prompt": "He stands in an abandoned, derelict clinic holding a cracked mirror up toward rows of empty diagnostic chairs, addressing them directly, tilting his head, the faintest cold amusement on the painted mouth.",
+   "negative": "circus clown, cheerful, joyful, bright colors",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_mirror"
+  },
+  {
+   "id": "obs18_satire",
+   "dur": 6,
+   "chars": [
+    "observer"
+   ],
+   "talking": true,
+   "vo": false,
+   "song": "the_mirror",
+   "camera": "close, to camera; slight dutch tilt",
+   "mode": "A",
+   "palette": "black and bone-white, single hard key, deep shadow",
+   "prompt": "Close on the painted face speaking directly to camera, head tilting, a slow tap of one fingernail against a tooth, dry and aslant, delivering a line with cold gallows humour.",
+   "negative": "circus clown, big happy grin, cheerful, bright colors",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_mirror"
+  },
+  {
+   "id": "obs19_world",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_mirror",
+   "camera": "epic wide, low; the city watching on giant screens",
+   "mode": "A",
+   "palette": "expressionist black, cold screen-glow blue, bone-white figure",
+   "prompt": "Wide and monumental: the figure stands atop a dark monument as a vast city square below watches him on towering screens, and he lifts the cracked mirror toward them and the glowing displays.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_mirror"
+  },
+  {
+   "id": "obs20_sealed",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_amber_note",
+   "camera": "macro, intimate",
+   "mode": "A",
+   "palette": "near-monochrome grey, a single warm amber glow",
+   "prompt": "His augmented hand slowly unfolds to reveal a small, worn, glowing amber note cupped in the palm, the one warm living light in a world of cold grey, its glow reflecting faintly in the luminous eye.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_amber_note"
+  },
+  {
+   "id": "obs21_hershadow",
+   "dur": 7,
+   "chars": [],
+   "talking": false,
+   "vo": true,
+   "song": "the_amber_note",
+   "camera": "distant, soft, static",
+   "mode": "B",
+   "palette": "grey dark, a single warm amber doorway",
+   "prompt": "Far down a dark corridor, a warm amber-lit doorway, and within it the soft faceless silhouette of a woman turning gently away and stepping into the light, never her face, only the grace of her leaving.",
+   "negative": "visible face, facial features, portrait, man, coat",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_amber_note"
+  },
+  {
+   "id": "obs22_unreachable",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_amber_note",
+   "camera": "close; glass between hand and light",
+   "mode": "A",
+   "palette": "cold grey-blue, the amber sealed behind glass",
+   "prompt": "He reaches toward the warm amber light, but his augmented hand meets a pane of cold glass; the light is inches away and infinitely far, reflected on the unreadable painted face.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_amber_note"
+  },
+  {
+   "id": "obs23_monologue",
+   "dur": 9,
+   "chars": [
+    "observer"
+   ],
+   "talking": true,
+   "vo": false,
+   "song": "the_verdict",
+   "camera": "extreme close, hard key; the central address",
+   "mode": "A",
+   "palette": "stark black and bone-white, one hard key light, total shadow around",
+   "prompt": "Extreme close-up, a single hard key light carving the painted weathered face out of pure black, the augmented eye faintly glowing, speaking the central quiet monologue directly and without fear.",
+   "negative": "circus clown, cheerful, bright colors, wide shot",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_verdict"
+  },
+  {
+   "id": "obs24_riseabove",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_verdict",
+   "camera": "wide, monumental; a single shaft of light in a vast dark hall",
+   "mode": "A",
+   "palette": "vast black, one towering shaft of pale light, bone-white figure",
+   "prompt": "The figure stands in a single towering shaft of pale light within a vast, cathedral-dark hall, arms lowering to his sides, calm and immense, the smallness of a man inside the scale of a myth.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_verdict"
+  },
+  {
+   "id": "obs25_dawn",
+   "dur": 7,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": true,
+   "song": "the_unreadable",
+   "camera": "wide, slow; walking away down an empty avenue",
+   "mode": "A",
+   "palette": "cold grey dawn, amber fading to a single pinpoint",
+   "prompt": "First grey dawn over an empty rain-washed avenue; the figure walks slowly away from camera, coat trailing, growing small between vast silent buildings, one faint amber reflection left on the wet ground.",
+   "negative": "cartoon, anime, illustration, cgi look, video-game render, low quality, blurry, soft focus, deformed anatomy, extra fingers, extra limbs, malformed hands, watermark, text overlay, logo, subtitles, oversaturated, garish colors, bright flat daylight, sitcom lighting, cheerful, comedic, slapstick, circus clown makeup, rainbow colors, party balloons, gore, blood spatter",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_unreadable"
+  },
+  {
+   "id": "obs26_lastlook",
+   "dur": 5,
+   "chars": [
+    "observer"
+   ],
+   "talking": false,
+   "vo": false,
+   "song": "the_unreadable",
+   "camera": "close; a half-turn, a single frame flicker",
+   "mode": "A",
+   "palette": "cold grey, a fleeting warm amber wash",
+   "prompt": "He half-turns back toward camera; for a single fleeting frame, beneath the paint and the years, the faint ghost of a much younger, gentler face surfaces — and is gone.",
+   "negative": "circus clown, big grin, bright colors",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_unreadable"
+  },
+  {
+   "id": "obs27_gone",
+   "dur": 5,
+   "chars": [],
+   "talking": false,
+   "vo": false,
+   "song": "the_unreadable",
+   "camera": "static wide; the empty avenue",
+   "mode": "B",
+   "palette": "cold grey dawn, a single amber pinpoint dimming to nothing",
+   "prompt": "The empty avenue at grey dawn, the figure gone; only a single faint amber pinpoint remains glinting on the wet stone, and slowly it fades to nothing.",
+   "negative": "person, face, coat, bright light",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_unreadable"
+  },
+  {
+   "id": "obs28_endcard",
+   "dur": 6,
+   "chars": [],
+   "talking": false,
+   "vo": false,
+   "song": "the_unreadable",
+   "camera": "static black; title card",
+   "mode": "B",
+   "palette": "pure black with fine grain",
+   "prompt": "Pure black screen with fine film grain, holding in silence for the end title, the last of the amber gone.",
+   "negative": "person, face, bright colors",
+   "tone": "high-contrast expressionist cinema in the tradition of Christopher Nolan and Roger Deakins; IMAX-scale nocturnal atmosphere, anamorphic wide lensing, dramatic chiaroscuro with a single hard motivated key light carving the subject out of deep blacks; volumetric haze, rain-sheen on every surface, monumental negative space with the figure often small against vast architecture; slow deliberate camera, patient push-ins and craning reveals; a mythic, dreamlike unreality, brooding, majestic and severe; painterly darkness, photoreal, fine film grain, highly detailed, cinematic color grade; NOT cheerful, NOT comedic",
+   "movement": "the_unreadable"
+  }
+ ]
+}

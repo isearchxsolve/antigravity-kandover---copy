@@ -1,0 +1,91 @@
+======================================================================
+COMPREHENSIVE SMOKE TEST: Hollywood-grade film engine
+======================================================================
+
+[TEST 1] QC gate failure detection
+  good: black=0, freeze=0  OK
+  black: black=1, freeze=1  FAIL
+  freeze: freeze=0 (detection depends on content)
+  good audio: -41.8 LUFS
+  loud audio: -2.6 LUFS  LOUDER
+  OK: QC gate correctly detects: black frames, freezes, loud audio
+
+[TEST 2] Postprocess NEED_INTERP guard
+[postprocess(ffmpeg)] interpolation skipped (16fps <= 16.0fps*1.2) -> C:\Users\Admin\AppData\Local\Temp\pp_test_aufteqp5\out_16.mp4
+  target=16fps: src=16.0 -> out=16.0 (interp skipped: True)
+[postprocess(ffmpeg)] -> C:\Users\Admin\AppData\Local\Temp\pp_test_aufteqp5\out_48.mp4
+  target=48fps: src=16.0 -> out=48.0 (interpolated: True)
+  OK: NEED_INTERP guard works: skips at 16fps, interpolates at 48fps, no vsbmc
+
+[TEST 3] Identity-aware take selection logic
+  OK: All 5 identity selection cases work correctly
+
+[TEST 4] Shot normalization + concat integrity
+  Input clips: 4 with dims [(256, 144), (512, 288), (320, 180)], target=256x144@24fps
+  Concat duration: 4.00s (expected 4.00s)  OK
+  OK: Shot normalization works: mixed dims/fps -> clean concat, no frame loss
+
+[TEST 5] Voice loudness conformance
+  quiet clip: -51.8 LUFS (input vol=-10dB)
+  normal clip: -41.8 LUFS (input vol=-10dB)
+  loud clip: -31.8 LUFS (input vol=-10dB)
+  Measured -30 LUFS -> gain=14.0dB (clamped to +/-18)
+  Measured -20 LUFS -> gain=4.0dB (clamped to +/-18)
+  Measured -10 LUFS -> gain=-6.0dB (clamped to +/-18)
+  OK: Voice loudness conformance: measures LUFS, clamps gain, applies correction
+
+[TEST 6] Grade match JSON target path
+  OK: Grade match: reads preset from JSON (postprocess) AND direct preset name
+
+[TEST 7] Notebook execution model compatibility
+  OK: Notebook model compatible: sharding, KIT_CONFIG, render_stills fix all present
+
+[TEST 8] Edge cases
+  OK: qc.py: missing file -> FAIL
+  OK: qc.py: duration mismatch -> WARN/FAIL
+  OK: stitch normalization: corrupt input fails safely (no silent corruption)
+  OK: grade_match: missing input -> exit 0 (fail-soft)
+
+[TEST 9] Full pipeline integration (selftest re-run)
+Traceback (most recent call last):
+  File "C:\dev\antigravity-kandover\comprehensive_smoke_test.py", line 447, in <module>
+    assert r.returncode == 0, f"Selftest FAST failed: {r.stdout}\n{r.stderr}"
+           ^^^^^^^^^^^^^^^^^
+AssertionError: Selftest FAST failed: === static checks (compile + deps + comfy_client + workflows + configs/shots) ===
+[static] OK -- all sources compile, deps present, graphs/_bind valid, configs/shots parse.
+
+=== preflight (cpu/mock) ===
+[preflight] MASTER FOLDER: C:\dev\antigravity-kandover\GODSHAND_MASTER\GODSHAND_MASTER\kit
+[preflight] all inputs (shots, refs, workflows) are read ONLY from this folder.
+[warn] nvidia-smi unavailable (OK on a CPU/assembly box; set KIT_REQUIRE_GPU=1 on a paid GPU box to make this fatal)
+[preflight] OK -- 2 shots, profile=(base), gpu=no, 36GB free. Safe to render.
+
+=== render_film (mock generate + cpu post) ===
+[render] GPU scheduler active: 0 GPU(s).
+[render] t01 on GPU 0: regime=danger free=0MB steps=12 dur=2.0s offload=model attn_slice=True vae_tile=True/256 fp8=True
+[postprocess(ffmpeg)] -> /tmp/kit_selftest_work\t01\final.mp4
+[ok] t01 -> /tmp/kit_selftest_work\t01/final.mp4
+[render] t02 on GPU 0: regime=danger free=0MB steps=12 dur=2.0s offload=model attn_slice=True vae_tile=True/256 fp8=True
+[postprocess(ffmpeg)] -> /tmp/kit_selftest_work\t02\final.mp4
+[ok] t02 -> /tmp/kit_selftest_work\t02/final.mp4
+[ok] render loop finished.
+[render] GPU scheduler summary:
+[gpu_scheduler] no GPUs
+
+=== clips.py (master + vertical + thumb + manifest) ===
+[note] t01: c2patool not installed -> embedded metadata + sidecar manifest only (install c2patool to cryptographically sign content credentials).
+[ok] t01 -> C:\dev\antigravity-kandover\GODSHAND_MASTER\GODSHAND_MASTER\kit\output_selftest\clips\t01  (master + vertical + thumb + manifest)
+[note] t02: c2patool not installed -> embedded metadata + sidecar manifest only (install c2patool to cryptographically sign content credentials).
+[ok] t02 -> C:\dev\antigravity-kandover\GODSHAND_MASTER\GODSHAND_MASTER\kit\output_selftest\clips\t02  (master + vertical + thumb + manifest)
+[ok] exported 2 clip package(s) -> C:\dev\antigravity-kandover\GODSHAND_MASTER\GODSHAND_MASTER\kit\output_selftest\clips
+
+=== stitch.py (concat + score + mux + master) ===
+
+--- STDERR ---
+
+[stage FAILED] stitch.py (concat + score + mux + master) (exit 1)
+
+[selftest] 1 pipeline issue(s):
+   x stitch.py
+
+

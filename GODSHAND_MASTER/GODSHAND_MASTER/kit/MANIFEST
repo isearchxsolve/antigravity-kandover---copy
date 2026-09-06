@@ -1,0 +1,26 @@
+# MANIFEST — model repos this kit downloads (into the read-only Kaggle model Dataset).
+# build_model_dataset.ipynb pulls these with hf download + HF_HUB_ENABLE_HF_TRANSFER=1,
+# auto-resume, 3x retry, and checksum. Never uses Q4 for finals; Q5/Q6 only if a single
+# T4 is all that's available.
+#
+# format: <role> | <hf repo or url> | <notes>
+
+VIDEO_BASE        | Wan-AI/Wan2.2-S2V              | primary photo+voice -> performance
+VIDEO_PHANTOM     | Wan-AI/Wan2.2-Phantom         | two-person subject-to-video
+VIDEO_FLF2V       | Wan-AI/Wan2.2-FLF2V           | first-last-frame reveals/chaining
+VIDEO_ANIMATE     | Wan-AI/Wan2.2-Animate         | borrowed-motion template
+GGUF_QUANT        | city96/Wan2.2-gguf            | Q8 (Q5/Q6 fallback on single T4)
+IDENTITY_PULID    | guozinan/PuLID               | face identity injection
+IDENTITY_INSTANT  | InstantX/InstantID           | face identity injection
+UPSCALE_SUPIR     | Fanghua-Yu/SUPIR             | stage-1 upscale
+UPSCALE_ESRGAN    | ai-forever/Real-ESRGAN       | 4x-UltraSharp fallback
+FACE_CODEFORMER   | sczhou/CodeFormer            | per-frame face restore (fidelity 0.7)
+INTERP_RIFE       | hzwer/Practical-RIFE         | 24 -> 48 fps
+LIPSYNC_LATENT    | bytedance/LatentSync         | mouth-to-audio align
+TTS_HINDI         | ai4bharat/indic-parler-tts   | Hindi/English TTS, no sample
+TTS_ENGLISH       | hexgrad/Kokoro-82M           | English preset voices, Apache-2.0
+TTS_BACKUP        | myshell-ai/MeloTTS-English   | backup
+AUDIO_MUSIC       | stabilityai/stable-audio-open-1.0 | AI score when a slot is empty
+AUDIO_FOLEY       | hkchengrex/MMAudio           | synced ambience/foley
+
+# Turing (T4, sm_75) note: NO SageAttention / fp8. Use xformers + GGUF.
